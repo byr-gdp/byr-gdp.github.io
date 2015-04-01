@@ -3,9 +3,10 @@ layout: default
 title: Learning && Coding
 ---
 <h1>{{ page.title }}</h2>
-<h3>About Me</h3>
-<p>此博客在2015年愚人节上线了，Pure HTML，等积累到一定阶段后再考虑样式。笔试面试均被鄙视，So，learning && coding</p>
-<h3>Latest Articles</h3>
+<h4>About Me</h3>
+<p>此博客于2015年愚人节上线。So，learning && coding.</p>
+<br>
+<h4>Latest Articles</h3>
 <ul>
 　　{% for post in site.posts %}
 　　　　<li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
