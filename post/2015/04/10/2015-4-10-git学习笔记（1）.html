@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+        <meta name="keywords" content="Git,笔记,">
+        <meta name="description" content="Git学习笔记（1）">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/monokai_sublime.css">
+        <link rel="stylesheet" href="/css/fluidbox.css">
+        <title>Git学习笔记（1）</title>
+    </head>
+    <body>
+        <div class="container">
+            <a class="index" href="/">Anthozoan77&#39;s Blog</a>
+            <div class="main article">
+                <div class="title">Git学习笔记（1）</div>
+                <div class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.jpg);"></span>
+                    <a class="name" href="/about.me.html">anthozoan77</a>
+                    <span class="date" data-time="1428656400">
+                        <span class="from"></span>
+                        <span class="date" data-time="1428942214">（更新于<span class="from"></span>）</span>
+                    </span>
+                    <span class="tags"><a class="tag" href="/tag/Git/index.html">Git</a><a class="tag" href="/tag/%e7%ac%94%e8%ae%b0/index.html">笔记</a></span>
+                </div>
+                <div class="content"><h4>教程来源：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" title="廖雪峰的官方网站">廖雪峰的官方网站</a></h4>
+
+<ol>
+<li><p>创建版本库</p>
+
+<ul>
+<li>初始化一个Git仓库，使用<code>git init</code>命令</li>
+<li>添加文件到Git仓库，分两步：
+
+<ul>
+<li>第一步，使用命令<code>git add &lt;file&gt;</code>，可反复使用添加多个文件</li>
+<li>第二步，使用命令<code>git commit -m &quot;xxx&quot;</code>，<code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，非强制但推荐</li>
+</ul></li>
+</ul></li>
+
+<li><p>时光机穿梭</p>
+
+<ol>
+<li>预备知识
+
+<ul>
+<li>掌握工作区的状态，使用<code>git status</code>命令</li>
+<li>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容</li>
+</ul></li>
+<li>版本回退
+
+<ul>
+<li>使用命令<code>git log</code>可以查看从最近到最远的三次提交日志，若嫌输出信息太多，可以加上参数<code>--pretty=oneline</code></li>
+<li>使用命令<code>git reset --hard commit_id</code>在不同版本穿梭。<code>commit_id</code>可以用类似于<code>HEAD</code>的形式代替。<code>HEAD</code>指向的版本就是当前版本，上一个版本就是<code>HEAD^</code>,上上版本就是<code>HEAD^^</code>,往上100个版本可以写作<code>HEAD~100</code></li>
+<li>要重返回来，用<code>git reflog</code>查看命令历史，通过获得具体<code>commit_id</code>来确定要回到哪个版本上</li>
+</ul></li>
+<li>工作区和暂存区<br />
+工作区（Working Directory）：就是在你电脑里能看到的目录<br />
+版本库（Repository）：工作区里的隐藏目录<code>.git</code><br />
+暂存区：版本库中的<code>index</code><br />
+把文件往Git版本库添加分两步执行：<br />
+    1. 第一步用<code>git add</code>把文件添加进去，实际上就是把文件修改添加到暂存区
+    2. 第二步用<code>git commit</code>提交更改，实际上就是把暂存区的所有内容提交到当前分支</li>
+<li>管理修改<br />
+Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件<br />
+每次修改，如果不add到暂存区，那就不会加入到commit中<br /></li>
+<li>撤销修改
+
+<ol>
+<li><code>git checkout -- file</code>可以丢弃工作区的修改，适合于两种情形：
+
+<ol>
+<li>文件修改后还没有放到暂存区，撤销修改后和版本库一模一样。即让文件回到最近一次<code>git commit</code>状态</li>
+<li>文件已经添加到暂存区后又作了修改，撤销修改就回到添加到暂存区以后的状态。即让文件回到最近一次<code>git add</code>状态</li>
+</ol></li>
+<li><code>git reset HEAD file</code>可以把暂存区的修改退回到工作区，当使用<strong>HEAD</strong>时，表示最新版本。至于如何丢弃工作区的修改，上一条已解释</li>
+</ol></li>
+<li>删除文件<br />
+分以下两种情况：
+
+<ol>
+<li>直接在文件管理器中删除文件，或者用<strong>rm</strong>命令。此时工作区和版本库就不一致，可用<code>git status</code>查看，进而有以下两种情况：
+
+<ul>
+<li>确认删除：需要从版本库中删除该文件，使用命令<code>git rm</code>,并且<code>git commit</code></li>
+<li>文件恢复：因为文件修改尚未放到暂存区，所以使用命令<code>git checkout -- file</code></li>
+</ul></li>
+<li>使用git命令<code>git rm</code>删除文件，同时自动将修改加入暂存区。同理有以下两种情况：
+
+<ul>
+<li>确认删除：只需提交即可</li>
+<li>文件恢复：因为已将修改加入暂存区，首先使用<code>git reset HEAD file</code>把暂存区的修改退回到工作区，再使用<code>git checkout -- file</code>丢弃修改来恢复</li>
+</ul></li>
+</ol></li>
+</ol></li>
+</ol>
+</div>
+                <div class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.jpg);"></div>
+                    <a class="name" href="/about.me.html">anthozoan77</a>
+                    <div class="intro">码农</div>
+                </div>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="copyright">
+                Anthozoan77&#39;s Blog ©
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+            </span>
+            <span class="publish">Powered by <a href="http://www.inkpaper.io/" target="_blank">Ink</a></span>
+        </div>
+        <script src="/js/jquery-1.11.2.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+        <script src="/js/jquery.fluidbox.min.js"></script>
+        <script src="/js/index.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </body>
+</html>

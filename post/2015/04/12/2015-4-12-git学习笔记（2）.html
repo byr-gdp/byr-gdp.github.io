@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+        <meta name="keywords" content="Git,笔记,">
+        <meta name="description" content="Git学习笔记（2）">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/monokai_sublime.css">
+        <link rel="stylesheet" href="/css/fluidbox.css">
+        <title>Git学习笔记（2）</title>
+    </head>
+    <body>
+        <div class="container">
+            <a class="index" href="/">Anthozoan77&#39;s Blog</a>
+            <div class="main article">
+                <div class="title">Git学习笔记（2）</div>
+                <div class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.jpg);"></span>
+                    <a class="name" href="/about.me.html">anthozoan77</a>
+                    <span class="date" data-time="1428829200">
+                        <span class="from"></span>
+                        <span class="date" data-time="1428942214">（更新于<span class="from"></span>）</span>
+                    </span>
+                    <span class="tags"><a class="tag" href="/tag/Git/index.html">Git</a><a class="tag" href="/tag/%e7%ac%94%e8%ae%b0/index.html">笔记</a></span>
+                </div>
+                <div class="content"><h4>教程来源：<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" title="廖雪峰的官方网站">廖雪峰的官方网站</a></h4>
+
+<ol>
+<li>远程仓库
+
+<ol>
+<li>添加远程库
+
+<ul>
+<li>要关联一个远程库，使用命令<strong>git remote add origin git@github.com:user-name/repo-name.git</strong></li>
+<li>关联后，使用命令<strong>git push -u origin master</strong>第一次推送master分支的所有内容</li>
+<li>此后，每次本地提交可以使用命令<strong>git push origin master</strong>推送最新修改</li>
+</ul></li>
+<li>从远程库克隆<br />
+使用命令<strong>git clone git@github.com:user-name/repo-name.git</strong>。GIt支持多种协议，包括<strong>Https</strong>，但通过<strong>ssh</strong>支持的原生git协议速度最快</li>
+</ol></li>
+<li>分支管理
+
+<ol>
+<li>创建与合并分支
+
+<ol>
+<li>查看分支：<code>git branch</code></li>
+<li>创建分支：<code>git branch &lt;name&gt;</code></li>
+<li>切换分支：<code>git checkout &lt;name&gt;</code></li>
+<li>创建+切换分支：<code>git checkout -b &lt;name&gt;</code></li>
+<li>合并某分支到当前分支：<code>git merge &lt;name&gt;</code>，快进模式（Fast-forward)</li>
+<li>删除分支：<code>git branch -d &lt;name&gt;</code></li>
+</ol></li>
+<li>解决冲突<br />
+
+<ul>
+<li>只能试图把各自的冲突合并起来，需手动解决</li>
+<li>用<code>git log --graph</code>命令可以看到分支合并图，如使用<code>git log --graph --pretty=oneline --abbrev-commit</code></li>
+</ul></li>
+<li>分支管理策略<br />
+通常，合并分支时，如果可能，Git会用<code>Fast forward</code>模式，但这种模式下，删除分支后会丢掉分支信息。如果要强制禁用Fast forward模式，即使用<strong>&ndash;no-ff方式的git merge</strong>，Git就会在merge时生成一个新的commit，这样从分支历史上就可以看出分支信息。</li>
+<li>Bug分支<br />
+
+<ol>
+<li>Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作</li>
+<li>恢复一下，有两个办法：
+
+<ol>
+<li>用<code>git stash apply</code>恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除</li>
+<li>用<code>git stash pop</code>，恢复的同时把stash内容也删了</li>
+</ol></li>
+</ol></li>
+<li>Feature分支<br />
+丢弃一个没有被合并过的分支，可以通过<code>git branch -D &lt;name&gt;</code>强行删除</li>
+<li>多人协作（待补充）</li>
+</ol></li>
+</ol>
+</div>
+                <div class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.jpg);"></div>
+                    <a class="name" href="/about.me.html">anthozoan77</a>
+                    <div class="intro">码农</div>
+                </div>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="copyright">
+                Anthozoan77&#39;s Blog ©
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+            </span>
+            <span class="publish">Powered by <a href="http://www.inkpaper.io/" target="_blank">Ink</a></span>
+        </div>
+        <script src="/js/jquery-1.11.2.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+        <script src="/js/jquery.fluidbox.min.js"></script>
+        <script src="/js/index.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </body>
+</html>

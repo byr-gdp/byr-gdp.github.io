@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=1">
+        <meta name="keywords" content="北邮人,网易云音乐,外链播放器,论坛,">
+        <meta name="description" content="如何在北邮人论坛回帖插入外链播放器">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/monokai_sublime.css">
+        <link rel="stylesheet" href="/css/fluidbox.css">
+        <title>如何在北邮人论坛回帖插入外链播放器</title>
+    </head>
+    <body>
+        <div class="container">
+            <a class="index" href="/">Anthozoan77&#39;s Blog</a>
+            <div class="main article">
+                <div class="title">如何在北邮人论坛回帖插入外链播放器</div>
+                <div class="info">
+                    <span class="avatar" style="background-image: url(/images/avatar.jpg);"></span>
+                    <a class="name" href="/about.me.html">anthozoan77</a>
+                    <span class="date" data-time="1425200400">
+                        <span class="from"></span>
+                        <span class="date" data-time="1428544800">（更新于<span class="from"></span>）</span>
+                    </span>
+                    <span class="tags"><a class="tag" href="/tag/%e5%8c%97%e9%82%ae%e4%ba%ba/index.html">北邮人</a><a class="tag" href="/tag/%e7%bd%91%e6%98%93%e4%ba%91%e9%9f%b3%e4%b9%90/index.html">网易云音乐</a><a class="tag" href="/tag/%e5%a4%96%e9%93%be%e6%92%ad%e6%94%be%e5%99%a8/index.html">外链播放器</a><a class="tag" href="/tag/%e8%ae%ba%e5%9d%9b/index.html">论坛</a></span>
+                </div>
+                <div class="content"><h3>最终效果如下</h3>
+
+<p><img src="http://i.imgur.com/hMd4kjL.png" alt="" />
+</p>
+
+<p>核心部分即回帖内容格式，以截图内容为例<br />
+[swf=<a href="http://music.163.com/style/swf/widget.swf?sid=30053697&amp;type=2&amp;auto=1&amp;width=320&amp;height=66">http://music.163.com/style/swf/widget.swf?sid=30053697&amp;type=2&amp;auto=1&amp;width=320&amp;height=66</a> width=340&amp;height=86][/swf]</p>
+
+<p>基本格式为<code>[swf=&quot;swf文件地址及参数&quot;][/swf]</code></p>
+
+<p>swf文件地址及参数的如何获取？下面以网易云音乐为例</p>
+
+<hr />
+
+<h3>1. 在WEB端的网易云音乐找到你所心仪的歌曲，如下图</h3>
+
+<p><img src="http://i.imgur.com/x5uT6xA.png" alt="" />
+</p>
+
+<hr />
+
+<h3>2. 单击<strong>生成外链播放器</strong>，在没有版权保护的情况下，进入下图所示界面</h3>
+
+<p><img src="http://i.imgur.com/HdgWLra.png" alt="" />
+</p>
+
+<hr />
+
+<h3>3. 选择<strong>flash插件</strong></h3>
+
+<p><img src="http://i.imgur.com/mAPI11M.png" alt="" />
+</p>
+
+<hr />
+
+<h3>4. 注意<strong>HTML代码</strong>部分，将以下部分复制下来，此即“swf文件地址及参数”的前身</h3>
+
+<p><code>http://music.163.com/style/swf/widget.swf?sid=30053697&amp;type=2&amp;auto=1&amp;width=320&amp;height=66&quot; width=&quot;340&quot; height=&quot;86&quot;</code></p>
+
+<hr />
+
+<h3>5. 去掉参数中的<strong>双引号</strong> ，同时两个参数之间用<strong>&amp;</strong>连接，修改后即为我们需要的“swf文件地址及参数”</h3>
+
+<p><code>http://music.163.com/style/swf/widget.swf?sid=30053697&amp;type=2&amp;auto=1&amp;width=320&amp;height=66&amp;width=340&amp;height=86</code></p>
+
+<hr />
+
+<h3>6. 代入基本格式，即为回帖内容</h3>
+
+<p><code>[swf=http://music.163.com/style/swf/widget.swf?sid=30053697&amp;type=2&amp;auto=1&amp;width=320&amp;height=66 width=340&amp;height=86][/swf]</code><br />
+&lt;完&gt;<br />
+&lt;最后修改于2015年4月10日&gt;</p>
+</div>
+                <div class="author">
+                    <div class="avatar" style="background-image: url(/images/avatar.jpg);"></div>
+                    <a class="name" href="/about.me.html">anthozoan77</a>
+                    <div class="intro">码农</div>
+                </div>
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="copyright">
+                Anthozoan77&#39;s Blog ©
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+            </span>
+            <span class="publish">Powered by <a href="http://www.inkpaper.io/" target="_blank">Ink</a></span>
+        </div>
+        <script src="/js/jquery-1.11.2.min.js"></script>
+        <script src="/js/highlight.pack.js"></script>
+        <script src="/js/jquery.fluidbox.min.js"></script>
+        <script src="/js/index.js"></script>
+        <script type="text/javascript">
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </body>
+</html>
