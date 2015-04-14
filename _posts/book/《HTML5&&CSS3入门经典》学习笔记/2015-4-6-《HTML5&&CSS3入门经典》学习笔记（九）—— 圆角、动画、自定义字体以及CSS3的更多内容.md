@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Chapter 9	圆角、动画、自定义字体以及CSS3的更多内容
-category: 技术
-tags: JavaScript
-description: JS中防止浏览器屏蔽window.open
+category: 《HTML5&&CSS3入门经典》学习笔记
+tags: HTML CSS
+description: 圆角、动画、自定义字体以及CSS3的更多内容
 ---
 1. CSS3的模块化方式
 2. 成熟的CSS3模块

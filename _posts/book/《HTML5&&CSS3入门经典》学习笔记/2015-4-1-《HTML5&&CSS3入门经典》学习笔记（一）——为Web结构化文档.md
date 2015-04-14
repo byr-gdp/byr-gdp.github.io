@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Chapter 1	为WEB结构化文档
-category: 技术
-tags: JavaScript
-description: JS中防止浏览器屏蔽window.open
+category: 《HTML5&&CSS3入门经典》学习笔记
+tags: HTML CSS
+description: 为WEB结构化文档
 ---
 
 1. 布尔特性：HTML5中存在一些不是由“名称/值”对组成，而只有一个名称组成的特性。这些特性被称为“不二特性”，如“required”或者“checked”
