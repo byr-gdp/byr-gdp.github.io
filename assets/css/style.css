@@ -105,9 +105,10 @@ a {
   width: 100px;
   height: 100px;
   margin: 55px auto 35px;
-  background: url(/assets/img/avatar.png);
   border-radius: 50%;
   box-shadow: 0 0 0px 4px white, 0 0 4px 4px #eee;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
   overflow: hidden;
   display: block; }
   #avatar:hover {
@@ -118,7 +119,6 @@ a {
     animation: spin .35s linear infinite; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     #avatar {
-      background: url(/assets/img/avatar@2X.png);
       -webkit-background-size: 100px 100px;
       -moz-background-size: 100px 100px;
       background-size: 100px 100px; } }
@@ -238,7 +238,6 @@ a {
 #mobile-avatar {
   width: 50px;
   height: 50px;
-  background: url(/assets/img/avatar.png);
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
   background-size: 50px 50px;

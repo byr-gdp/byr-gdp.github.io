@@ -1,15 +1,33 @@
-permalink: /:year/:month/:day/:title.html   #博文的固定链接
-paginate: 10                                #分页时每页博文数量
-author:                                     #自定义常亮
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+pygments: true
+
+kramdown:
+  input: GFM
+
+# 作者信息
+author: 
   name: 龚大鹏
   email: anthozoan77@gmail.com
-title: 龚大鹏的博客                             #自定义常量
-locals:                                     #自定义常量
-  tags: 标签
-  about: 关于
-active: 技术
-		工具
-		资源
-		读书                                 #自定义常量
-subscribe_rss: /pages/atom.xml              #订阅地址
-markdown: redcarpet                         #markdown解释器
+  #link: http://yansu.org
+  #weibo: http://weibo.com/yansu0711
+  github: http://github.com/byr-gdp
+
+# 站点信息
+title: 龚大鹏的博客 
+description: 龚大鹏的博客
+#url: http://yansu.org
+rss_url: /pages/atom.xml
+
+# avatar头像及Favicon
+avatar: http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png
+favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
+
+# google analytics 设置
+ga:
+  id: UA-54767140-1
+ # url: yansu.org
+
+# disqus 设置
+disqus:
+  #shortname: suyan-zh
