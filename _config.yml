@@ -20,9 +20,8 @@ description: 龚大鹏的博客
 rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
-avatar: ./assets/img/avatar.png
-# favicon: http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico
-
+avatar:  ./assets/img/avatar.png
+favicon: ./assets/img/avatar.png
 # Sidebar filter
 # Choose 'tag' or 'category' as filter in sidebar.
 filter: 'category'
