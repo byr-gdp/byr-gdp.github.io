@@ -1,1 +1,15 @@
-pygments: true
+permalink: /:year/:month/:day/:title.html   #博文的固定链接
+paginate: 10                                #分页时每页博文数量
+author:                                     #自定义常亮
+  name: 龚大鹏
+  email: anthozoan77@gmail.com
+title: 龚大鹏的博客                             #自定义常量
+locals:                                     #自定义常量
+  tags: 标签
+  about: 关于
+active: 技术
+		工具
+		资源
+		读书                                 #自定义常量
+subscribe_rss: /pages/atom.xml              #订阅地址
+markdown: redcarpet                         #markdown解释器
