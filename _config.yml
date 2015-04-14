@@ -27,10 +27,10 @@ favicon: ./assets/img/avatar.png
 filter: 'category'
 
 # google analytics 设置
-ga:
-  id: UA-54767140-1
+# ga:
+  # id: UA-54767140-1
  # url: yansu.org
 
 # disqus 设置
 disqus:
-  shortname: byr-gdp
+  shortname: byrgdpgithubio
