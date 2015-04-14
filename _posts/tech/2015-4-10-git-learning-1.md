@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git学习笔记（1）
-category:技术
+category: 技术
 tags: Git
 description: Git学习笔记（1）
 ---
