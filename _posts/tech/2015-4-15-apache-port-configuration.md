@@ -54,6 +54,7 @@ description: 配置Apache不同的端口指向不同的网站
     ErrorLog "logs/dummy-host.q.com-error.log"
     CustomLog "logs/dummy-host.q.com-access.log" common
 	</VirtualHost>  
+
 最重要的地方是**VirtualHost \*：port**,以及**DocumentRoot**，其它选项我是直接复制
 
 ### 6.当然，第三步的DocumentRoot可以设置为其他目录。不过个人觉得放在一起，以端口号来命名文件夹的形式也不错
