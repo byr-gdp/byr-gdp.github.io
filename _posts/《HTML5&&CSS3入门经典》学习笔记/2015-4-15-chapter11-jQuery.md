@@ -6,7 +6,7 @@ tags: HTML CSS JavaScript
 description: 使用jQuery
 ---
 
-## 1. jQuery基础
+### 1. jQuery基础
  1. $函数介绍  
 	可以使用两种不同的名称访问此函数：jQuery或者$，二者等价。
  2. 链式结构
