@@ -35,8 +35,8 @@ description: 配置Apache不同的端口指向不同的网站
     ErrorLog "logs/dummy-host2.byr_gdp.com-error.log"
     CustomLog "logs/dummy-host2.byr_gdp.com-access.log" common
 	</VirtualHost>  
-
-在后面追加以下内容  
+  
+在后面追加以下内容    
 	
 	<VirtualHost *:1024>
     ServerAdmin webmaster@dummy-host.q.com
@@ -55,6 +55,8 @@ description: 配置Apache不同的端口指向不同的网站
     ErrorLog "logs/dummy-host.q.com-error.log"
     CustomLog "logs/dummy-host.q.com-access.log" common
 	</VirtualHost>  
+
+  
 
 最重要的地方是**VirtualHost \*：port**,以及**DocumentRoot**，其它选项我是直接复制
 
