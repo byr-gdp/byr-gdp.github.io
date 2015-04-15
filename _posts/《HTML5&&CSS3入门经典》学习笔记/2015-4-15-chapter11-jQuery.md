@@ -6,7 +6,8 @@ tags: HTML CSS JavaScript
 description: 使用jQuery
 ---
 
-### 1. jQuery基础
+###
+ 1. jQuery基础
  1. $函数介绍  
 	可以使用两种不同的名称访问此函数：jQuery或者$，二者等价。
  2. 链式结构
@@ -17,21 +18,17 @@ description: 使用jQuery
  1. 使用jQuery选择元素  
 	使用$()及一个CSS选择器选择一个或一组元素
  2. 创建和添加元素  
-	创建元素形式如：
-	>
-		var elem = $("<h1>").text("Good Morning").attr("id","greeting");
+	创建元素形式如：  
+	> `var elem = $("<h1>").text("Good Morning").attr("id","greeting");`
 	  
 	比较灵活的写法还有：  
-	>
-		var elem = "$("<h1>Good Morning</h1>").attr("id","greeting");
+	> `var elem = "$("<h1>Good Morning</h1>").attr("id","greeting");`
 	
 	更进一步：
-	> 
-		var elem = "$("<h1 id = "greeting">Good Morning"</h1>);
+	> `var elem = "$("<h1 id = "greeting">Good Morning"</h1>);`
 
 	添加元素形式如：
-	>
-		$("#container").append(elem);
+	> `$("#container").append(elem);`
 
  3. 使用jQuery操控元素  
 	1. 使用`$().addClass()、$().removeClass()、$().hasClass()和$().toggleClass()`管理CSS类
