@@ -34,7 +34,8 @@ description: 配置Apache不同的端口指向不同的网站
     ServerName dummy-host2.byr_gdp.com
     ErrorLog "logs/dummy-host2.byr_gdp.com-error.log"
     CustomLog "logs/dummy-host2.byr_gdp.com-access.log" common
-	</VirtualHost>
+	</VirtualHost>  
+
 在后面追加以下内容  
 	
 	<VirtualHost *:1024>
