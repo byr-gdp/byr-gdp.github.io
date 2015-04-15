@@ -10,7 +10,9 @@ description: 前端开发自动刷新实现方法总结
 ### 1. [Live.js](http://livejs.com/)  
 官网介绍：
 
-	Just include Live.js and it will monitor the current page including local CSS and Javascript by sending consecutive HEAD requests to the server. Changes to CSS will be applied dynamically and HTML or Javascript changes will reload the page.  
+	Just include Live.js and it will monitor the current page including local CSS and Javascript 
+	by sending consecutive HEAD requests to the server. Changes to CSS will be applied dynamically 
+	and HTML or Javascript changes will reload the page.  
 
 大意就是引入`Live.js`文件后它会通过不断发送HEAD请求来监视当前页面本地CSS和JS。任何CSS的改变会动态显示同时HTML和JS的变化会重载页面。  
 使用方法：  
@@ -36,7 +38,7 @@ description: 前端开发自动刷新实现方法总结
 接下来有两种方法。  
 1. 一种是在HTML文件`<body>`前嵌入下面一段话  
  
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>  
+	 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>  
 
 2.安装浏览器插件（推荐）  
 
