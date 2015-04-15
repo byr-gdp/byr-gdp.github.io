@@ -9,13 +9,15 @@ description: 前端开发自动刷新实现方法总结
 
 ### 1. [Live.js](http://livejs.com/)  
 官网介绍：
->Just include Live.js and it will monitor the current page including local CSS and Javascript by sending consecutive HEAD requests to the server. Changes to CSS will be applied dynamically and HTML or Javascript changes will reload the page.  
+
+	Just include Live.js and it will monitor the current page including local CSS and Javascript by sending consecutive HEAD requests to the server. Changes to CSS will be applied dynamically and HTML or Javascript changes will reload the page.  
 
 大意就是引入`Live.js`文件后它会通过不断发送HEAD请求来监视当前页面本地CSS和JS。任何CSS的改变会动态显示同时HTML和JS的变化会重载页面。  
 使用方法：  
 	1. 下载`live.js`文件并引入到HTML文件中  
 	2. 官网原文这样描述  
-> use the bookmarklet! Drag the following link to your bookmarks bar   
+	
+	use the bookmarklet! Drag the following link to your bookmarks bar   
   
 意思应该是把该链接拖到书签即可使用，初步尝试没有效果。
 
@@ -44,8 +46,10 @@ description: 前端开发自动刷新实现方法总结
 3. 点击`Chrome extension on the Chrome Web Store`,按照提示安装即可。**注意：安装完插件后需要进入扩展程序设置允许LiveReload访问文件地址**，如下图所示  
 ![](http://i.imgur.com/OuCroL4.png)  
 
-Done,enjoy it！  
+	**Done,enjoy it！**  
 
-### 3. 包括但不限于以上方法，还有诸如**F5**、**brackets**等等，有机会再来补充
+### 3. 包括但不限于以上方法，还有诸如**F5**、**brackets**等等，有机会再来补充  
+
 <完>  
+
 <最后修改于2015-4-15 22:47:47>
