@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NoSql数据库入门（2）——MongoDB（面向文档的数据库）
-category: 技术 笔记
+category: 技术,笔记
 tags: NoSQL MongoDB
 description: NoSql数据库入门（2）——MongoDB（面向文档的数据库）
 ---
