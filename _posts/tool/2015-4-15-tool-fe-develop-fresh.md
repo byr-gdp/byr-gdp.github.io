@@ -13,9 +13,11 @@ description: 前端开发自动刷新实现方法总结
 > Just include Live.js and it will monitor the current page including local CSS and Javascript by sending consecutive HEAD requests to the server. Changes to CSS will be applied dynamically and HTML or Javascript changes will reload the page.  
 
 大意就是引入`Live.js`文件后它会通过不断发送HEAD请求来监视当前页面本地CSS和JS。任何CSS的改变会动态显示同时HTML和JS的变化会重载页面。  
-使用方法：  
-1. 下载`live.js`文件并引入到HTML文件中  
-2. 官网原文这样描述  
+使用方法：
+  
+#### 1. 下载`live.js`文件并引入到HTML文件中  
+
+#### 2. 官网原文这样描述  
 	
 > use the bookmarklet! Drag the following link to your bookmarks bar   
   
@@ -25,6 +27,7 @@ description: 前端开发自动刷新实现方法总结
 
 三大平台均有，本文只限于Windows版  
 使用方法：  
+
 #### 1. 下载适合Windows的安装包，下载链接[单击我](http://download.livereload.com/windows/LiveReloadSetup.exe)  
 
 #### 2. 安装需要一段时间，安装成功后打开出现如下界面  
