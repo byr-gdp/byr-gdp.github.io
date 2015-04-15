@@ -2,7 +2,7 @@
 layout: post
 title: 前端开发自动刷新实现方法总结
 category: 工具
-tags: 前端
+tags: 前端 自动刷新 敏捷开发
 description: 前端开发自动刷新实现方法总结
 
 ---
@@ -26,21 +26,21 @@ description: 前端开发自动刷新实现方法总结
 ### 2.[LiveReload](http://livereload.com/)
 三大平台均有，本文只限于Windows版  
 使用方法：  
-1. 下载适合Windows的安装包，下载链接[单击我](http://download.livereload.com/windows/LiveReloadSetup.exe)  
-2. 在线安装需要一段时间，安装成功后打开出现如下界面  
+#### 1. 下载适合Windows的安装包，下载链接[单击我](http://download.livereload.com/windows/LiveReloadSetup.exe)  
+#### 2. 安装需要一段时间，安装成功后打开出现如下界面  
 ![](http://i.imgur.com/gvnHYkC.png)  
-接下来单击**+add**添加一个工作目录后如下图  
+#### 3. 接下来单击**+add**添加一个工作目录后如下图  
 ![](http://i.imgur.com/uTqdz4d.png)  
-选中之前添加的目录，界面如下  
+#### 4. 选中之前添加的目录，界面如下  
 ![](http://i.imgur.com/u25Pts2.png)  
-注意红色矩形圈中部分  
+#### 5. 注意红色矩形圈中部分  
 ![](http://i.imgur.com/MYgd76e.png)  
 接下来有两种方法。  
-1. 一种是在HTML文件`<body>`前嵌入下面一段话  
+##### 1. 一种是在HTML文件`<body>`前嵌入下面一段话  
  
 	 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>  
 
-2.安装浏览器插件（推荐）  
+##### 2.安装浏览器插件（推荐）  
 
 1. 单击`install browser extensions`链接
 2. 在打开的网页如下图，根据你的浏览器选择对号入座，这里以Chrome为例  
