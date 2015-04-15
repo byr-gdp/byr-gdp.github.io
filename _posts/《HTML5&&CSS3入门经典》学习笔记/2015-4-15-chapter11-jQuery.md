@@ -18,22 +18,18 @@ description: 使用jQuery
 	使用$()及一个CSS选择器选择一个或一组元素
  2. 创建和添加元素  
 	创建元素形式如：  
-	> `var elem = $("<h1>").text("Good Morning").attr("id","greeting");`
-	  
+	`var elem = $("<h1>").text("Good Morning").attr("id","greeting");`  
 	比较灵活的写法还有：  
-	> `var elem = "$("<h1>Good Morning</h1>").attr("id","greeting");`
-	
+	`var elem = "$("<h1>Good Morning</h1>").attr("id","greeting");`  
 	更进一步：
-	> `var elem = "$("<h1 id = "greeting">Good Morning"</h1>);`
-
+	`var elem = "$("<h1 id = "greeting">Good Morning"</h1>);`  
 	添加元素形式如：
-	> `$("#container").append(elem);`
-
- 3. 使用jQuery操控元素  
+	`$("#container").append(elem);`
+ 3. 使用jQuery操控元素
 	1. 使用`$().addClass()、$().removeClass()、$().hasClass()和$().toggleClass()`管理CSS类
 	2. 使用`$().attr()`获取或设置特性
 	3. 使用`$().css()`获取或设置CSS属性
-	4. 使用`$().html()`获取或设置元素的HTML
+	4. 使用`$().html()`获取或设置元素的HTML  
  4. 基本动画与特效
 	1. 使用`$().show()、$().hide()和$().toggle()`显示与隐藏元素
 	2. 使用`$().fadeIn()、$().fadeOut()、$().fadeToggle()`动态显示不透明度
