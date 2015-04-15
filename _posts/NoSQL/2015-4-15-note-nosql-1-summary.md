@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NoSql数据库入门（1）——NoSQL数据库的基础知识
-category: 技术 笔记
+category: NoSQL
 tags: NoSQL
 description: NoSql数据库入门（1）——NoSQL数据库的基础知识
 ---
