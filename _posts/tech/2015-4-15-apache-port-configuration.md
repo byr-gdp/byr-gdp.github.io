@@ -36,7 +36,7 @@ description: 配置Apache不同的端口指向不同的网站
     CustomLog "logs/dummy-host2.byr_gdp.com-access.log" common
 	</VirtualHost>  
 
-在后面追加以下内容二  
+在后面追加以下内容  
 	
 	<VirtualHost *:1024>
     ServerAdmin webmaster@dummy-host.q.com

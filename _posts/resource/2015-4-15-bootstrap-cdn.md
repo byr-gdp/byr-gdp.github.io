@@ -7,7 +7,7 @@ description: bootstrap CDN加速服务
 ---
 
 ### 1. 使用 Bootstrap 中文网提供的免费 CDN 加速服务  
-	<嗯嗯嗯!-- 新 Bootstrap 核心 CSS 文件 -->
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
