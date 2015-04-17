@@ -34,3 +34,7 @@ description: 使用jQuery
 	1. 使用`$().show()、$().hide()和$().toggle()`显示与隐藏元素
 	2. 使用`$().fadeIn()、$().fadeOut()、$().fadeToggle()`动态显示不透明度
 	3. 使用`$().slideUp()、$().slideDown()和$().slideToggle()`创建滑动门效果
+
+### 3. 使用jQuery管理事件
+1. jQuery遗留事件处理  
+	`$().bind()`和`$().unbind()`，其行为与使用标准的`$().on`和`$().off()`完全一致
