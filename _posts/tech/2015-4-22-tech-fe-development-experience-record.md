@@ -17,3 +17,6 @@ inline-box可以设置width和height属性，而inline该属性无效。
 	有一种说法是这样实现代码量大，不如ul直观
 2. 使用ul  
 	相应的需要将垂直排列的li变为水平，仅需给li设置css属性`display:inline-block`即可
+
+### 4. div中图片水平居中  
+`text-align:center`即可，向左向右更改center
