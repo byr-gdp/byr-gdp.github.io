@@ -15,8 +15,25 @@ description: 找实习的那些日子
 - 我会尽量按照“时间 地点 公司信息 事件 结果 原因”的格式来维护。 
  
 ---
-- 2015-03-28　　　北京市海淀区东北旺中关村软件园孵化器2A楼2308室　　 跟谁学  　 　 面试　　　Failed　　　　布局无经验
-- 2015-31-31　　　北京市海淀区清华科技园创业大厦2层　　　　　　　　　网易有道　　霸笔　　　Unknown
-- 2015-04-07　　　北京市海淀区清华科技园创业大厦2层　　　　　　　　　网易有道　　面试　　　Failed　　　　原生JS和JQuery经验不足，不推荐bootstrap
-- 2015-04-18　　　清华大学三教3300　　　　　　　　　　　　　　　　　　腾讯　　　 笔试　　　Failed
-- 2015-04-23　　　五道口学研大厦A座AB107　　　　　　　　　　　　　　闻题鸟　　　面试　　　
+
+
+<table>
+<tr>
+	<td>2015-03-28</td><td>北京市海淀区东北旺中关村软件园孵化器2A楼2308室</td><td>跟谁学</td><td>面试</td><td>Failed</td><td>布局无经验</td>
+</tr>
+<tr>
+	<td>2015-31-31</td><td>北京市海淀区清华科技园创业大厦2层</td><td>网易有道</td><td>霸笔</td><td>Succeed</td><td></td>
+</tr>
+<tr>
+	<td>2015-04-07</td><td>北京市海淀区清华科技园创业大厦2层</td><td>网易有道</td><td>面试</td><td>Failed</td><td>原生JS和JQuery经验不足，不推荐bootstrap</td>
+</tr>
+<tr>
+	<td>2015-04-18</td><td>清华大学三教3300/td><td>腾讯</td><td>笔试</td><td>Failed</td><td></td>
+</tr>
+<tr>
+	<td>2015-04-23</td><td>五道口学研大厦A座AB107</td><td>闻题鸟</td><td>面试</td><td>Waiting</td><td></td>
+</tr>
+<tr>
+	<td>2015-04-27</td><td>知春路锦秋家园1号楼2101</td><td>朝夕</td><td>面试</td><td>Waiting</td><td>布局无经验</td>
+</tr>
+</table>
