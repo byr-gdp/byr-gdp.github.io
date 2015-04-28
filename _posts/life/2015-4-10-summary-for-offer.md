@@ -34,6 +34,6 @@ description: 找实习的那些日子
 	<td>2015-04-23</td><td>五道口学研大厦A座AB107</td><td>闻题鸟</td><td>面试</td><td>Waiting</td><td></td>
 </tr>
 <tr>
-	<td>2015-04-27</td><td>知春路锦秋家园1号楼2101</td><td>朝夕</td><td>面试</td><td>Waiting</td><td>布局无经验</td>
+	<td>2015-04-27</td><td>知春路锦秋家园1号楼2101</td><td>朝夕</td><td>面试</td><td>Waiting</td><td></td>
 </tr>
 </table>
