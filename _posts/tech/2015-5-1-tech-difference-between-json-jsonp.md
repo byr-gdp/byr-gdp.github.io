@@ -18,7 +18,7 @@ JSONP是在参加乐视WEB前端开发实习生面试过程中面试官问到的
 ### 2.JSONP应用
 1. 服务器端jsonp.php代码为：  
 >
-	<?php  
+<?php  
 	header('Content-type: application/json');  
 	//获取回调函数名  
 	$jsoncallback = htmlspecialchars($_REQUEST ['jsoncallback']);  
@@ -29,53 +29,54 @@ JSONP是在参加乐视WEB前端开发实习生面试过程中面试官问到的
 	?>  
 
 2. 客户端html代码为：  
->
-	<!DOCTYPE html>
-	<html>
-	<head>
-    <title>JSONP 实例</title>
-	</head>
-	<body>
-    <div id="divCustomers"></div>
-    <script type="text/javascript">
-        function callbackFunction(data, methodName)
-        {
-            var html = '<ul>';
-            for(var i = 0; i < data.length; i++)
-            {
-                html += '<li>' + data[i].name + "&nbsp" + data[i].age + '</li>';
-            }
-            html += '</ul>';
-            document.getElementById('divCustomers').innerHTML = html;
-        }
-    </script>
-	<script type="text/javascript" src="jsonp.php?jsoncallback=callbackFunction"></script>
-	</body>
-	</html>
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+    		<title>JSONP 实例</title>
+		</head>
+		<body>
+    		<div id="divCustomers"></div>
+    		<script type="text/javascript">
+    		    function callbackFunction(data, methodName)
+    	    	{
+    	        	var html = '<ul>';
+    	        	for(var i = 0; i < data.length; i++)
+    	        	{
+    	            	html += '<li>' + data[i].name + "&nbsp" + data[i].age + '</li>';
+    	        	}
+    	        	html += '</ul>';
+    	        	document.getElementById('divCustomers').innerHTML = html;
+    	    	}
+    		</script>
+		<script type="text/javascript" src="jsonp.php?jsoncallback=callbackFunction"></script>
+		</body>
+		</html>
+
 
 3. jQuery使用JSONP
->
-	<!DOCTYPE html>
-	<html>
-	<head>
-	<title>JSONP 实例</title>
-	<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.js"></script>	
-	</head>
-	<body>
-	<div id="divCustomers"></div>
-	<script>
-	$.getJSON("jsonp.php?jsoncallback=?", function(data) {
-	var html = '<ul>';
-	for(var i = 0; i < data.length; i++)
-	{
-		html += '<li>' + data[i].name + "&nbsp" + data[i].age + '</li>';
-	}
-	html += '</ul>';
-	$('#divCustomers').html(html); 
-	});
-	</script>
-	</body>
-	</html> 
+
+		<!DOCTYPE html>
+		<html>
+		<head>
+		<title>JSONP 实例</title>
+		<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.js"></script>	
+		</head>
+		<body>
+		<div id="divCustomers"></div>
+		<script>
+		$.getJSON("jsonp.php?jsoncallback=?", function(data) {
+		var html = '<ul>';
+		for(var i = 0; i < data.length; i++)
+		{
+			html += '<li>' + data[i].name + "&nbsp" + data[i].age + '</li>';
+		}
+		html += '</ul>';
+		$('#divCustomers').html(html); 
+		});
+		</script>
+		</body>
+		</html> 
 
 ### 3.参考资料
 1. [维基百科-JSONP](http://zh.wikipedia.org/wiki/JSONP)
