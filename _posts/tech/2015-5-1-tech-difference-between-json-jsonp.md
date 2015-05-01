@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  关于JSONP的几点总结
-category: resource
+category: 技术
 tags: JSONP
 description: 关于JSONP的几点总结
 ---

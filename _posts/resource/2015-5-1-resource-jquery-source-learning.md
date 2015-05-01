@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jQuery 源码学习资源整理
-category: resource
+category: 资源
 tags: jQuery 源码
 description: jQuery 源码学习资源整理
 ---

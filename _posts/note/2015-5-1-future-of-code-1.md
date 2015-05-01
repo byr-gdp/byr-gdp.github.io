@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 《代码的未来》读书笔记
-category: note
+category: 笔记
 tags: 代码的未来 读书笔记
 description: 《代码的未来》读书笔记
 ---
