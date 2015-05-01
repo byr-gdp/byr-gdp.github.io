@@ -36,4 +36,13 @@ description: 找实习的那些日子
 <tr>
 	<td>2015-04-27</td><td>知春路锦秋家园1号楼2101</td><td>朝夕</td><td>面试</td><td>Waiting</td><td></td>
 </tr>
+<tr>
+	<td>2015-04-27</td><td></td><td>朝夕</td><td>面试</td><td>Waiting</td><td></td>
+</tr>
+<tr>
+	<td>2015-04-28</td><td>北京市海淀区天作国际大厦B座502室</td><td>不知名茶</td><td>面试</td><td>Succeed</td><td>正式工作地点在传媒大学，略远</td>
+</tr>
+<tr>
+	<td>2015-04-29</td><td>朝阳公园东乐视大厦</td><td>乐视</td><td>面试</td><td>Succeed</td><td>考虑中</td>
+</tr>
 </table>
