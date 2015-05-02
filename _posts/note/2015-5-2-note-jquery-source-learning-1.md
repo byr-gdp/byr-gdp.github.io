@@ -31,31 +31,32 @@ description: 慕课网 jQuery 源码解析总结
 任何库与框架设计的第一个要点就是解决命名空间与变量污染的问题。jQuery就是利用了JavaScript函数作用域的特性，采用**立即调用表达式**包裹了自身的方法来解决这个问题。  
 jQuery立即调用函数表达式有三种：  
 写法一：  
+		
+	(function(window, factory) {
+    	factory(window)
+	}(this, function() {
+    	return function() {
+  			//jQuery的调用
+   		}
+	}))
+上面的代码中嵌套了2个函数，而且把一个函数作为参数传递到另一个函数中并且执行，这种方法有点复杂，下面简化一下。    
+写法二：  
 
-		(function(window, factory) {
-    		factory(window)
-		}(this, function() {
-    		return function() {
-       			//jQuery的调用
-   			}
-		}))
-上面的代码中嵌套了2个函数，而且把一个函数作为参数传递到另一个函数中并且执行，这种方法有点复杂，下面简化一下，  
-写法二：
+	var factory = function(){
+    return function(){
+       	//执行方法
+   		}
+	}
+	var jQuery = factory();
 
-		var factory = function(){
-    	return function(){
-        	//执行方法
-   			}
-		}
-		var jQuery = factory();
 上面的代码效果和方法1是等同的，但是这个factory有点变成了简单的工厂方法模式，需要自己调用，不像是一个单例的jQuery类，所以我们需要改成“自执行”，而不是另外调用。  
-写法三：
+写法三：  
 
-		(function(window, undefined) {
-	    	var jQuery = function() {}
-		    // ...
-	    	window.jQuery = window.$ = jQuery;
-		})(window);
+	(function(window, undefined) {
+	    var jQuery = function() {}
+		// ...
+	    window.jQuery = window.$ = jQuery;
+	})(window);
 
 这种写法的优势：
 
