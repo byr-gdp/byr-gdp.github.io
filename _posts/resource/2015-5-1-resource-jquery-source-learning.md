@@ -25,3 +25,7 @@ description: jQuery 源码学习资源整理
 链接为：[jQuery1.6.1源码分析系列](http://www.cnblogs.com/nuysoft/archive/2011/11/14/2248023.html)  
 
 目前学习到**03 构造jQuery对象-源码结构和核心函数**
+
+
+### 3.jQuery源码分析系列-Aaron
+链接为：[jQuery源码分析系列](http://www.cnblogs.com/aaronjs/p/3279314.html)
