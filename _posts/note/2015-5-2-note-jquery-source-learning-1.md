@@ -29,8 +29,8 @@ description: 慕课网 jQuery 源码解析总结
 ### 2. 立即调用表达式
 注：[本节慕课教程](http://www.imooc.com/code/3247)示例代码四个click事件很有参考意义，比如**命名函数表达式不会预先提升**等。  
 任何库与框架设计的第一个要点就是解决命名空间与变量污染的问题。jQuery就是利用了JavaScript函数作用域的特性，采用**立即调用表达式**包裹了自身的方法来解决这个问题。  
-	jQuery立即调用函数表达式有三种：  
-	写法一：  
+jQuery立即调用函数表达式有三种：  
+写法一：  
 
 		(function(window, factory) {
     		factory(window)
@@ -49,7 +49,7 @@ description: 慕课网 jQuery 源码解析总结
 		}
 		var jQuery = factory();
 上面的代码效果和方法1是等同的，但是这个factory有点变成了简单的工厂方法模式，需要自己调用，不像是一个单例的jQuery类，所以我们需要改成“自执行”，而不是另外调用。  
-	写法三：
+写法三：
 
 		(function(window, undefined) {
 	    	var jQuery = function() {}
