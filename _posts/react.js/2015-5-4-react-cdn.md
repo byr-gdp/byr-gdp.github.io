@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React.js CDN 加速服务
-category: React.js
+category: React
 tags: React.js CDN
 description: React.js CDN 加速服务
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React.js学习笔记
-category: React.js
+category: React
 tags: React.js
 description: react.js学习笔记
 ---
@@ -19,4 +19,4 @@ description: react.js学习笔记
 		var myElement = <MyComponent someProperty={true} />;
 		React.render(myElement, document.body);
 
-3. 由于 JSX 就是 JavaScript，一些标识符像 class 和 for 不建议作为 XML 属性名。作为替代，React DOM 使用 `className` 和 `htmlFor` 来做对应的属性。
+3. 由于 JSX 就是 JavaScript，一些标识符像 class 和 for 不建议作为 XML 属性名。作为替代，React DOM 使用 `className` 和 `htmlFor` 来做对应的属性。 因为class 和 for 是 JavaScript的保留字

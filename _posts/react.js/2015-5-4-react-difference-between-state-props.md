@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 区分state和props
-category: React.js
+category: React
 tags: React.js state props
 description: 区分state和props
 ---
