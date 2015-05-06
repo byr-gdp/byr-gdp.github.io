@@ -6,9 +6,10 @@ title: Hello World
 ## 关于我
 这最初是在阮一峰老师博文指导下搭建的博客，教程链接<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">单击我</a>。  
 后来参考了闫肃的博文[在Github上搭建Jekyll博客和创建主题](http://yansu.org/2014/02/12/how-to-deploy-a-blog-on-github-by-jekyll.html"在Github上搭建Jekyll博客和创建主题")。  
-于是有了现在这个雏形，我也希望能够从零开始设计构建一个类似的博客，当然，坚持记录才是最重要的。  
-目前正在寻求一份web前端开发实习，这是我的[在线简历](http://byr-gdp.github.io/resume_impress.js)，基于[impress.js](https://github.com/bartaz/impress.js/)实现。
-
+于是有了现在这个雏形，我当然也希望能够从零开始设计构建一个类似的博客，不过，当下的目标是坚持记录，这才是最重要的。  
+我目前在**不知名茶**实习，这是我第一份实习工作。  
+这是我的[在线简历](http://byr-gdp.github.io/resume_impress.js)，基于[impress.js](https://github.com/bartaz/impress.js/)实现。  
+欢迎交流 :)
 
 ## 博客平台
 
