@@ -222,6 +222,6 @@ description: 使用ul代替select实现下拉菜单透明效果
 
 ### 在线版本
 
-####１.[select](/html/2015-05-10-tech-select-ul-transparent/select.html)
+#### １.[select](/html/2015-05-10-tech-select-ul-transparent/select.html)
 
 #### 2.[ul](/html/2015-05-10-tech-select-ul-transparent/ul.html)
