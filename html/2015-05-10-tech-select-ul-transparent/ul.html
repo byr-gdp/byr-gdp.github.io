@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ul</title>
+	<link rel="stylesheet" href="./css/ul.css">
+	<script src="./js/ul.js"></script>
+</head>
+<body onload="prepare()">
+	<div id="main">
+		<span class="title">选择采摘</span>
+		<div style="width:100%;">
+			<div style="display: inline-block; width:31%; ">
+				<div style="position:relative;">
+					<span class="menu" onclick="clickEvent(1);">选择山头</span>
+				</div> 
+				<ul id="u1" class="hidden" >
+					<li class="choice1" onclick='selectLi("山头一", 1)'>山头1</li>
+					<li class="choice1" onclick='selectLi("山头二", 1)'>山头2</li>
+					<li class="choice1" onclick='selectLi("山头三", 1)'>山头3</li>
+					<li class="choice1" onclick='selectLi("山头四", 1)'>山头4</li>
+					<li class="choice1" onclick='selectLi("山头五", 1)'>山头5</li>
+					<li class="choice1" onclick='selectLi("山头六", 1)'>山头6</li>
+				</ul>
+			</div>
+			<div style="display: inline-block; width:31%;">
+				<div style="position: relative">
+					<span class="menu" onclick="clickEvent(2);">采摘位置</span>
+				</div>
+				<ul id="u2" class="hidden">
+					<li class="choice2" onclick='selectLi("采摘位置1", 2)'>采摘位置1</li>
+					<li class="choice2" onclick='selectLi("采摘位置2", 2)'>采摘位置2</li>
+					<li class="choice2" onclick='selectLi("采摘位置3", 2)'>采摘位置3</li>
+					<li class="choice2" onclick='selectLi("采摘位置4", 2)'>采摘位置4</li>	
+					<li class="choice2" onclick='selectLi("采摘位置5", 2)'>采摘位置5</li>	
+					<li class="choice2" onclick='selectLi("采摘位置6", 2)'>采摘位置6</li>
+				</ul>
+			</div>
+			<div style="display: inline-block; width:31%;">
+				<div style="position: relative;">
+					<span class="menu" onclick="clickEvent(3);">采摘位置</span>
+				</div>
+				<ul id="u3" class="hidden" >
+					<li class="choice3" onclick='selectLi("采摘位置1", 3)'>采摘位置1</li>
+					<li class="choice3" onclick='selectLi("采摘位置2", 3)'>采摘位置2</li>
+					<li class="choice3" onclick='selectLi("采摘位置3", 3)'>采摘位置3</li>
+					<li class="choice3" onclick='selectLi("采摘位置4", 3)'>采摘位置4</li>
+					<li class="choice3" onclick='selectLi("采摘位置5", 3)'>采摘位置5</li>
+					<li class="choice3" onclick='selectLi("采摘位置6", 3)'>采摘位置6</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
