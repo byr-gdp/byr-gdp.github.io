@@ -220,7 +220,7 @@ description: 使用ul代替select实现下拉菜单透明效果
 
 #### JS(与实现透明效果无关)
 
-### 在线版本
+### 3.在线版本
 
 #### １.[select](/html/2015-05-10-tech-select-ul-transparent/select.html)
 
