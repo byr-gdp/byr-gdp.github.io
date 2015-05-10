@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 《JavaScript DOM 编程艺术》笔记
+title: 《JavaScript DOM 编程艺术》笔记（一）
 category: 笔记
 tags: JavaScript DOM
 description: 《JavaScript DOM 编程艺术》笔记
@@ -19,7 +19,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 	
 	但这种用法并不是一个好习惯，实际上是给lennon数组添加了name、year和living三个属性
 
-2. 对象  
+2. 对象   
 	创建对象使用**Object**关键字，上一节的lennon数组可以创建成下面这个对象：
 	
 		var lennon = Object();  
