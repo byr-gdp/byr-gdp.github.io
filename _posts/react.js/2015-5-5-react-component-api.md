@@ -10,7 +10,8 @@ description: React 组件API
 组件API总结来源于[中文文档](http://reactjs.cn/react/docs/component-api.html)。除了setState外其它均很陌生。总结出来方便以后查询。很多说明都是照搬原来文档，以后我会根据学习情况来添加自己的理解。
 
 ### 1.setState
-	setState(object nextState[, function callback])
+	setState(object nextState[, function callback])  
+
 绝对不要直接改变 this.state，因为在之后调用 setState() 可能会替换掉你做的更改。把 this.state 当做不可变的。  
 setState() 不会立刻改变 this.state，而是创建一个即将处理的 state 转变。在调用该方法之后获取 this.state 的值可能会得到现有的值，而不是最新设置的值。
 
