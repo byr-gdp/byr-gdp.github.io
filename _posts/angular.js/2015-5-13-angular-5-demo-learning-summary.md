@@ -47,4 +47,11 @@ description: 5个示例带你学习AngularJS学习总结
 
 2. 创建过滤器仅仅是简单地调用angular.module("name", [])返回的模块对象上的filter()方法。
 
+### 5.切换网络
+
+1. var app = angular.module("switchableGrid", ['ngResource']);
+
+2. app.factory('instagram', function($resource);  
+	工厂函数这部分不理解
+
 
