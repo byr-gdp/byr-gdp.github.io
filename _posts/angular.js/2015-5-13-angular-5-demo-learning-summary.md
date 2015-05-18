@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 5个示例带你学习AngularJS学习总结
-category: Angular.js
+category: Angular
 tags: AngularJS Angular.js
 description: 5个示例带你学习AngularJS学习总结
 ---
