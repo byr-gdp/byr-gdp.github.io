@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="style.css">
+<div id="editor">
+<h1>Markdown Editor</h1>
+  <div id="content">
+    <textarea v-model="input" debounce="300"></textarea>
+    <div id="output" v-html="input | marked"></div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/0.11.10/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
+<script src="js.js"></script>

@@ -1,0 +1,35 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+div#editor{
+	width: 680px;
+	position: relative;
+	left: 50%;
+	top: 20%;
+	margin-left: -340px;
+}
+textarea{
+	display: block;
+	width: 50%;
+	height: 500px;
+	resize: none;
+	padding: 20px;
+	background-color: #CDC5BF;
+	border: 1px solid #ccc;
+}
+div#content{
+	position: relative;
+}
+div#output{
+	width: 298px;
+	height: 458px;
+
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left:10px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	background-color: #CDC5BF;
+}
