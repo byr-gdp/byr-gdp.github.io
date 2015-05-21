@@ -9,7 +9,7 @@ description: vue.js-Markdown编辑器
 ### 0.写在前面
 参考资料：[Markdown编辑器](http://cn.vuejs.org/examples/index.html)
 在线示例：[Markdown编辑器](/html/vue.js_demo/Markdown/index.html)
-html\vue.js_demo\Markdown
+
 
 ### 1.HTML
 需要主要引用的两个外部文件，一是**vue.min.js**，二是**marked.min.js**  
