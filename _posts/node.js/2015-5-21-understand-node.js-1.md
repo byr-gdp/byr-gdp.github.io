@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 《深入浅出node.js》笔记（一）
-category: node.js
+category: node
 tags: 
 description: 《深入浅出node.js》笔记（一）
 ---
