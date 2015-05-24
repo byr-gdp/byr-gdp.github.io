@@ -1,14 +1,14 @@
 ---
 layout: post
 title: vue.js示例-Markdown编辑器
-category: vue.js
+category: vue
 tags: 
 description: vue.js-Markdown编辑器
 ---
 
 ### 0.写在前面
 参考资料：[Markdown编辑器](http://cn.vuejs.org/examples/index.html)
-在线示例：[Markdown编辑器](/html/vue.js_demo/Markdown/index.html)
+在线预览：[Markdown编辑器](/html/vue.js_demo/Markdown/index.html)
 
 
 ### 1.HTML
