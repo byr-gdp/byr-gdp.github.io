@@ -29,7 +29,7 @@ description: CSS3学习记录（一）
 			-webkit-border-image:url(border.png) 30 30 round; /* Safari 和 Chrome */
 			-o-border-image:url(border.png) 30 30 round; /* Opera */
 		}
-特别注意**30**的意义，用于定位png图片用于边框的部分。具体意义有待实践深究。（待完善）
+特别注意 **30** 的意义，用于定位png图片用于边框的部分。具体意义有待实践深究。（待完善）
 
 ### CSS3 background
 
@@ -37,17 +37,86 @@ description: CSS3学习记录（一）
 	以像素或者百分比规定尺寸。如果以百分比规定尺寸，那么尺寸相对于父元素的宽度和高度。
 
 2. background-origin  
-	background-origin规定背景图片的定位区域。背景图片可以放置于 content-box、padding-box 或 border-box 区域。
+	background-origin规定**背景图片**的定位区域。背景图片可以放置于 content-box、padding-box 或 border-box 区域。默认值是padding-box
 
 3. 多重背景图片  
 	background-image: url(), url()...
 	
 4. background-clip  
-	background-clip规定背景的绘制区域
+	background-clip规定背景的绘制区域。默认值是border-box。  
+	语法：`background-clip: border-box|padding-box|content-box;`
 
 5. background-origin 与 background-clip 区别  
-	(待完善）
+	`background-clip`属性指定了背景在哪些区域可以显示，但与背景实际开始绘制的位置无关，背景实际开始绘制的位置不一定等同于指定的显示区域。`background-origin`属性制定了背景从哪个区域(边框、补白或内容)开始绘制。对于**background-color**，二者是一致的，而对于**background-img**，二者并不相同。
+	- 以设置background-color为例
+		1. background-origin  
+			CSS样式：
+				
+				div
+				{
+					border:10px dashed black;
+					padding:10px;
+					background-color: yellow;
+					background-repeat:no-repeat;
+				}
+				#div1{
+					background-origin:border-box;
+				}
+				#div2{
+					background-origin:padding-box;
+				}
+				#div3{
+					background-origin:content-box;
+				}
 
+			显示效果：
+
+		2. background-clip  
+			CSS样式：
+				
+				div
+				{
+					border:10px dashed black;
+					padding:10px;
+					background-color: yellow;
+					background-repeat:no-repeat;
+				}
+				#div1{
+					background-clip:border-box;
+				}
+				#div2{
+					background-clip:padding-box;
+				}
+				#div3{
+					background-clip:content-box;
+				}
+
+			显示效果：
+
+	- 以设置background-img为例
+		1. background-origin
+		2. background-clip  
+			CSS样式：
+div
+{
+border:10px dashed black;
+padding:10px;
+background-image:url('/i/bg_flower.gif');
+background-repeat:no-repeat;
+background-position:left;
+}
+#div1
+{
+background-clip:border-box;
+}
+#div2
+{
+background-clip:padding-box;
+}
+#div3
+{
+background-clip:content-box;
+}
 ### CSS3 文本效果
 
 1. text-shadow
