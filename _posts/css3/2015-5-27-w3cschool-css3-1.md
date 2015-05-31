@@ -186,7 +186,7 @@ description: CSS3学习记录（一）
 
 
 3. [更多属性](http://www.w3school.com.cn/css3/css3_text_effect.asp)  
-如text-outline、text-overflow、text-wrap...
+其中有些当前主流浏览器尚未支持，如text-wrap、text-outline等
 
 ### CSS3 字体  
 （待完善）
