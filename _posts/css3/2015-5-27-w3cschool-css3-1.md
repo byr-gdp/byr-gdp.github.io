@@ -160,9 +160,30 @@ description: CSS3学习记录（一）
 		}  
 
 2. word-wrap  
-	允许文本强制进行换行，及时会对单词进行拆分
+	允许文本强制进行换行，及时会对单词进行拆分。  
+	语法为：`word-wrap: normal|break-word;`
 
 		p{ word-wrap: break-word;}
+		
+3. word-break  
+	规定自动换行的处理方法。  
+	语法为：`word-break: normal|break-all|keep-all;`
+	
+4. word-wrap:break-word 与 word-break:break-all区别  
+	word-wrap会首先尝试挪到下一行，看看下一行的宽度够不够，不够的话就进行单词内的断句。word-break不会尝试把长单词挪到下一行，而是直接进行单词内的断句。若想节省空间，用word-break:break-all。  
+	二者效果比较：  
+	![image](http://int64ago.qiniudn.com/u6bnk62zqia4i.png)
+	
+5. text-overflow  
+	属性规定当文本溢出包含元素时发生的事情。一般与`overflow:hidden`联用。  
+	`text-overflow: clip|ellipsis|string;` 
+	 
+	| 值     | 描述          | 
+	| :----------: |:-------------:|  
+	| clip      | 修剪文本  |  
+	| ellipsis   | 显示省略符号来代表被修剪的文本   |  
+	| string  |使用给定的字符串来代表被修剪的文本    |
+
 
 3. [更多属性](http://www.w3school.com.cn/css3/css3_text_effect.asp)  
 如text-outline、text-overflow、text-wrap...
