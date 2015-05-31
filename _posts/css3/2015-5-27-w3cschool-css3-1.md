@@ -147,6 +147,7 @@ description: CSS3学习记录（一）
 				{
 					background-clip:content-box;
 				}
+				
 		显示效果：  
 ![](http://i.imgur.com/jY2LMLk.png)
 
@@ -164,7 +165,7 @@ description: CSS3学习记录（一）
 		p{ word-wrap: break-word;}
 
 3. [更多属性](http://www.w3school.com.cn/css3/css3_text_effect.asp)  
-比如text-outline、text-overflow、text-wrap...
+如text-outline、text-overflow、text-wrap...
 
 ### CSS3 字体  
 （待完善）
