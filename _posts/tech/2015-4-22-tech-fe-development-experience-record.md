@@ -5,6 +5,8 @@ category: 技术
 tags: HTML CSS JavaScript
 description: 前端开发过程心得记录
 ---
+### 0.写在前面
+这是用来记录我在前端学习、开发过程当中的点点滴滴。考虑到知识的零碎性，于是有了本文的存在。内容很杂，逻辑也谈不上清晰，方便今后回顾进一步总结即可。
 
 ### 1.float属性在布局中使用  
 在HTML中，具有float浮动属性的元素自上而下要优先出现，并设置相应的width来占据相应的空间，之后才是“正常流”中的其它元素。在双栏布局的源码中经常看到div.right先于div.main出现。
@@ -60,3 +62,17 @@ CSS
 		
 效果比较：
 ![image](http://int64ago.qiniudn.com/w9ykamf672e29.png)
+
+### 9.JavaScript方法调用
+原文地址：[JavaScript方法调用](http://www.lifelaf.com/blog/?p=1177)  
+1. 与普通的函数调用不同的是，在进行方法调用时，function中的this指代将发生变化 — this将指代用于调用该function的对象。  
+2. 嵌入function中的代码无法从外部继承this，也就是说，在嵌入的function中，this指代的并不是调用方法的对象，而是全局对象。如果确实需要在嵌入function中访问到调用方法的对象，可以在外部function中将this值保存到一个变量中，即经常见到的`var self = this;`
+
+### 10.闭包（Closure）
+原文地址：[闭包（Closure）](http://www.lifelaf.com/blog/?p=1181)  
+1. 在JavaScript中所有的函数(function)都是对象，而定义函数时都会产生相应的函数调用对象链。函数对象和函数调用对象链之间的一一组合，就称之为“闭包”。  
+2. 令闭包真正发挥作用的是嵌套函数的情况
+
+### 11.类（Class）
+原文地址：[类（Class）](http://www.lifelaf.com/blog/?p=1188)
+1. 类的定义和构造函数的实现
