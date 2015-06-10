@@ -6,9 +6,10 @@ tags:
 description: vue.js-Github提交
 ---
 
-### 参考资料：[Github提交](http://cn.vuejs.org/examples/commits.html)  
-### 在线预览：[latestGithubCommits](https://byr-gdp.github.io/latest_commits_via_vue.js)
-### 项目地址：[latestGithubCommits](https://github.com/byr-gdp/latest_commits_via_vue.js/)
+参考资料：[Github提交](http://cn.vuejs.org/examples/commits.html)  
+在线预览：[latestGithubCommits](https://byr-gdp.github.io/latest_commits_via_vue.js)  
+项目地址：[latestGithubCommits](https://github.com/byr-gdp/latest_commits_via_vue.js/)
+
 ### 实现功能
 
 1. 根据uesrname查找repo
