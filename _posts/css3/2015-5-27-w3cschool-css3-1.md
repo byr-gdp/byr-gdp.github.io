@@ -28,8 +28,11 @@ description: CSS3学习记录（一）
 			-moz-border-image:url(border.png) 30 30 round; /* 老的 Firefox */
 			-webkit-border-image:url(border.png) 30 30 round; /* Safari 和 Chrome */
 			-o-border-image:url(border.png) 30 30 round; /* Opera */
-		}
-特别注意 **30** 的意义，用于定位png图片用于边框的部分。具体意义有待实践深究。（待完善）
+		}  
+
+特别注意 **30** 的意义，用于定位png图片用于边框的部分。
+![](http://i.imgur.com/0kWctUX.png)
+
 
 ### CSS3 background
 
@@ -47,7 +50,7 @@ description: CSS3学习记录（一）
 	语法：`background-clip: border-box|padding-box|content-box;`
 
 5. background-origin 与 background-clip 区别  
-	`background-clip`属性指定了背景在哪些区域可以显示，造成一种切片的效果，但与背景实际开始绘制的位置无关，背景实际开始绘制的位置不一定等同于指定的显示区域。`background-origin`属性制定了背景从哪个区域(边框、补白或内容)开始绘制，仅对**background-img**有效。
+	`background-clip`属性指定了背景在哪些区域可以显示，造成一种切片的效果，但与背景实际开始绘制的位置无关，背景实际开始绘制的位置不一定等同于指定的显示区域。`background-origin`属性制定了背景从哪个区域(边框、补白或内容)开始绘制，仅对**background-image**有效。
 	- 以设置background-color为例
 		1. background-origin  
 			CSS样式：
@@ -189,4 +192,4 @@ description: CSS3学习记录（一）
 其中有些当前主流浏览器尚未支持，如text-wrap、text-outline等
 
 ### CSS3 字体  
-（待完善）
+（待补充）
