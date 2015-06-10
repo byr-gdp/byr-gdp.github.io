@@ -56,7 +56,8 @@ matrix() 方法需要六个参数，包含数学函数，允许您：旋转、�
 	- 规定动画的时长
 	
 ## 多列
-#### 如下多列属性
+
+#### 常用属性
 1. column-count
 2. column-gap
 3. column-rule
