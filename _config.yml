@@ -27,9 +27,9 @@ favicon: ./assets/img/avatar.png
 filter: 'category'
 
 # google analytics 设置
-# ga:
-  # id: UA-54767140-1
- # url: yansu.org
+ga:
+  id: UA-63929964-1
+  url: byr-gdp.github.io
 
 # disqus 设置
 disqus:
