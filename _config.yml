@@ -29,7 +29,8 @@ filter: 'category'
 # google analytics 设置
 ga:
   id: UA-63929964-1
-  url: byr-gdp.github.io
+  url: if-true.com
+  # url: byr-gdp.github.io
 
 # disqus 设置
 disqus:
