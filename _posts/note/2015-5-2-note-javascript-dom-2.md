@@ -6,7 +6,7 @@ tags: JavaScript DOM
 description: 《JavaScript DOM 编程艺术》笔记
 ---
 
-### 4.案例研究：JavaScript图片库
+### Chapter 4 案例研究：JavaScript图片库
 
 1. 非DOM解决方案  
 以下两条语句的效果是等效的。
@@ -31,7 +31,7 @@ nodeType属性总共有12种可取值，但其中仅有3种具有实用价值。
 5. nodeValue属性  
 对于`<p id="description">This is a sentence.</p>`，若通过`var desctiption = document.getElementById("description")`得到该对象后，必须注意的细节是在用nodeValue属性获取description对象的值时，**并不是包含在这个段落里的文本**。`<p>`元素本身的nodeValue属性是一个空值，包含在`<p>`元素里的文本是另一个节点，它是`<p>`元素的第一个子节点，所以正确的写法是`description.childNodes[0].nodeValue`或者`description.firstChild.nodeValue`。DOM还提供了一个与之对应的**lastChild**属性
 
-### 5.最佳实践
+### Chapter 5 最佳实践
 
 1. 平稳退化：确保网页在没有JavaScript的情况下也能正常工作  
 如果正确地使用了JavaScript脚本，就可以让访问者在他们得浏览器不支持JavaScript的情况下仍能顺利地浏览你的网站。几种不好的做法如下：

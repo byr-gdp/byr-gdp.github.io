@@ -6,9 +6,9 @@ tags: JavaScript DOM
 description: 《JavaScript DOM 编程艺术》笔记
 ---
 
-### 1.JavaScript简史
+### Chapter 1 JavaScript简史
 
-### 2.Javascript语法
+### Chapter 2 Javascript语法
 1. 数组  
 	关联数组：如果在填充数组时只给出了元素的值，这个数组就将是一个传统数组，它的各个元素的下标将被自动创建和刷新。可以通过在填充数组时为每个新元素明确地给出下标来改变这种默认的行为。在为新元素给出下标时，不必局限于使用整数数字，可以使用字符串：  
 		
@@ -47,7 +47,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 3. 关于命名
 	在命名变量时，用下划线来分隔各个单词；在命名函数时，采用驼峰命名法。这么做可以一眼看出哪些名字是变量，哪些名字是函数。
 
-### 3.DOM
+### Chapter 3 DOM
 1. 5个常用的DOM方法：getElementById、getElementsByTagName、getElementsByClassName、getAttribute、setAttribute
 2. 节点（node)
 	1. 元素节点(element node)
