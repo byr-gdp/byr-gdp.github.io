@@ -28,3 +28,32 @@ description: 《JavaScript DOM 编程艺术》笔记
 		}  
 5. DOM Core 和 HTML-DOM
 			
+### Chapter 7 动态创建标记
+
+1. 一些传统方法
+	1. document.write：最大缺点是它违背了“行为应该与表现分离”的原则。即使把document.write
+	语句挪到外部函数里，也还是需要在标记的`<body>`部分使用`<script>`标签才能调用那个函数
+	2. innerHTML：可用来读、写某给定元素里的HTML内容。使用innerHTML属性，你就可以把JavaScript代码从标记中分离出来。用不着在标记的的`<body>`部分插入`<script>`标签
+	
+2. DOM方法
+	1. createElement方法：  
+		语法：`document.createElement(nodeName);`  
+		如`var para = document.createElement("p");`
+	2. appendChild方法：  
+		语法：`parent.appendChild(child);`
+	3. createTextNode方法：  
+		语法：`document.createTextNode(text);`
+	4. insertBefore方法：  
+		语法：`parentElement.insertBefore(newElement, targetElement);`
+	5. insertAfter方法：  
+			
+			function insertAfter(newELement, targetElement) {
+				var parent = targetElement.parentNode;
+				if(parent.lastChild == targetElement) {
+					parent.appendChild(newElement);
+				} else {
+					parent.insertBefore(newElement, targetElement.nextSibling);
+				}
+			}
+
+3. Ajax
