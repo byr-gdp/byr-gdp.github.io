@@ -37,3 +37,7 @@ description: AMD vs CommonJS vs CMD
 	与AMD蛮相近。
 	
 	关键词：玉伯、sea.js
+	
+4. 参考资料：
+
+	1. [浅析JS中的模块规范（CommonJS，AMD，CMD）])(http://www.2cto.com/kf/201411/348276.html)
