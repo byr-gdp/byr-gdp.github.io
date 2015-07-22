@@ -21,18 +21,33 @@ description: Git学习笔记（2）
 		2. 创建分支：`git branch <name>`
 		3. 切换分支：`git checkout <name>`
 		4. 创建+切换分支：`git checkout -b <name>`
-		5. 合并某分支到当前分支：`git merge <name>`，快进模式（Fast-forward)
+		5. 合并某分支到当前分支：`git merge <name>`，快进模式（/Users/gdp/Github Project/byr-gdp.github.io/_posts/tech/2015-4-12-git-learning-2.mdFast-forward)
 		6. 删除分支：`git branch -d <name>`
 	2. 解决冲突  
 		- 只能试图把各自的冲突合并起来，需手动解决
 		- 用`git log --graph`命令可以看到分支合并图，如使用`git log --graph --pretty=oneline --abbrev-commit`
 	3. 分支管理策略  
-		通常，合并分支时，如果可能，Git会用`Fast forward`模式，但这种模式下，删除分支后会丢掉分支信息。如果要强制禁用Fast forward模式，即使用**--no-ff方式的git merge**，Git就会在merge时生成一个新的commit，这样从分支历史上就可以看出分支信息。
+		通常，合并分支时，如果可能，Git会用`Fast forward`模式，但这种模式下，删除分支后会丢掉分支信息。如果要强制禁用Fast forward模式，即使用**--no-ff方式的git merge**，Git就会在merge时生成一个新的commit，这样从分支历史上就可以看出分支信息。语法：`git merge --no-ff -m "commit information" branchName`
 	4. Bug分支  
-		1. Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
+		1. Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。语法`git stash`
 		2. 恢复一下，有两个办法：
-			1. 用`git stash apply`恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除
+			1. 用`git stash apply`恢复，但是恢复后，stash内容并不删除，你需要用`git stash drop`来删除
 			2. 用`git stash pop`，恢复的同时把stash内容也删了
 	5. Feature分支  
 		丢弃一个没有被合并过的分支，可以通过`git branch -D <name>`强行删除
-	6. 多人协作（待补充）
+	6. 多人协作
+	
+		当你从远程仓库克隆时，实际上Git自动把本地的master分支和远程的master分支对应起来了
+		
+		1. 推送分支
+		
+			语法：`git push origin branch-name`
+		
+		2. 抓取分支
+		
+			语法：`git pull`，有冲突则解决
+			
+		3. **分支关联**
+			
+			创建本地分支并与远程分支关联：`git checkout -b dev origin/dev`
+			指定本地分支与远程分支关联：`git branch --set-upstream dev origin/dev`
