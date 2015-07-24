@@ -1,9 +1,10 @@
 ---
 layout: post
 title: vue.js示例-Markdown编辑器
-category: vue
-tags: 
+category: 框架
+tags: vue
 description: vue.js-Markdown编辑器
+
 ---
 
 ### 0.写在前面

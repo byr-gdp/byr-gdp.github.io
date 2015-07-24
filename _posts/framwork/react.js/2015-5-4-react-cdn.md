@@ -1,9 +1,10 @@
 ---
 layout: post
 title: React.js CDN 加速服务
-category: React
+category: 框架
 tags: React.js CDN
 description: React.js CDN 加速服务
+
 ---
 
 ### 0.一般引入以下两个文件即可

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: vue.js示例-Github提交
-category: vue
-tags: 
+category: 框架
+tags: vue
 description: vue.js-Github提交
+
 ---
 
 参考资料：[Github提交](http://cn.vuejs.org/examples/commits.html)  

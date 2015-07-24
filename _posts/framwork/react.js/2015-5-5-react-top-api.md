@@ -1,9 +1,10 @@
 ---
 layout: post
 title: React 顶层API
-category: React
+category: 框架
 tags: React React.js
 description: React 顶层API
+
 ---
 ### 0.写在前面
 顶层API总结来源于[中文文档](http://reactjs.cn/react/docs/top-level-api.html)，大多数比较陌生。总结出来方便以后查询。考虑到我对很多API的理解并不深刻，很多说明都是照搬原来文档，以后我会根据学习情况来添加自己的理解。

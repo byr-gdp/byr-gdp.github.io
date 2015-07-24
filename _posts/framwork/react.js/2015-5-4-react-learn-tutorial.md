@@ -1,9 +1,10 @@
 ---
 layout: post
 title: React 入门实例教程
-category: React
+category: 框架
 tags: React.js
 description: React 入门实例教程
+
 ---
 
 ### 0.写在前面

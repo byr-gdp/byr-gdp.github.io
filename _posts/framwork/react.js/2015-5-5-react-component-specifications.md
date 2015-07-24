@@ -1,9 +1,10 @@
 ---
 layout: post
 title: 组件的详细说明
-category: React
+category: 框架
 tags: React React.js
 description: 组件的详细说明
+
 ---
 
 ### 0.写在前面

@@ -1,9 +1,10 @@
 ---
 layout: post
 title: React.js学习笔记
-category: React
+category: 框架
 tags: React.js
 description: react.js学习笔记
+
 ---
 
 ### 1. HTML 标签与 React 组件对比

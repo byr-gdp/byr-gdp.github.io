@@ -1,9 +1,10 @@
 ---
 layout: post
 title: 区分state和props
-category: React
+category: 框架
 tags: React.js state props
 description: 区分state和props
+
 ---
 
 简单地对每一项数据提出三个问题：

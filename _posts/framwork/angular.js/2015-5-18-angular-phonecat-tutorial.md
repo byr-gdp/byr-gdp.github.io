@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Angular.js 教程整理
-category: Angular
+category: 框架
 tags: AngularJS Angular.js
 description: Angular.js 教程整理
 ---

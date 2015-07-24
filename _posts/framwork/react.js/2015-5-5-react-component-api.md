@@ -1,9 +1,10 @@
 ---
 layout: post
 title: React 组件API
-category: React
+category: 框架
 tags: React React.js
 description: React 组件API
+
 ---
 
 ### 0.写在前面
