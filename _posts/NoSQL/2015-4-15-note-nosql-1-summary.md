@@ -1,10 +1,12 @@
 ---
 layout: post
 title: NoSql数据库入门（1）——NoSQL数据库的基础知识
-category: NoSQL
-tags: NoSQL
+category: DB
+tags: NoSQL database
 description: NoSql数据库入门（1）——NoSQL数据库的基础知识
+
 ---
+
 ### 1. 关系型数据库和NoSQL数据库
 1. **NoSQL**是**Not Only SQL**的缩写，意义是：适用关系型数据库的时候就使用关系型数据库，不适用的时候也没有必要非使用关系型数据库不可，可以考虑使用更加合适的数据存储
 2. 关系型数据库的不足：  
