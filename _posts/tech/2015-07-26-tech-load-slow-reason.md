@@ -1,5 +1,3 @@
-记录个好网站：[性能魔方](http://www.mmtrix.com/)
-
 ---
 layout: post
 title: 页面加载慢原因分析
@@ -9,7 +7,9 @@ description: 页面加载慢原因分析
 
 ---
 
-原帖地址：http://www.zhihu.com/question/27085552
+记录个不错网站：[性能魔方](http://www.mmtrix.com/)
+
+扩展阅读：http://www.zhihu.com/question/27085552
 
 所有结论都源于**瀑布图**
 
