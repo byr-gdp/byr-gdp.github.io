@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+<div class="container">
+    <form action="" class="form-horizontal" role="form">
+        <fieldset>
+            <legend>Test</legend>
+            <div class="form-group">
+                <label class="col-md-2 control-label">DateTime Picking (Meridian format)</label>
+                <div class="input-group date form_datetime col-md-5" data-date-format="dd MM yyyy - HH:ii p" >
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+                <label class="col-md-2 control-label">DateTime Picking (Default format)</label>
+                <div class="input-group date form_datetime_1 col-md-5" data-date-format="yyyy-mm-dd hh:ii">
+                    <input type="text" class="form-control" size="16" vlaue="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+            </div>
+            <hr>
+			<div class="form-group">
+                <label class="col-md-2 control-label">Date Picking</label>
+                <div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+                <label class="col-md-2 control-label">Date Picking (Default format)</label>
+                <div class="input-group date form_date_1 col-md-5" data-date="" data-date-format="yyyy-mm-dd">
+                    <input type="text" class="form-control" size="16" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+            </div>
+            <hr>
+			<div class="form-group">
+                <label class="col-md-2 control-label">Time Picking (Default format)</label>
+                <div class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                </div>
+                <label class="col-md-2 control-label">Time Picking (Meridian format)</label>
+                <div class="input-group date form_time_1 col-md-5" data-date="" data-date-format="HH:ii p">
+                    <input type="text" class="form-control" size="16" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="../js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+    $('.form_datetime_1').datetimepicker({
+        weekStart: 6,   //0表示Sunday，1表示Monday,以此类推
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 4,   // 选项：0是当前小时内选择，1是一天选择小时段，2是选择具体一天，3是选择月份，4是选择年
+        forceParse: 1,  //当选择器关闭的时候，是否强制解析输入框中的值。也就是说，当用户在输入框中输入了不正确的日期，选择器将会尽量解析输入的值，并将解析后的正确值按照给定的格式format设置到输入框中.若将input设为readonly，则不会存在此问题
+    });
+	$('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+    $('.form_date_1').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView:   2, //选择日期的关键，限定View最小值
+        forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+    $('.form_time_1').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView:   0,
+        maxView:   1,
+        forceParse:0,
+        showMeridian: 1 //不论是1还是0 都不会影响最终的显示效果，仅仅是选择日期有区别
+    })
+</script>
+
+</body>
+</html>

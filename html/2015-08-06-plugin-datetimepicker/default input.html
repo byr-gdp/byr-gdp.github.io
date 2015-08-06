@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+	<script type="text/javascript" src="./jquery/jquery-1.8.3.min.js">
+</script>
+<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+	<div class="col-md-6 col-md-offset-3">
+		<form class="bs-example bs-example-form" role="form">
+			<h3>Default input</h3>
+			<div class="input-group col-md-12">
+				<span class="">yyyy-mm-dd hh:ii</span>
+				<input type="text" class="form-control form_datetime_1" readonly value="2015-08-06 10:30">	
+			</div>	
+			<div class="input-group col-md-12">
+			    <span class="">yyyy-mm-dd</span> 依旧会选择时间
+			    <input type="text" class="form-control form_datetime_2" readonly value="2015-8-6" >
+			</div>
+			<hr>
+			<h3>Default component</h3>
+			<span>icon-th不出现</span>
+			<div class="input-group col-md-12">
+				<span>dd MM yyyy - hh:ii</span>
+				<input type="text" class="form-control form_datetime_3" value="" readonly>
+			</div>
+			<hr>
+			<h3>定位</h3>
+			<span>pickerPosition左右方向与箭头方向相反</span>
+			<div class="input-group col-md-12">
+				<span>bottom-left</span>
+				<input type="text" class="form-control form_datetime_4" value="" readonly>
+			</div>
+			<div class="input-group col-md-12">
+				<span>bottom-right</span>
+				<input type="text" class="form-control form_datetime_5" value="" readonly>
+			</div>
+			<div class="input-group col-md-12">
+				<span>top-left</span>
+				<input type="text" class="form-control form_datetime_6" value="" readonly>
+			</div>
+			<div class="input-group col-md-12">
+				<span>top-right</span>
+				<input type="text" class="form-control form_datetime_7" value="" readonly>
+			</div>
+			<hr>
+			<h3>Advanced</h3>
+			<span>reset无法启用</span>
+			<div class="input-group col-md-12">
+				<span>startDate MinuteStep 底部bug</span>
+				<input type="text" class="form-control form_datetime_8" value="" readonly>
+			</div>
+			<hr>
+			<h3>Mirror field</h3>
+			<div class="input-group col-md-12">
+				<span>Mirror field 第一个input输入，第二个mirror</span>
+				<input type="text" class="form-control form-datetime_9" value="" readonly>
+				<input type="text" id="mirror_field" class="form-control" value="" readonly>
+			</div>
+			<hr>
+			<h3>Meridian format</h3>
+			<div class="input-group col-md-12">
+				<input type="text" class="form-control form_datetime_10" value="" readonly>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+
+<script>
+	$(".form_datetime_1").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+	$(".form_datetime_2").datetimepicker({format: 'yyyy-mm-dd'});
+	$(".form_datetime_3").datetimepicker({format: 'dd MM yyyy - hh:ii'});
+	$(".form_datetime_4").datetimepicker({
+		format: 'dd MM yyyy - hh:ii',
+		autoclose: true,
+		todayBtn: true,
+		pickerPosition: 'bottom-left'
+	});
+	$(".form_datetime_5").datetimepicker({
+		format: 'dd MM yyyy - hh:ii',
+		autoclose: true,
+		todayBtn: true,
+		pickerPosition: 'bottom-right'
+	})
+	$(".form_datetime_6").datetimepicker({
+		format: 'dd MM yyyy - hh:ii',
+		autoclose: true,
+		todayBtn: true,
+		pickerPosition: 'top-left'
+	})
+	$(".form_datetime_7").datetimepicker({
+		format: 'dd MM yyyy - hh:ii',
+		autoclose: true,
+		todayBtn: true,
+		pickerPosition: 'top-right'
+	})
+	$(".form_datetime_8").datetimepicker({
+		format: 'dd MM yyyy - hh:ii',
+		autoclose: true,
+		todayBtn: true,
+		startDate: '2015-08-08 18:25',
+		MinuteStep: 5
+	})
+	$(".form-datetime_9").datetimepicker({
+		format: "dd MM yyyy - hh:ii",
+        linkField: "mirror_field",
+        linkFormat: "yyyy-mm-dd hh:ii"
+	})
+	$(".form_datetime_10").datetimepicker({
+		format: 'dd MM yyyy - HH:ii P',
+		showMeridian: true,
+        autoclose: true,
+        todayBtn: true
+	})
+</script>
+</html>
