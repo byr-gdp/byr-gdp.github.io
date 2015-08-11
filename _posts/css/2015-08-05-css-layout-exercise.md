@@ -21,9 +21,9 @@ description: 40个css布局练习
   		<div id="footer">Footer</div>
 	</div> 
 	
-因为重点是**布局**，所以样式在定义好之后不会再改变，主要改动的是`wrapper`、`extra`和`footer`，姑且分别称之为part1、part2、part3。
+因为重点是**布局**，所以样式在定义好之后不会再改变，主要改动的是`wrapper`、`extra`和`footer`。
 
-因为原网站[layoutgala](http://blog.html.it/layoutgala/)也提供了参考代码，我目前（2015-08-08开始）主要在进行校对工作，通过比较得以发现之前忽视的地方，尤其是窗口resize后的布局变化，鉴于之前没有做更多测试。
+因为原网站[layoutgala](http://blog.html.it/layoutgala/)也提供了参考代码，我目前（2015-08-08开始）主要在进行校对工作，通过比较得以发现之前不足之处，尤其是窗口resize后的布局变化。
 
 
 
