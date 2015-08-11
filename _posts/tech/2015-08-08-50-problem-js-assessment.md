@@ -338,7 +338,7 @@ Hello, Ellie!!!
 
 ### 逻辑操作
 
-### 二进制转换
+### Number
 
 #### 1.二进制转换——十进制转二进制
 
@@ -407,3 +407,159 @@ base10('11000000')
       return result;
 	}
 	
+#### 3.二进制转换——数字转换二进制字符串
+
+##### 题目描述
+
+将给定数字转换成二进制字符串。如果字符串长度不足 8 位，则在前面补 0 到满8位。 
+
+**输入例子:**
+
+convertToBinary(65)
+
+**输出例子:**
+
+01000001
+
+##### 分析
+
+字符串追加实现方法很多，从最简单的“+”，或者`concat`、字符串`split`成数组后`unshift`再`join`等等。代码如下：
+
+	//最开始想到的笨方法，前导0实现较复杂
+	function convertToBinary(num) {
+	  var result = num.toString(2);
+      var len = result.length;
+      var tmp = '0'
+      if(len < 8){
+    	for(var i=0; i<8-len-1; i++) {
+        	tmp = tmp.concat('0');
+    	}
+        result = tmp.concat(result);
+      }
+      return result;
+	}
+	
+	//优化前导0实现，通过unshfit
+	function convertToBinary(num) {
+	  var result = num.toString(2);
+      var len = result.length;
+      result = result.split('');
+      for(var i=0; i<8-len; i++) {
+        result.unshift('0');  //数组从头插入
+      }
+      return result.join('');
+	}
+	
+	//参考其他提交记录，如下实现也很巧妙
+	function convertToBinary(num) {
+ 
+      var zero=[0,0,0,0,0,0,0,0],bit=num.toString(2);
+      if(bit.length>=8){
+        return bit;
+      }
+      return zero.slice(bit.length-8).join("")+bit;
+	}
+	
+### 对象
+
+#### 1.改变上下文
+
+##### 题目描述
+
+将函数 fn 的执行上下文改为 obj，返回 fn 执行后的值 
+
+**输入例子:**
+
+alterContext(function() {return this.greeting + ', ' + this.name + '!'; }, {name: 'Rebecca', greeting: 'Yo' })
+
+**输出例子:**
+
+Yo, Rebecca!
+
+##### 分析
+
+用到apply，直接贴代码
+
+	function alterContext(fn, obj) {
+	  return fn.apply(obj);
+	}
+	
+#### 2.批量改变对象的属性
+
+##### 题目描述
+
+给定一个构造函数 constructor，请完成 alterObjects 方法，将 constructor 的所有实例的 greeting 属性指向给定的 greeting 变量。
+ 
+**输入例子:**
+
+var C = function(name) {this.name = name; return this;}; var obj1 = new C('Rebecca'); alterObjects(C, 'What\'s up'); obj1.greeting;
+
+**输出例子:**
+
+What's up
+
+##### 分析
+
+用到`prototype`，直接贴代码
+
+
+	function alterObjects(constructor, greeting) {
+	  constructor.prototype.greeting=greeting;
+	}
+	
+#### 3.属性遍历
+
+##### 题目描述
+
+找出对象 obj 不在原型链上的属性(注意这题测试例子的冒号后面也有一个空格~)
+
+1. 返回数组，格式为 key: value
+2. 结果数组不要求顺序 
+
+**输入例子:**
+
+var C = function() {this.foo = 'bar'; this.baz = 'bim';}; C.prototype.bop = 'bip'; iterate(new C());
+
+**输出例子:**
+
+["foo: bar", "baz: bim"]
+
+##### 分析
+
+用到了`hasOwnProperty`和for循环`for(var key in obj)`形式，代码如下：
+
+	function iterate(obj) {
+	  var arr = [];
+      for(var key in obj) {
+        if(obj.hasOwnProperty(key)) {
+            arr.push(key + ': ' + obj[key]);
+        }
+      }
+      return arr;
+	}
+	
+### 模块
+
+#### 1.模块
+
+##### 题目描述
+
+完成函数 createModule，调用之后满足如下要求：
+
+1. 返回一个对象
+2. 对象的 greeting 属性值等于 str1， name 属性值等于 str2
+3. 对象存在一个 sayIt 方法，该方法返回的字符串为 greeting属性值 + ', ' + name属性值
+
+##### 分析
+
+返回函数中调用属性前得加`this`，代码如下：
+	
+	function createModule(str1, str2) {
+	  return {
+        greeting: str1,
+        name    : str2,
+        sayIt   : function() {
+            return this.greeting + ', ' + this.name;
+        }
+      }
+	}
