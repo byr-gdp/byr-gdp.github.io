@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 50道js能力测评经典题(2)
+title: 50道js能力测评经典题(3)
 category: 技术
 tags: js 测评
 description: 50道js能力测评经典题
