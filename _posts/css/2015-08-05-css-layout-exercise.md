@@ -7,7 +7,7 @@ description: 40个css布局练习
 
 ---
 
-前前后后大约花了三天时间来完成，具体练习可访问[layoutgala](http://blog.html.it/layoutgala/)。40个练习主要围绕`float`展开，我会将这40个练习的要求及代码整理出来。
+前前后后大约花了三天时间来完成，具体练习可访问[layoutgala](http://blog.html.it/layoutgala/)。40个练习主要围绕`float`展开，之后会将这40个练习的具体要求及代码整理出来。
 
 所有练习以如下HTML结构为基础：
 
@@ -21,9 +21,11 @@ description: 40个css布局练习
   		<div id="footer">Footer</div>
 	</div> 
 	
-因为重点是**布局**，所以样式在定义好之后不会再改变，主要改动的是`wrapper`、`extra`和`footer`。
+考虑到重点是**布局**，所以样式在设置好之后几乎不会再改变，主要改动的是`container`、`wrapper`、`content`、`extra`和`footer`。
 
-因为原网站[layoutgala](http://blog.html.it/layoutgala/)也提供了参考代码，我目前（2015-08-08开始）主要在进行校对工作，通过比较得以发现之前不足之处，尤其是窗口resize后的布局变化。
+原网站[layoutgala](http://blog.html.it/layoutgala/)提供了参考代码，我目前（2015-08-08 到 2015-08-13）进行了校对工作，通过比较发现之前代码不足，并调整了css样式写法，将样式和布局分离。
+
+我将所有整理放到了Github上，项目地址：[40LayoutExercise](https://github.com/byr-gdp/40LayoutExercise)。接下来主要完善相关文档，表述清楚各个练习的要求，希望能帮助更多像我一样的初学者。
 
 
 
