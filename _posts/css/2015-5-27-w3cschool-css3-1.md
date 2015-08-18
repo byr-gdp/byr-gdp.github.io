@@ -1,9 +1,10 @@
 ---
 layout: post
 title: CSS3学习记录（一）
-category: 技术
+category: css
 tags: HTML CSS3 
 description: CSS3学习记录（一）
+
 ---
 
 ### CSS3 border

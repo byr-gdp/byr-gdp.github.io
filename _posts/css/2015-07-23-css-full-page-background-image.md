@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 背景图全屏显示
-category: 技术
+category: css
 tags: CSS
 description: 背景图全屏显示
 

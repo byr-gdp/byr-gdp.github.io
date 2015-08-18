@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 网易有道前端面试小结
-category: jobs 
+category: 随笔 
 tags: 面试 有道
 description: 网易有道前端面试小结
 ---

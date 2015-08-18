@@ -1,10 +1,13 @@
 ---
 layout: post
 title: NoSql数据库入门（2）——MongoDB（面向文档的数据库）
-category: DB
+category: 技术
 tags: NoSQL MongoDB database
 description: NoSql数据库入门（2）——MongoDB（面向文档的数据库）
 ---
+
+这本书是图书馆偶然看到的，翻阅几章后发现无外乎概念的简单堆砌，<del>更像是国内科研工作者的产出，</del>故完结，不再更新。
+
 ### 1. 特征  
 1. MongoDB的最大特征就是无表结构，MongoDB在保存数据的时候会把数据和数据结构都完整地以BSON（JSON的二进制化产物）的形式保存起来，并把它作为值和特定的键进行关联。
 2. MongoDB跟关系型数据库不同之处在于它无法进行**JOIN**查询，但它可以再标准的对象中事先嵌入（embed）其他对象，这样也能获得同样的效果

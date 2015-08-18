@@ -1,9 +1,10 @@
 ---
 layout: post
 title: 《深入浅出node.js》笔记（二）
-category: node
-tags: 
+category: 笔记
+tags: node javascript
 description: 《深入浅出node.js》笔记（二）
+
 ---
 
 # 第二章 模块机制

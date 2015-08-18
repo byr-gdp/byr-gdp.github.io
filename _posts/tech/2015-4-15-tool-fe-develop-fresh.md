@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 前端开发自动刷新实现方法总结
-category: 工具
+category: 技术
 tags: 前端 自动刷新 敏捷开发
 description: 前端开发自动刷新实现方法总结
 

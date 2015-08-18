@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 找实习的那些日子
-category: jobs
+category: 随笔
 tags: 实习
 description: 找实习的那些日子
 ---

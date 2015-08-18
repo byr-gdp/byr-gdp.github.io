@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 40个css布局练习
-category: 技术
+category: css
 tags: CSS
 description: 40个css布局练习
 

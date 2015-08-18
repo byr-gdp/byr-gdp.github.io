@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 关于CSS权重
-category: 技术
+category: css
 tags: CSS 
 description: 关于CSS权重
 
