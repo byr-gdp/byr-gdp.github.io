@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 一些第三方组件收集
-category: 资源
+category: 插件
 tags: HTML CSS JavaScript
 description: 一些第三方组件收集
 
