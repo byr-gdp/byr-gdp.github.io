@@ -13,12 +13,12 @@ description: 40个css布局练习
 
 	<div id="container">
 		<div id="header">Header</div>
-  		<div id="wrapper">
+		<div id="wrapper">
     		<div id="content">Content</div>
-  		</div>
-  		<div id="navigation">Navigation</div>
-  		<div id="extra">Extra stuff</div>
- 		<div id="footer">Footer</div>
+    	</div>
+    	<div id="navigation">Navigation</div>
+    	<div id="extra">Extra stuff</div>
+    	<div id="footer">Footer</div>
 	</div> 
 	
 考虑到重点是**布局**，所以样式在设置好之后几乎不会再改动，主要改动的是`container`、`wrapper`、`content`、`extra`和`footer`布局方式。
