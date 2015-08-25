@@ -46,6 +46,7 @@ this 永远指向函数运行时所在的对象，而不是函数被创建时所
 3. 构造器调用模式
 
 	即使用new调用的函数，则其中this将会被绑定到那个新构造的对象。
+		
 		function Foo(){
     		this.name = 'fooname';
 		}
@@ -64,6 +65,7 @@ this 永远指向函数运行时所在的对象，而不是函数被创建时所
 ---
 	
 参考资料：
-	1. 知乎[JavaScript 中 this 是如何工作的？](http://www.zhihu.com/question/19624483)
+
+1. 知乎[JavaScript 中 this 是如何工作的？](http://www.zhihu.com/question/19624483)
 	
 (最后修改于2015-08-25)
