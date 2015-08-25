@@ -1,13 +1,13 @@
 ---
 layout: post
-title: JavaScript中this是如何工作的
+title: 关于JavaScript中this
 category: 技术
 tags: JavaScript this
-description: JavaScript中this是如何工作的
+description:  关于JavaScript中this
 
 ---
 
-	when a function of an object was called, the object will be passed into the execution context as this value.
+> when a function of an object was called, the object will be passed into the execution context as this value.
 	
 据说理解了这句话，this也就明白了。
 
@@ -17,9 +17,9 @@ this 永远指向函数运行时所在的对象，而不是函数被创建时所
 
 匿名函数或不处于任何对象中的函数指向 window 。
 
-<hr>
+---
 
-函数中的this的值取决于函数调用的模式：
+函数中的this的值取决于函数调用的模式
 
 1. 方法调用模式
 
@@ -60,6 +60,10 @@ this 永远指向函数运行时所在的对象，而不是函数被创建时所
 		}
 		var foo = {};
 		getName.call(foo, name);  // this =>foo
-		
+	
+---
+	
 参考资料：
 	1. 知乎[JavaScript 中 this 是如何工作的？](http://www.zhihu.com/question/19624483)
+	
+(最后修改于2015-08-25)
