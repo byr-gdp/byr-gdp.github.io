@@ -6,9 +6,11 @@ title: Aloha byr-gdp
 
 ## 关于我
 
-愿成为一名有点美感、懂点设计的前端攻城狮  
-我目前在[**不知名茶**](http://www.yeatea.com)实习，这是我第一份实习工作，工作重心是vue和Angular。  
-<del>这是我的[在线简历](http://byr-gdp.github.io/resume_impress.js)，基于[impress.js](https://github.com/bartaz/impress.js/)实现。</del> 
+北邮本科在读，通信专业的前端汪，伪全栈工程师的路上
+啥都折腾一下，但仅仅是一下
+因为以上原因，*团面试被狠狠虐过  
+不计前嫌，重新开始
+
 
 ## 关于博客
 
@@ -16,6 +18,8 @@ title: Aloha byr-gdp
 后来参考了闫肃的博文[在Github上搭建Jekyll博客和创建主题](http://yansu.org/2014/02/12/how-to-deploy-a-blog-on-github-by-jekyll.html"在Github上搭建Jekyll博客和创建主题")。  
 于是有了现在这个雏形，我当然也希望能够从零开始，尝试hexo、ghost等，自己设计完善主题，不过当下的目标是坚持记录，这才是最核心的。  
 
-#### 欢迎讨论  :)
+## 
+
+happy is all & coding is funny
  
 
