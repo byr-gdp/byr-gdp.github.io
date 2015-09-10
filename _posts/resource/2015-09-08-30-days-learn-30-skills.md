@@ -21,6 +21,23 @@ description: 《30天学习30种新技术》
 	
 3. 2015-09-09	Day 2 : AngularJS —— 对 AngularJS 的初步认识
 
-	对于AngularJS和vue一直没有深入，这次也只是简单回顾地过滤器和控制器。我一直很好奇也很想知道如何构建如此大型的SPA，这次用到前面学习的的bower，也算是一种进步
+	对于AngularJS和vue一直没有深入，这次也只是简单回顾地过滤器和控制器。我一直很好奇也很想知道如何构建如此大型的SPA，这次用到前面学习的的bower，也算是收获
+	
+4. 2015-09-10	Day 8 : Harp.JS —— 现代静态 web 服务器
+
+	Harp是一个开源静态服务器，[官方文档](http://harpjs.com/docs/deployment/harp-platform)，为诸如`.jade`、`.md`、`.coffee`、`less`、`styl`、`html`、`js`、`css`等静态资源提供服务
+	
+	初始化后的目录结构如下：
+	
+		.
+		├── 404.jade
+		├── _layout.jade
+		├── index.jade
+		└── main.less
+		
+	和当前使用的jekyll很类似，以后学习jekyll相关或许用的着
+	
+
+
 	
 	
