@@ -54,6 +54,11 @@ description: bridged nat host-only
 
 对于像我一样的新手，值得注意的是bridged和nat区别了，比如虚拟机开启了web服务但内网的其他真实机器无法访问到，有可能就是网络模式选择的问题
 
+# 参考资料
+
+1. [bridged、host-only和NAT的虚拟机用法](http://virtual.51cto.com/art/200908/142106.htm)
+
+
 （最后修改于2015-09-10）
 
 
