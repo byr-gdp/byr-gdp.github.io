@@ -44,6 +44,10 @@ description: 《30天学习30种新技术》
 
 	此次没有实践，因为该教程是在Fedora机器上测试的。更多的收获是Docker和vagrant的区别。比较直观的一点是前者更省资源，后者是基于Virtual Box提供的虚拟机，提供的是完整地操作系统，启动较长时间，消耗内存和CPU。
 
+6. 2015-09-13	Day 5  : GruntJS —— 重复乏味的工作总会有人做（反正我不做）
+
+	从零开始配置了**Gruntfile**，并简单使用了`contrib-uglify`、`grunt-markdown`、`grunt-markdown-pdf`。`grunt-markdown-pdf`挺有意思，可扩展CSS，自定义程度高。
+
 
 	
 	
