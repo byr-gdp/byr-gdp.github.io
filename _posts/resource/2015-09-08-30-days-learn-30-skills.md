@@ -48,6 +48,8 @@ description: 《30天学习30种新技术》
 
 	从零开始配置了**Gruntfile**，并简单使用了`contrib-uglify`、`grunt-markdown`、`grunt-markdown-pdf`。`grunt-markdown-pdf`挺有意思，可扩展CSS，自定义程度高。
 
+7. 2015-09-14	Day 7  : GruntJS 在线重载 提升生产率至新境界
 
+	用到的grunt插件有`grunt-markdown`、`grunt-contrib-uglify`、`grunt-contrib-watch`。需要注意的是**watch**的配置方法，不需要`grunt.registerTask(...)`，使用时直接`grunt watch`即可。
 	
-	
+	**`livereload`未能重现**，npm中[livereload](https://www.npmjs.com/package/livereload)用于服务器端，出现`require`，可能需要webpack来解决。同时GitHub的[livereload-js](https://github.com/livereload/livereload-js)应该用于浏览器端，但初步尝试会报错。
