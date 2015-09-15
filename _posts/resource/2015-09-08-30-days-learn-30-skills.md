@@ -58,5 +58,11 @@ Just give it a try.
 	
 	**`livereload`未能重现**，npm中[livereload](https://www.npmjs.com/package/livereload)用于服务器端，出现`require`，可能需要webpack来解决。同时GitHub的[livereload-js](https://github.com/livereload/livereload-js)应该用于浏览器端，但初步尝试会报错。
 	
+8. 2015-09-15	Day 23	: 使用 TimelineJS 构建精美的时间轴
+
+	基于 jQuery 的插件，根据 Config 信息来定制时间轴的展示。目前我更倾向于用 CSS 来实现，故未花精力在此。
+	
+
 （未完待续）
+
 （最后修改于2015-09-14）
