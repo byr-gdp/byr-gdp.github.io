@@ -120,7 +120,13 @@ Just give it a try.
 
 	使用的插件有`grunt-markdown`、`grunt-contrib-uglify`、`grunt-contrib-watch`。需要注意的是**watch**的配置方法，不需要`grunt.registerTask(...)`，使用时直接`grunt watch`即可。
 	
-	**`livereload`未能重现**，npm中[livereload](https://www.npmjs.com/package/livereload)用于服务器端，出现`require`，可能需要webpack来解决。同时GitHub的[livereload-js](https://github.com/livereload/livereload-js)应该用于浏览器端，但初步尝试会报错。
+	<del>**`livereload`未能重现**，npm中[livereload](https://www.npmjs.com/package/livereload)用于服务器端，出现`require`，可能需要webpack来解决。同时GitHub的[livereload-js](https://github.com/livereload/livereload-js)应该用于浏览器端，但初步尝试会报错。</del>
+	
+	之前会报错是因为理解有偏差。`<script src="127.0.0.1:9877/livereload.js"></script>`并不意味着需要**亲自**把`livereload.js`文件放在根目录下（因为这样就意味着得有相应脚本，所以才会有之前`npm install livereload`和在GitHub寻找livereload源码的经历）。
+	
+	执行`grunt watch`后，配置信息指定了端口，此时`127.0.0.1:指定端口/livereload.js`已存在，只需要调用即可。同时无须python开启HTTP服务器，只要相应`.html`文件能正确调用脚本`livereload.js`即可。
+	
+	之前的做法是在工作目录执行`python -m SimpleHTTPServer 指定端口`开启HTTP服务器，而该指定端口与grunt watch配置端口一致，而这样做显然是错误的。要么端口冲突、要么无法正确地引用`livereload.js`文件
 	
 8. 2015-09-15	Day 23	: 使用TimelineJS构建精美的时间轴
 
