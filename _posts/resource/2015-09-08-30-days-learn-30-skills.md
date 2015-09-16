@@ -14,6 +14,70 @@ Just give it a try.
 
 ---
 
+目录如下：
+
+1. <del>Day 1: Bower——管理你的客户端依赖关系</del>
+ 
+2. <del>Day 2: AngularJS —— 对 AngularJS 的初步认识</del>
+
+3. Day 3: Flask —— 使用 Python 和 OpenShift 进行即时 Web 开发
+
+4. Day 4: PredictionIO —— 如何创建一个博客推荐器
+
+5. <del>Day 5: GruntJS —— 重复乏味的工作总会有人做（反正我不做）</del>
+
+6. Day 6: 在 Java 虚拟机上使用 Grails 进行快速 Web 开发
+
+7. <del>Day 7: GruntJS 在线重载 提升生产率至新境界</del>
+
+8. <del>Day 8: Harp.JS —— 现代静态 Web 服务器</del>
+
+9. Day 9: TextBlob —— 对文本进行情感分析
+
+10. Day 10: PhoneGap —— 开发手机应用如此简单
+
+11. Day 11: AeroGear 推送服务器：使应用的通知推送变得简单
+
+12. Day 12: OpenCV —— Java 开发者的人脸检测
+
+13. Day 13: Dropwizard —— 非常棒的 Java REST 服务器栈
+
+14. Day14：使用斯坦福 NER 软件包实现你自己的命名实体识别器（Named Entity Recognition，NER）
+
+15. Day 15：Meteor —— 从零开始创建一个 Web 应用
+
+16. Day 16: Goose Extractor —— 好用的文章提取工具
+
+17. Day 17: 使用 JBoss Forge 和 OpenShift 构建部署 JAVA EE 6 应用
+
+18. Day 18: BoilerPipe —— Java开发者的文章提取工具
+
+19. <del>Day 19: EmberJS 入门指南</del>
+
+20. Day 20: 斯坦福CoreNLP —— 用 Java 给 Twitter 情感分析
+
+21. <del>Day 21：Docker 入门教程</del>
+
+22. Day 22： 使用 Spring、MongoDB 和 AngularJS 开发单页面应用
+
+23. <del>Day 23： 使用 TimelineJS 构建精美的时间轴</del>
+
+24. Day 24: 使用 Yeoman 自动构建 Ember 项目
+
+25. Day 25: Tornado —— 联合 Tornado、MongoDB 和 AngularJS 进行应用开发
+
+26. Day 26: TogetherJS —— 让我们一起来编程！
+
+27. Day 27: Restify —— 在Node.js中构建正确的REST Web服务
+
+28. Day 28: OpenShift 的 Eclipse 集成
+
+29. Day 29: 编写你的第一个 Google Chrome 扩展程序
+
+30. <del>Day 30: Play Framework —— Java 开发者的梦想框架</del>
+
+---
+
 为了践行这个计划，避免半途而废。不按顺序的选择最感兴趣的内容学习且每学习一种新技术记录当时日期和小结。
 
 1. 2015-09-08	Day 30: Play Framework —— Java 开发者的梦想框架
@@ -58,10 +122,15 @@ Just give it a try.
 	
 	**`livereload`未能重现**，npm中[livereload](https://www.npmjs.com/package/livereload)用于服务器端，出现`require`，可能需要webpack来解决。同时GitHub的[livereload-js](https://github.com/livereload/livereload-js)应该用于浏览器端，但初步尝试会报错。
 	
-8. 2015-09-15	Day 23	: 使用 TimelineJS 构建精美的时间轴
+8. 2015-09-15	Day 23	: 使用TimelineJS构建精美的时间轴
 
-	基于 jQuery 的插件，根据 Config 信息来定制时间轴的展示。目前我更倾向于用 CSS 来实现，故未花精力在此。
+	基于jQuery的插件，根据Config信息来定制时间轴的展示。目前我更倾向于用CSS来实现，故未花精力在此。
 	
+9. 2015-09-16	Day 19  : EmberJS入门指南
+
+	简单介绍了Ember框架，并讲解如何用Ember创建一个单页面的社交化书签应用，其中涉及路由管理。当前主要重心是vue，未深入及实践。
+
+
 
 （未完待续）
 
