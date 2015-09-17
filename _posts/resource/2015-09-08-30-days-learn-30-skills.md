@@ -68,7 +68,7 @@ Just give it a try.
 
 26. Day 26: TogetherJS —— 让我们一起来编程！
 
-27. Day 27: Restify —— 在Node.js中构建正确的REST Web服务
+27. <del>Day 27: Restify —— 在Node.js中构建正确的REST Web服务</del>
 
 28. Day 28: OpenShift 的 Eclipse 集成
 
@@ -136,8 +136,18 @@ Just give it a try.
 
 	简单介绍了Ember框架，并讲解如何用Ember创建一个单页面的社交化书签应用，其中涉及路由管理。当前主要重心是vue，未深入及实践。
 
+10. 2015-09-17	Day 27  : Restify —— 在Node.js中构建正确的REST Web服务
+
+	前后端分离是趋势，作为前端，能自己独立实现REST api着实很棒。因为node，这一切有了可能。
+	
+	restify是一个基于Nodejs的REST应用框架，支持服务器端和客户端。restify比起express更专注于REST服务，去掉了express中的template, render等功能，同时强化了REST协议使用，版本化支持，HTTP的异常处理。
+	
+	该教程中`createServer(port, ip_addr, function(){...})`可能由于版本问题导致报错，不过在去掉`ip_addr`即可。
+	
+	搜索资料过程中发现一个基于restify的[手机归属地查询项目](https://github.com/roymax/moquery)，还用到了redis和sqlite，挖坑学习。
+
 
 
 （未完待续）
 
-（最后修改于2015-09-16）
+（最后修改于2015-09-17）
