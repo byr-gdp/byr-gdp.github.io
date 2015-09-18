@@ -42,9 +42,9 @@ Just give it a try.
 
 13. Day 13: Dropwizard —— 非常棒的 Java REST 服务器栈
 
-14. Day14：使用斯坦福 NER 软件包实现你自己的命名实体识别器（Named Entity Recognition，NER）
+14. Day14: 使用斯坦福 NER 软件包实现你自己的命名实体识别器（Named Entity Recognition，NER）
 
-15. Day 15：Meteor —— 从零开始创建一个 Web 应用
+15. Day 15: Meteor —— 从零开始创建一个 Web 应用
 
 16. Day 16: Goose Extractor —— 好用的文章提取工具
 
@@ -66,7 +66,7 @@ Just give it a try.
 
 25. Day 25: Tornado —— 联合 Tornado、MongoDB 和 AngularJS 进行应用开发
 
-26. Day 26: TogetherJS —— 让我们一起来编程！
+26. <del>Day 26: TogetherJS —— 让我们一起来编程！</del>
 
 27. <del>Day 27: Restify —— 在Node.js中构建正确的REST Web服务</del>
 
@@ -146,8 +146,11 @@ Just give it a try.
 	
 	搜索资料过程中发现一个基于restify的[手机归属地查询项目](https://github.com/roymax/moquery)，还用到了redis和sqlite，挖坑学习。
 
+11. 2015-09-18 	Day 26 	: TogetherJS —— 让我们一起来编程！
+
+	介绍了一个来自Mozilla的很有意思的JavaScript库——TogetherJS，其采用**Web RTC**技术，实现用户在网站上实时协作，可以用来实现一些有趣的事情。	
 
 
-（未完待续）
+（暂时告一段落，不再补充）
 
-（最后修改于2015-09-17）
+（最后修改于2015-09-18）
