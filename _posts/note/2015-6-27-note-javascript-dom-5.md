@@ -71,7 +71,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 							rows[j].style.backgroundColor = "#ffc";
 							odd = false;
 						} else {
-							odd - true;
+							odd = true;
 						}
 					}
 				}

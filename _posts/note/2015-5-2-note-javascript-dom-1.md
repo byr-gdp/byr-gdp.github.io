@@ -4,12 +4,15 @@ title: 《JavaScript DOM 编程艺术》笔记（一）
 category: 笔记
 tags: JavaScript DOM
 description: 《JavaScript DOM 编程艺术》笔记
+
 ---
 
 ### Chapter 1 JavaScript简史
 
 ### Chapter 2 Javascript语法
+
 1. 数组  
+
 	关联数组：如果在填充数组时只给出了元素的值，这个数组就将是一个传统数组，它的各个元素的下标将被自动创建和刷新。可以通过在填充数组时为每个新元素明确地给出下标来改变这种默认的行为。在为新元素给出下标时，不必局限于使用整数数字，可以使用字符串：  
 		
 		var lennon = Array();  
@@ -19,7 +22,8 @@ description: 《JavaScript DOM 编程艺术》笔记
 	
 	但这种用法并不是一个好习惯，实际上是给lennon数组添加了name、year和living三个属性
 
-2. 对象   
+2. 对象
+
 	创建对象使用**Object**关键字，上一节的lennon数组可以创建成下面这个对象：
 	
 		var lennon = Object();  
@@ -45,16 +49,20 @@ description: 《JavaScript DOM 编程艺术》笔记
 	现在可以通过beatles.vocalist.name得到值"John"。
 
 3. 关于命名
+	
 	在命名变量时，用下划线来分隔各个单词；在命名函数时，采用驼峰命名法。这么做可以一眼看出哪些名字是变量，哪些名字是函数。
 
 ### Chapter 3 DOM
+
 1. 5个常用的DOM方法：getElementById、getElementsByTagName、getElementsByClassName、getAttribute、setAttribute
+
+
 2. 节点（node)
 	1. 元素节点(element node)
 	2. 文本节点(text node)
 	3. 属性节点(attribute node)
 
-3. getElementsByClassName兼容老浏览器  
+3. getElementsByClassName兼容老浏览器(只能匹配一个class值)  
 		
 		function getElementsByClassName(node, classname){
 			if(node.getElementsByClassName){
@@ -74,3 +82,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 
 4. DOM的工作模式：先加载文档的静态内容，再动态刷新，动态刷新不影响文档的静态内容。
 5. getElementById返回一个对象，getElementsByTagName和getElementsByClassName返回一个对象数组。
+
+（完）
+
+（最后修改于2015-09-21）

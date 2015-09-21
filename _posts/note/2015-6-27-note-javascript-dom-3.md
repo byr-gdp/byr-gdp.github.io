@@ -35,7 +35,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 	语句挪到外部函数里，也还是需要在标记的`<body>`部分使用`<script>`标签才能调用那个函数
 	2. innerHTML：可用来读、写某给定元素里的HTML内容。使用innerHTML属性，你就可以把JavaScript代码从标记中分离出来。用不着在标记的的`<body>`部分插入`<script>`标签
 	
-2. DOM方法
+2. **DOM方法**(重要)
 	1. createElement方法：  
 		语法：`document.createElement(nodeName);`  
 		如`var para = document.createElement("p");`
@@ -57,3 +57,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 			}
 
 3. Ajax
+
+（完）
+
+（最后修改于2015-09-21）
