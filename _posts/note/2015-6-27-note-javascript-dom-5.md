@@ -125,3 +125,7 @@ description: 《JavaScript DOM 编程艺术》笔记
 						element.className += newClassName;
 						
 5. 对函数进行抽象
+
+（完）
+
+（最后修改于2015-09-21）
