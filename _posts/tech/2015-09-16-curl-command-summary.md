@@ -7,12 +7,12 @@ description: curl 指令小结
 
 ---
 
-参考阮一峰[curl网站开发指南](http://www.ruanyifeng.com/blog/2011/09/curl.html)，不是特别全面但入门够用，和参考的其他资料相比参数使用更『语义化』，比如设置UA，使用`--user-agent`而非`-A`等等，在不是很熟悉的情况下更易于理解。
+参考了阮一峰[curl网站开发指南](http://www.ruanyifeng.com/blog/2011/09/curl.html)，内容并非特别全面但入门了解足矣，与参考的其他资料相比最大的特点是参数使用更符合『语义化』，比如设置UA，使用`--user-agent`而非`-A`等等，虽然这需要输入更多字符，但在不是很熟悉的情况下更容易理解。
 
 下面对常用命令的总结，持续补充中...
 
 
-1. 简单使用，返回网页源码
+1. 返回网页源码
 
 	`curl + [url]`
 	
@@ -102,7 +102,9 @@ description: curl 指令小结
 	
 	`curl --user name:password [url]`
 
+（完）
 
+（最后修改于2015-09-21）
 
 
 
