@@ -21,10 +21,6 @@ title: Aloha
 
 随心而写，有料即可
 
-当我回首这些内容时，心里无数个草泥马奔腾而过，“这都是啥？”
-
-这才是进步
-
-## happy is all :)
+## No Coding, Just Joking
  
 
