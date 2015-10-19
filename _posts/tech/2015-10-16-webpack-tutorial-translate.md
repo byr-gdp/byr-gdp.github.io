@@ -13,7 +13,7 @@ description: 《CSS 权威指南》
 
 # WELCOME
 
-这份指南会通过自始自终通过围绕一个简单例子。通过学习本教程你可以学到：
+这份指南自始自终围绕一个简单例子。通过学习本教程你可以学到：
 
 * 如何安装webpack
 * 如何使用webpack
@@ -22,9 +22,9 @@ description: 《CSS 权威指南》
 
 # 安装WEBPACK
 
-首先你需要有node环境
+首先你需要安装有node，然后执行
 
-*图片*
+	`npm install webpack -g`
 
 > 这会使webpack命令生效
 
@@ -32,15 +32,15 @@ description: 《CSS 权威指南》
 
 我们从一个空文件夹开始，首先创建以下文件
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/17/5623130e3e6f0.png)
 
 然后在该文件夹根目录下执行以下命令：
 
 	webpack ./entry.js bundle.js
 	
-这会编译你的`entry.js`文件并生成`bundle.js`。倘若成功，将有一下信息输出：
+这会编译你的`entry.js`文件并生成`bundle.js`。倘若成功，将有以下信息输出：
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/17/5623130e40ae6.png)
 
 用浏览器打开`index.html`，会出现`It works.`
 
@@ -48,7 +48,7 @@ description: 《CSS 权威指南》
 
 接下来，我们会将一些代码移入一个新文件。
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/17/5623130e616f3.png)
 
 再次用以下命令编译
 
@@ -66,15 +66,18 @@ description: 《CSS 权威指南》
 
 会用到的文件如下：
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/18/562468f9a72c0.png)
+
 
 再次编译并刷新浏览器你会看到应用的背景变为黄色。
+
+![image](https://ooo.0o0.ooo/2015/10/17/5623130e3951d.png)
 
 # 绑定LOADER
 
 我们不希望总是敲下如此冗长的`require("!style!css!./style.css");`，所以我们可以绑定文件的扩展名以简化写法为`require("./style.css")`。
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/18/5624697c01675.png)
 
 执行以下的编译命令：
 
@@ -86,7 +89,7 @@ description: 《CSS 权威指南》
 
 我们希望将配置选项写入配置文件中。
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/17/5623130e4b155.png)
 
 此后，仅需执行：
 
@@ -94,7 +97,7 @@ description: 《CSS 权威指南》
 
 来编译
 
-*图*
+![image](https://ooo.0o0.ooo/2015/10/17/562313105e09d.png)
 
 > `webpack`命令总会尝试载入当前目录的`webpack.config.js`文件
 
