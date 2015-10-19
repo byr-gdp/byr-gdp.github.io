@@ -24,7 +24,7 @@ description: 《CSS 权威指南》
 
 首先你需要安装有node，然后执行
 
-	`npm install webpack -g`
+`npm install webpack -g`
 
 > 这会使webpack命令生效
 
@@ -46,11 +46,11 @@ description: 《CSS 权威指南》
 
 # 再添加一个文件
 
-接下来，我们会将一些代码移入一个新文件。
+接下来，我们会为一个新文件添加如下代码。
 
 ![image](https://ooo.0o0.ooo/2015/10/17/5623130e616f3.png)
 
-再次用以下命令编译
+再执行以下命令
 
 	webpack ./entry.js bundle.js
 	
@@ -64,7 +64,7 @@ description: 《CSS 权威指南》
 
 运行`npm install css-loader style-loader`来安装这些loader（此处使用局部安装而非全局安装），这会在你的目录下生成`node_modules`文件夹。
 
-会用到的文件如下：
+需要改动的文件如下：
 
 ![image](https://ooo.0o0.ooo/2015/10/18/562468f9a72c0.png)
 
@@ -101,9 +101,9 @@ description: 《CSS 权威指南》
 
 > `webpack`命令总会尝试载入当前目录的`webpack.config.js`文件
 
-# 更友好的输出
+# 更友好地输出
 
-随着项目的增长，编译过程可能会越来越长，所以我们可以展示一些进度条以及颜色。我们可以通过以下命令达到目的：
+随着项目的增长，编译过程可能会越来越长，所以我们可以展示一些进度条以及增加配色来实现更友好地输出。我们可以通过以下命令达到目的：
 
 	webpack --progress --colors
 	
@@ -115,7 +115,7 @@ description: 《CSS 权威指南》
 	
 # 开发服务器
 
-提供开发服务器是再好不过的了
+提供开发服务器是非常好的一项服务，可以替换`python -m SimpleHTTPServer`启用HTTP静态服务器
 
 通过以下命令全局安装
 
