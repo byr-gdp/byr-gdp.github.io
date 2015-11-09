@@ -1,9 +1,9 @@
 ---
 layout: post
 title: webpack入门(译)
-category: 笔记
-tags: css
-description: 《CSS 权威指南》
+category: 翻译
+tags: webpack loader
+description: webpack入门(译)
 
 ---
 

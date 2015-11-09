@@ -1,9 +1,9 @@
 ---
 layout: post
-title: datetimepicker tutorial 中文版
-category: 插件
+title: datetimepicker tutorial（译）
+category: 翻译
 tags: bootstrap jquery datetimepicker
-description: datetimepicker tutorial 中文版
+description: datetimepicker tutorial（译）
 
 ---
 
