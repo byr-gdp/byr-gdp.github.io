@@ -19,6 +19,8 @@ description: 高性能HTML5
 
 ## 第三部分 创建一个网站
 
+### 第六章 页面模板
+
 1. 使用IE的兼容模式（通常情况下应该关闭，除非由于历史原因不得不使用），可以通过以下 `meta` 标签做到
 
 > `<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">`
@@ -29,3 +31,8 @@ description: 高性能HTML5
 
 > `<meta name="viewport" content="width=device-width">`
 
+### 第七章 导航
+
+1. ID 属性选择器的性能是最高的（但比含标识符的选择器高的不多）。因为标识符可以重复使用，所以应该使用含标识符的选择器而不是 ID 属性选择器，牺牲这点性能是值得的。
+
+2. 试图让所有浏览器展示完全一样的效果是不对的。
