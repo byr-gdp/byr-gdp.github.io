@@ -40,7 +40,7 @@ description: Git学习笔记（1）
 	5. 撤销修改
 	
 		1. 尚未执行 `git add`，使用 `git checkout [filename]`。
-		2. 已执行 `git add`，使用 `git reset HEAD [filename]`，将暂存区的修改退回到工作区。
+		2. 已执行 `git add`，使用 `git reset HEAD [filename]`，将暂存区的修改退回到工作区。可选择的参数有：`--soft --hard --mixed（默认）`。`--soft`执行的效果是返回到该 commit `git commit` 之前，此时仍可以做修改。`--hard` 执行的效果是将 HEAD 指向该 commit，之后的任何改变都丢失，需通过 `git reflog` 找回。`--mixed（缺省）`执行的效果是返回到该 commit `git add` 之前。
 	
 	6. 删除文件
 	
@@ -56,4 +56,4 @@ description: Git学习笔记（1）
 			
 ---			
 			
-(最后修改于 2015-12-04)
+(最后修改于 2015-12-07)
