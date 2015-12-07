@@ -26,7 +26,8 @@ description: Git学习笔记（2）
 		3. 切换分支：`git checkout <name>`
 		4. 创建+切换分支：`git checkout -b <name>`
 		5. 合并某分支到当前分支：`git merge <name>`，快进模式（/Users/gdp/Github Project/byr-gdp.github.io/_posts/tech/2015-4-12-git-learning-2.mdFast-forward)
-		6. 删除分支：`git branch -d <name>`
+		6. 删除本地分支：`git branch -d <name>` 或者 `git branch --delete <name>`，以及强制删除 `git branch -D <name>` 或者 `git branch --delete --force <name>`
+		7. 删除远程分支 `git push origin --delete <name>`
 	2. 解决冲突  
 		- 只能试图把各自的冲突合并起来，需手动解决
 		- `git merge`、`git rebase`搭配使用
@@ -57,3 +58,7 @@ description: Git学习笔记（2）
 			
 			创建本地分支并与远程分支关联：`git checkout -b dev origin/dev`
 			指定本地分支与远程分支关联：`git branch --set-upstream dev origin/dev`
+			
+---
+
+（最后修改于 2015-12-07）
