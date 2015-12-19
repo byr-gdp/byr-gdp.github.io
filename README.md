@@ -1,6 +1,6 @@
 ### 我的博客
 
-地址：[https://github.com/byr-gdp/3-Jekyll](https://github.com/byr-gdp/3-Jekyll)
+地址：[https://if-true.com](http://if-true.com)
 
 ### 安装说明
 
