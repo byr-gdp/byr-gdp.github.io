@@ -319,8 +319,58 @@ description: 《JavaScript 权威指南》
 	2. 静态私有变量
 	3. 模块模式（单例模式）（不懂）
 	
+	
+# 第8章 BOM
 
+1. window 对象
 
+	1. 双重角色：表示浏览器的一个实例，是通过 JavaScript 访问浏览器窗口的一个借口，又是 ECMAScript 规定的 Global 对象。
+
+	2. 全局作用域
+
+		定义全局变量与在 window 对象上直接定义属性差别：全局变量不能通过 `delete` 操作符删除，而直接在 window 对象上的定义属性可以。
+	
+	3. 尝试访问未声明的变量会抛出错误，但是通过查询 window 对象，可以知道某个可能未声明的变量是否存在。
+	4. 窗口关系及框架（略）
+	5. 窗口位置
+
+		screenLeft screenTop screenX screenY 
+	
+		移动：moveTo() moveBy()
+
+	6. 窗口大小
+
+		innerWidth innerHeight outerWidth outerHeight
+	
+		document.documentElement.clienWidth(clientHeight) 		document.body.clientWidth(Height)
+	
+	7. 导航和打开窗口
+
+		window.open() 导航到一个特定 URL 或者打开一个新的浏览器窗口。
+	
+		调用 close() 方法可以关闭通过 window.open() 打开的弹出窗口。
+	
+8. location 对象
+
+	1. 既是 window 对象的属性，也是 document 对象的属性。window.location 和 document.location 引用的是同一个对象。
+	
+	9. 查询字符串参数 location.search
+	10. 位置操作 window.location 或 location.href
+
+		replace() 方法避免生成新纪录。
+		reload() 重新加载。location.reload(true) 从服务器加载，否则可能从缓存中加载。
+
+11. navigator 对象
+
+12. screen 对象
+
+	基本只用来表明客户端的能力，其中包括浏览器窗口外部的显示器的信息。
+	
+13. history 对象
+
+	go() back() forward()
+	
+  
 
 
 
