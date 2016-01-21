@@ -2,7 +2,7 @@
 layout: post
 title: 找实习的那些日子
 category: 随笔
-tags: 实习
+tags: interview, front-end
 description: 找实习的那些日子
 ---
 

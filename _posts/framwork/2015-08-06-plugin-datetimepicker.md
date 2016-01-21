@@ -2,7 +2,7 @@
 layout: post
 title: 时间日期选择器 datetimepicker
 category: 插件
-tags: bootstrap jquery datetimepicker
+tags: bootstrap, jquery, datetimepicker, css
 description: 时间日期选择器 datetimepicker
 
 ---

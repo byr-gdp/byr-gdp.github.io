@@ -2,7 +2,7 @@
 layout: post
 title: Linux学习资源（持续更新）
 category: 资源
-tags: Linux
+tags: linux, tutorial, resource
 description: Linux学习资源
 ---
 

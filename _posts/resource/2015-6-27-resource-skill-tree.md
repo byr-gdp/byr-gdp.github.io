@@ -2,7 +2,7 @@
 layout: post
 title: 知道创宇研发技能表
 category: 资源
-tags: 技能 前端
+tags: skill, front end, fe
 description: 知道创宇研发技能表
 ---
 

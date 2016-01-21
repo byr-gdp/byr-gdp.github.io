@@ -2,7 +2,7 @@
 layout: post
 title: datetimepicker tutorial（译）
 category: 翻译
-tags: bootstrap jquery datetimepicker
+tags: bootstrap, jquery, datetimepicker, translation
 description: datetimepicker tutorial（译）
 
 ---

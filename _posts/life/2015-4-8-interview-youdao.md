@@ -2,7 +2,7 @@
 layout: post
 title: 网易有道前端面试小结
 category: 随笔 
-tags: 面试 有道
+tags: interview, youdao, front-end, netease
 description: 网易有道前端面试小结
 ---
 

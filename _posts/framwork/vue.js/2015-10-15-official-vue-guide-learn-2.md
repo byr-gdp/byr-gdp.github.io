@@ -2,7 +2,7 @@
 layout: post
 title: Vue 教程学习（二）——绑定表达式
 category: 技术
-tags: Vue JavaScript JS
+tags: vue, vue.js, tutorial
 description: Vue 教程学习
 
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: 闻题鸟前端面试小结
 category: 随笔
-tags: 面试 闻题鸟
+tags: interview, front-end
 description: 闻题鸟有道前端面试小结
 ---
 

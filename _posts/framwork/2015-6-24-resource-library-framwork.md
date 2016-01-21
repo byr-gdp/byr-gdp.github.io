@@ -2,7 +2,7 @@
 layout: post
 title: 一些第三方组件收集
 category: 插件
-tags: HTML CSS JavaScript
+tags: html, css, javascript, plugin
 description: 一些第三方组件收集
 
 ---

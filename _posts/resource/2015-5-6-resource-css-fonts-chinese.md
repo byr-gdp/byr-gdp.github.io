@@ -2,7 +2,7 @@
 layout: post
 title: CSS中文字体对照表
 category: 资源
-tags: CSS 中文 对照表
+tags: css, css3, font
 description: CSS中文字体对照表
 ---
 

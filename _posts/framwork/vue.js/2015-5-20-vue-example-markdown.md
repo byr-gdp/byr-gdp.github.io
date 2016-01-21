@@ -2,7 +2,7 @@
 layout: post
 title: vue.js示例-Markdown编辑器
 category: 框架
-tags: vue
+tags: vue, vue.js, markdown
 description: vue.js-Markdown编辑器
 
 ---

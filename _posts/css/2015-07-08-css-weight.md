@@ -2,7 +2,7 @@
 layout: post
 title: 关于CSS权重
 category: css
-tags: CSS 
+tags: html, css, css3, css weight
 description: 关于CSS权重
 
 ---

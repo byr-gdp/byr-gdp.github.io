@@ -2,7 +2,7 @@
 layout: post
 title: 背景图全屏显示
 category: css
-tags: CSS
+tags: css, background image, background, img
 description: 背景图全屏显示
 
 ---

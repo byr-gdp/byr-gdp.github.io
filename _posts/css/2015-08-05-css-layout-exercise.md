@@ -2,7 +2,7 @@
 layout: post
 title: 40个css布局练习
 category: css
-tags: CSS
+tags: css, layout, exercise
 description: 40个css布局练习
 
 ---

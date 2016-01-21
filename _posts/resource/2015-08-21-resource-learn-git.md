@@ -2,7 +2,7 @@
 layout: post
 title: Git 学习资源整理
 category: 资源
-tags: git 资源
+tags: git, tutorial
 description: Git 学习资源整理
 
 ---

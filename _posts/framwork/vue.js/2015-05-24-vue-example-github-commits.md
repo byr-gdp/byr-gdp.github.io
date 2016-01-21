@@ -2,7 +2,7 @@
 layout: post
 title: vue.js示例-Github提交
 category: 框架
-tags: vue
+tags: vue, vue.js, github
 description: vue.js-Github提交
 
 ---

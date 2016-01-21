@@ -2,7 +2,7 @@
 layout: post
 title: 代码规范之伪元素选择器（伪类）
 category: 技术
-tags: 伪元素 伪类 选择器 代码规范
+tags: css, selector, pseudo-classes
 description: 代码规范之伪元素选择器（伪类）
 
 ---

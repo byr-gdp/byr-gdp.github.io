@@ -2,7 +2,7 @@
 layout: post
 title: 《30天学习30种新技术》
 category: 资源
-tags: web angular css js
+tags: css, angular, node, npm, grunt
 description: 《30天学习30种新技术》
 
 ---

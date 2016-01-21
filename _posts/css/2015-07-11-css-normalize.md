@@ -2,7 +2,7 @@
 layout: post
 title: 关于normalize.css
 category: css
-tags: CSS
+tags: css, css3, normalize
 description: 关于normalize.css
 
 ---

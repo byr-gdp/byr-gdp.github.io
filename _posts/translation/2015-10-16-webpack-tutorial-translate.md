@@ -2,7 +2,7 @@
 layout: post
 title: webpack入门(译)
 category: 翻译
-tags: webpack loader
+tags: webpack, loader, plugin, tutorial
 description: webpack入门(译)
 
 ---
