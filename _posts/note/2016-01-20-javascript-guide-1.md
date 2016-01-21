@@ -391,8 +391,11 @@ description: 《JavaScript 权威指南》
 	1. 用户代理字符串检测技术
 	
 		1. 识别呈现引擎：主要检测五大呈现引擎：IE Gecko Webkit KHTML 和 Opera
-
-
+		2. 识别浏览器
+		3. 识别平台
+		4. 识别 Windows 操作系统
+		5. 识别移动设备
+		6. 识别游戏系统
   
 
 
