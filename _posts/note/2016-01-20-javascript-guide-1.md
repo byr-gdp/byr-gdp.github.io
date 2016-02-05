@@ -53,7 +53,7 @@ description: 《JavaScript 权威指南》
 8. toString()
 
 	1. null 和 undefined 没有该方法。可以使用转型函数 String()。
-	2. 可传递一个参数：输出数值的技术。默认情况下，toString()以十进制格式返回数值的字符串表示。
+	2. 可传递一个参数：输出数值的基数。默认情况下，toString()以十进制格式返回数值的字符串表示。
 	
 9. Object 类型
 
@@ -92,7 +92,7 @@ description: 《JavaScript 权威指南》
 		
 6. 垃圾收集
 
-	1. 标记清楚
+	1. 标记清除
 	2. 引用计数
 	
 7. 基本类型值在内存中占据固定大小的空间，被保存在栈空间中
@@ -100,7 +100,7 @@ description: 《JavaScript 权威指南》
 
 # 第5章 引用类型
 
-1. 创建 Object 实例的方式有2种。第一种是使用 new 操作符后跟 Object构造函数，另一种是使用对象字面量表示法。
+1. 创建 Object 实例的方式有2种。第一种是使用 new 操作符后跟 Object 构造函数，另一种是使用对象字面量表示法。
 2. 一般来说，访问对象属性时使用**点表示法**，不过也可以使用**方括号表示法**来访问对象的属性
 3. Array 类型
 
@@ -131,8 +131,8 @@ description: 《JavaScript 权威指南》
 
 	1. 初始化三种方法：函数声明、函数表达式，第三种是使用 Function 构造函数，理解"函数是对象，函数名是指针"
 	2. 没有重载
-	3. 函数内部属性：arguments this
-	4. 函数的属性和方法：两个属性：length prototype，length 表示函数希望接受的命名参数的个数
+	3. 函数内部属性：arguments、this
+	4. 函数的属性和方法：两个属性：length、prototype，length 表示函数希望接受的命名参数的个数
 	5. 每个函数都包含两个非继承而来的方法：apply()和call()，区别仅仅是接受参数的方式不同，真正强大的地方是扩充函数赖以运行的作用域。
 	
 7. 基本包装类型
@@ -157,7 +157,7 @@ description: 《JavaScript 权威指南》
 	2. Math 对象
 	
 		1. Math 的对象属性：Math.E Math.LN10 Math.LN2 Math.LOG2E Math.LOG10E Math.PI Math.SQRT1_2 Math.SQRT2
-		2. min()和max()
+		2. `min()和max()`
 			
 			这两个方法经常用于避免多余的循环和在 if 语句中确定一组数的最大值，通过使用 `apply()`方法
 			
@@ -197,7 +197,13 @@ description: 《JavaScript 权威指南》
 	
 		用函数来封装以特定接口创建对象的细节
 		
-			function createPerson(name, age, job){        		var o = new Object();		        o.name = name;        		o.age = age;		        o.job = job;		        o.sayName = function(){		            alert(this.name);        		};				return o; 
+			function createPerson(name, age, job){        		var o = new Object();
+				o.name = name;
+				o.age = age;
+				o.job = job;
+				o.sayName = function(){
+					alert(this.name);
+				};				return o; 
 			}
 		
 		工厂模式虽然解决了创建多个相似对象的问题,但却没有解决**对象识别**的问题(即怎样知道一个对象的类型)。
@@ -206,7 +212,10 @@ description: 《JavaScript 权威指南》
 	
 		之前的例子重写如下：
 		
-			function Person(name, age, job){        		this.name = name;		        this.age = age;		        this.job = job;		        this.sayName = function(){		            alert(this.name);				}; 
+			function Person(name, age, job){        		this.name = name;
+				this.age = age;
+				this.job = job;
+				this.sayName = function(){		        	alert(this.name);				}; 
 			}		    var person1 = new Person("Nicholas", 29, "Software Engineer");		    var person2 = new Person("Greg", 27, "Doctor");
 		    
 		对象的 constructor 属性最初是用来标识对象类型的。创建自定义的构造函数意味着将来可以将它的实例标识为一种特定的类型。而这正是构造函数模式胜过工厂模式的地方。
@@ -218,17 +227,17 @@ description: 《JavaScript 权威指南》
 		
 		实例通过使用 hasOwnProperty()方法,可以确认什么时候访问的是实例属性（true）,什么时候访问的是原型属性(false)。
 		
-		原型与 in 操作符：有两种方式使用 in 操作符:单独使用和在 for-in 循环中使用。在单独使用时,in 操作符会在通 过对象能够访问给定属性时返回 true,无论该属性存在于实例中还是原型中。
+		原型与 in 操作符：有两种方式使用 in 操作符:单独使用和在 for-in 循环中使用。在单独使用时,in 操作符会在通过对象能够访问给定属性时返回 true,无论该属性存在于实例中还是原型中。
 		
 		封装 hasPrototypeProperty() 确定该属性到底是存在于对象中,还是存在于原型中。
 		
 			function hasPrototypeProperty(object, name){		        return !object.hasOwnProperty(name) && (name in object);			}
 			
 		Object.keys()和 Object.getOwnPropertyNames()方法都可以用来替代 for-in 循环。
-		更简单的原型语法：用一个包含所有属性和方法的 对象字面量来重写整个原型对象。
+		更简单的原型语法：用一个包含所有属性和方法的对象字面量来重写整个原型对象。
 		
-			function Person(){			}			
-			Person.prototype = {			    name : "Nicholas",			    age : 29,			    job: "Software Engineer",			    sayName : function () {			        alert(this.name);	    		}			};
+			function Person(){						}			
+			Person.prototype = {			    name: "Nicholas",			    age: 29,			    job: "Software Engineer",			    sayName: function () {			        alert(this.name);	    		}			};
 			
 		注意：constructor 属性不再指向 Person 了。除非显示地设置。
 		原型的动态性：重写整个原型对象会出现问题（P156）
@@ -298,7 +307,7 @@ description: 《JavaScript 权威指南》
 3. **闭包**是指有权访问另一个函数作用域中的变量的函数。创建闭包的常见方式，就是在一个函数内部创建另一个函数。因为内部函数的作用域链会包含外部函数。
 4. this 对象是在运行时基于函数的执行环境绑定的。两个很典型的例子：
 
-		var name = "The Window";		var object = {    		name : "My Object",		    getNameFunc : function(){		        return function(){		            return this.name;        		};			} 
+		var name = "The Window";		var object = {    		name : "My Object",			getNameFunc : function(){		        return function(){		            return this.name;        		};			} 
 		};		alert(object.getNameFunc()()); //"The Window"
 		
 		var name = "he Window";
@@ -324,7 +333,7 @@ description: 《JavaScript 权威指南》
 
 1. window 对象
 
-	1. 双重角色：表示浏览器的一个实例，是通过 JavaScript 访问浏览器窗口的一个借口，又是 ECMAScript 规定的 Global 对象。
+	1. 双重角色：表示浏览器的一个实例，是通过 JavaScript 访问浏览器窗口的一个接口，又是 ECMAScript 规定的 Global 对象。
 
 	2. 全局作用域
 
