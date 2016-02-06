@@ -7,7 +7,7 @@ description: 《JavaScript 权威指南》
 
 ---
 
-（Chapter 10 —— Chapter 12）
+（Chapter 10 —— Chapter 12、Chapter 21 —— Chapter 22）
 
 ---
 
@@ -82,3 +82,205 @@ description: 《JavaScript 权威指南》
 # 第12章 DOM2 和 DOM3
 
 1. DOM1 级主要定义的是 HTML 和 XML 文档的底层结构。DOM2 和 DOM3 级则在这个结构 的基础上引入了更多的交互能力,也支持了更高级的 XML 特性。
+
+# 第21章 Ajax 与 Comet
+
+1. XMLHttpRequest 用法
+
+	若不必支持IE7以前的版本，直接使用 XMLHttpRequest 构造函数。
+	
+		var xhr = new XMLHttpRequest();
+		
+	紧接着，调用 `open()` 方法，接受三个参数：请求类型、URL、是否异步发送请求，此时并不会发送真正的请求，而只是启动一个请求准备发送。
+	要发送特定的请求，需要调用 `send()` 方法，接受一个参数：请求主体的数据或 null。
+	对于**异步请求**，需要检测 `readyState` 属性，来获取当前活动状态。只要 `readyState` 变化，都会触发 `readystatechange` 事件。例子如下：
+	
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if(xhr.readyState == 4) {
+				if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+					alert(xhr.responseText);
+				} else {
+					alert("Request was unsuccessful: " + xhr.status);
+				}
+			}
+		}
+		xhr.open('get', 'example.txt', true);
+		
+	在接收到响应之前，可以调用 `abort()` 方法来取消异步请求。
+	
+2. HTTP 头部信息
+
+	`setRequestHeader()` 方法可以设置自定义的请求头部信息，接受两个参数，键值对。
+	`getResponseHeader()` 方法传入头部字段，可以取得响应头部信息，而调用 `getAllResponseHeaders()` 则可以取得包含所有头部信息的长字符串。
+	
+3. GET 请求
+
+	使用 GET 请求查询字符串中每个参数的名称和值都必须使用 encodeURIComponent() 进行编码。
+	
+4. POST 请求
+
+	将数据作为请求的主体提交。
+	
+5. XMLHttpRequest 2级
+
+	1. FormData
+	2. 超时设定
+	3. overrideMimeType() 方法
+	
+6. 进度事件
+
+	6个进度事件：loadstars、progress、error、abort、load、loaded。
+	
+	progress 事件包含三个属性：lengthComputable、position、totaSize
+	
+7. 跨源资源共享
+
+	CORS 背后的基本思想，就是使用自定义的 HTTP 头部让浏览器与服务器进行沟通，从而决定请求与响应成功还是失败。
+	
+	非 IE 浏览器通过 XMLHttpRequest 实现了对 CORS 的原生支持。
+	
+8. 跨浏览器的 CORS
+
+		function createCORSRequest(method, url) {
+			var xhr  = new XMLHttpRequest();
+			if("withCredentials" in xor) {
+				xhr.open(method, url, true);
+			} else if(typeof XDomainRequest != "undefined") {
+				xhr = new XDomainRequest();
+				xhr.open(method, url);
+			} else {
+				xhr = null;
+			}
+			return xhr;
+		}
+		
+		var request = createCORSRequest('get', 'http://www.somewhere-else.com/page/');
+		if(request) {
+			request.onload = function() {
+				// 处理 request.responseText
+			};
+			request.send();
+		}
+		
+9. 其他跨域技术
+
+	1. 图像 Ping
+	
+			var img = new Image();
+			img.onload = img.onerror = function() {
+				alert('done');
+			}
+			img.src = 'url';
+			
+		2个缺点：只能发送 GET 请求，无法访问服务器的响应文本。
+			
+	2. JSONP
+	
+		优点是能够访问响应文本。
+		
+	3. Comet
+	
+		一种服务器向页面推送数据的技术。两种实现方式：**长轮询和流**（区分短轮询）
+		
+	4. Web Sockets
+	
+		1. 实例化
+		
+				var socket = new WebSocket('ws://www.example.com/server.php');
+				
+		2. 发送和接收数据
+		
+				socket.send('hello world'); // 复杂的数据结构发送之前必须序列化
+				
+				socket.onmessage = function(event) {
+					var data = event.data;
+					// ...
+				}
+				
+		3. 其他事件
+		
+			1. open：在成功建立连接时触发。
+			2. error：在发生错误时触发，连续不能持续。
+			3. close：在连接关闭时触发。`event` 对象还有三个额外的属性：wasClean、code、reason。
+			
+
+# 第22章 高级技巧
+
+1. 高级函数
+
+	1. 安全的类型检测
+	
+		在任何值上调用 Object 原生的 toString() 方法，都会返回一个 `[object NativeConstructorName]` 格式的字符串。通过 `Object.prototype.toString.call(value)` 检测。
+		
+	2. 作用域安全的构造函数
+	
+		由于 this 对象实在运行时绑定的，避免因为忽略 new 操作符而导致 this 映射到全局对象 window 上。（P599 例子）
+		
+	3. 惰性载入函数
+	
+		2种实现方式：函数被调用时再处理函数，函数声明时就指定适当的函数（匿名、自执行函数）
+		
+	4. 函数绑定 bind()
+	
+			function bind(fn, context) {
+				return function() {
+					return fn.apply(context, arguments);
+				}
+			}
+			
+	5. 函数柯里化（function currying）
+	
+		创建步骤：调用另一个函数并为他传入要柯里化的函数和必要参数。
+		
+			function curry(fn) {
+				var args = Array.prototype.slice.call(arguments, 1);
+				return function() {
+					var innerArgs = Array.prototype.slice.call(arguments);
+					var finalArgs = args.concat(innerArgs);
+					return fn.apply(null, finalArgs);
+				}
+			}
+			
+2. 防篡改对象
+
+	1. 不可扩展对象
+	
+		使用 `Object.preventExtensions()` 方法来不能再给对象添加属性和方法，已有的成员丝毫不受影响。使用 `Object.isExtensible()` 方法来确定对象是否可以扩展。
+		
+	2. 密封的对象
+	
+		使用 `Object.seal()` 方法使队形不可扩展，且已有成员的 `[[Configurable]]` 特性将被设置为 false，意味着不能删除。
+		
+		使用 `Object.isSealed()` 方法确定对象是否已经被密封了。
+		
+	3. 冻结的对象
+	
+		使用 `Object.freeze()` 方法来冻结对象。在密封的基础上，将已有成员的 `[[Writable]]` 特性设置为 false。同时有 `Object.isFrozen()` 方法来检测冻结对象。
+		
+3. 高级定时器
+
+	JavaScript 中没有任何代码是立刻执行的，但一旦进程空闲则尽快执行。关于定时器要记住的最重要的事情是，指定的时间间隔表示何时将定时器的代码添加到队列，而不是何时实际执行代码。
+
+	避免 `setInterval()` 重复定时器的2个缺点，可以使用如下模式
+	
+		setTimeout(function() {
+			// TODO
+			setTimeout(arguments.callee, interval); // arguments.callee 来获取对当前执行函数的引用
+		}, interval)
+		
+4. Yielding Processes
+
+	运行在浏览器中的 JavaScript 都被分配了一个确定数量的资源，不同于桌面应用往往能够随意控制内存大小和处理器时间，JavaScript 被严格限制了，放置恶意的 Web 程序。
+	
+	数组分块技术。
+	
+5. 函数节流（重要）
+6. 自定义事件
+
+	1. 属性 handlers：存储事件处理程序。
+	2. addHandler()：注册给定类型事件的事件处理程序。
+	3. fire()：触发一个事件。
+	4. removeHandler()：注销某个事件类型的事件处理程序。
+	
+7. 拖放（略）
