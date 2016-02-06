@@ -2,95 +2,198 @@
 layout: post
 title: 50道js能力测评经典题(1)
 category: 技术
-tags: js 测评
+tags: javascript, js, 评测, 练习
 description: 50道js能力测评经典题
 
 ---
 
-在线测评：[牛客网](http://www.nowcoder.com/ta/js-assessment?page=1)，完成该练习的目的主要在于复习原生js，因为平时框架用的比较多，很多时候是照着前人的成果依葫芦画瓢，是时候温习原生、拥抱原生了。
+在线测评：[牛客网](http://www.nowcoder.com/ta/js-assessment?page=1)，该练习的目的主要在于复习原生js。去年（2015）夏天在南京的时候我大概过了一遍，当时也发现很多问题，近半年时间算是把《JavaScript 权威指南》选择性地看了一遍，春节（2016）期间重做一次该练习，看看是否有长进。
 
-在50个练习中，我会选择性地挑选完成有难度或有意思的题目来记录。
+在50个练习中，<del>我会选择性地挑选完成有难度或有意思的题目来记录。</del>我除了按照基本要求完成外，每道题会看看其他人的答案，如果有**精彩**的代码我也会在本文附上。
 
-今天（2015-08-13）把所有练习过了一遍，才发现其实只有45个题。不过暴露出很多问题，尤其是**函数相关**，得恶补一下。
+<del>今天（2015-08-13）把所有练习过了一遍，才发现其实只有45个题。不过暴露出很多问题，尤其是**函数相关**，得恶补一下。</del>
 
 # 数组
 
-## 1.[移除数组中的元素](http://www.nowcoder.com/practice/a93dd26ebb8c425d844acc17bcce9411?rp=1&ru=/ta/js-assessment)
+## 1. [查找数组元素位置](http://www.nowcoder.com/practice/e7835a8113dd48afb15f77ef8d1dcb1d?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-### 题目描述
+        function indexOf(arr, item) {
+            if(Array.prototype.indexOf) {
+                return arr.indexOf(item);
+            } else {
+                for(var i = 0; i < arr.length; i++) {
+                    if(arr[i] === item) {
+                        return i;
+                    }
+                }
+            }
+            return -1;
+        }
 
-移除数组 arr 中的所有值与 item 相等的元素，请直接在给定的 arr 数组上进行操作 
+## 2. [数组求和](http://www.nowcoder.com/practice/cc3ce199461c4c4cb8f63db61d7eba30?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-#### 分析
+        function sum(arr) {
+            var sum = 0;
+            arr.forEach(function(e) {
+                sum += e;
+            })
+		    return sum;
+		}
+		
+		function sum(arr) {
+    		return eval(arr.join('+'))
+		}
 
-难点在于**直接在给定的arr数组**上进行操作。倘若生成一个新数组，可采用`push`方法，于是乎想到是否有从数组删除某个元素的方法，有`push`必有`pop`,但显然`pop`不合适...最终采用了[splice方法](http://www.w3school.com.cn/jsref/jsref_splice.asp)，该方法向数组中添加/删除项目，然后返回被删除的项目。代码如下：
+## 3. [移除数组中的元素（返回新的数组）](http://www.nowcoder.com/practice/edbc7496a36e433c89d298b9256af856?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-	function removeWithoutCopy(arr, item) {
-	  for(var i = 0; i < arr.length; i++) {
+		function remove(arr, item) {
+			var newArr = [];
+    		arr.forEach(function(e) {
+        		if(e !== item) {
+            		newArr.push(e);
+        		}
+    		})
+		    return newArr;
+		}
+		
+		function remove(arr, item) {
+			var newArr = [];
+			for(var i in arr) {
+				if(arr[i] !== item) {
+					newArr.push(arr[i]);
+				}
+			}
+			return newer;
+		}
+		
+		function remove(arr, item) {
+    		return arr.filter(function(x) { 
+    			return x !== item; 
+    		});
+		}
+
+## 4. [移除数组中的元素(操作原数组)](http://www.nowcoder.com/practice/a93dd26ebb8c425d844acc17bcce9411?rp=1&ru=/ta/js-assessment)
+
+难点在于**直接在给定的arr数组**上进行操作，需用到 `splice`。
+
+    function removeWithoutCopy(arr, item) {
+      for(var i = 0; i < arr.length; i++) {
         if(item === arr[i]) {
           arr.splice(i, 1);
-          i--;
+          i--; // for循环逆序的话，i--可以省略
         }
       }
       return arr;
     }
    
-for循环逆序的话，`i--`也可以省略
+	function removeWithoutCopy(arr, item) {
+		var pos = arr.indexOf(item);
+    	while(pos !== -1) {
+        	arr.splice(pos, 1);
+        	pos = arr.indexOf(item);
+    	}
+    	return arr;
+	}
 
-## 2.查找重复元素
+## 5. [末尾添加元素（返回新的数组）](http://www.nowcoder.com/practice/3c7905cea3264ddaac4bf637ab3a19f9?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-### 题目描述
+	function append(arr, item) {
+		return arr.concat([item]);
+		// return arr.concat(item);
+	}
+		
+	function append(arr, item) {
+		var newArr = arr.concat();
+		newArr.push(item);
+		return newer;
+	}
 
-找出数组 arr 中重复出现过的元素 
+## 6. [删除数组最后一个元素（返回新的数组）](http://www.nowcoder.com/practice/df4b0b7a459447538351c4c7008b34e7?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-#### 输入例子:
+	function truncate(arr) {
+		return arr.slice(0, arr.length-1);
+		// return arr.slice(0, -1)
+	}
+		
+## 7. [开头添加元素（返回新的数组）](http://www.nowcoder.com/practice/93994cb28b1c4ec5ad7da4f9c33ebfbe?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]).sort()
+	function prepend(arr, item) {
+		return [item].concat(arr);
+	}
+		
+## 8. [删除数组第一个元素（返回新的数组）](http://www.nowcoder.com/practice/0323822699da497b8822898e90025882?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-#### 输出例子:
+	function curtail(arr) {
+		return arr.slice(1);
+	}
+		
+## 9. [数组合并（返回新的数组）](http://www.nowcoder.com/practice/ba9ee11affbd44539a4104d7f098f06b?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-[1, 3, 4]
+	function concat(arr1, arr2) {
+    	return arr1.concat(arr2);
+    }
+ 	
+## 10. [添加元素（返回新的数组）](http://www.nowcoder.com/practice/941bcfa5b87940869fda681c1597fd3a?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-### 代码
+	function insert(arr, item, index) {
+		return arr.slice(0, index).concat(item, arr.slice(index));
+	}
+	
+## 11. [计数](http://www.nowcoder.com/practice/628339bd8e6e440590ad86caa7ac6849?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
+
+	function count(arr, item) {
+		var count = 0;
+    	arr.forEach(function(e) {
+        	if(e === item) {
+            	count++;
+        	}
+        	// e === item ? count++ : 0;
+    	})
+    	return count;
+	}
+	
+	function count(arr, item) {
+		return arr.filter(function(e) {
+    	    return e === item;
+    	}).length;
+	}
+
+## 12. [查找重复元素](http://www.nowcoder.com/practice/871a468deecf453589ea261835d6b78b?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
 	function duplicates(arr) {
-   	  var repeat = [];
-      var prev = null;	//存储比较过的数，防止三个及三个以上连续一样的
-      arr = arr.sort();
-      for(var i=0; i<arr.length-1; i++) {
-        if(arr[i] == arr[i+1]){
-          if(prev !== arr[i]){
-            repeat.push(arr[i]);
-          }
-          prev = arr[i];
-        }
-      }
-      return repeat;
-    }
-    
-## 3.求二次方
-
-### 题目描述
-
-为数组 arr 中的每个元素求二次方。不要直接修改数组 arr，结果返回新的数组 
-
-#### 输入例子:
-
-square([1, 2, 3, 4])
-
-#### 输出例子:
-
-[1, 4, 9, 16]
-   
-这里贴的是其他同学采用`map方法`的代码，学习下，而我仍采用最常规的for循环加push方法。
+		var result = [];
+    	arr.sort();
+    	for(var i = 0; i < arr.length - 1; i++) {
+    		// 合并判断条件
+        	if(arr[i] === arr[i+1]) {
+            	if(result.indexOf(arr[i]) === -1) {
+               		result.push(arr[i]);
+            	}
+        	}
+    	}
+    	return result;
+	}
+	
+## 13. [求二次方](http://www.nowcoder.com/practice/b7a8647e33d84f5c88acdd7c81a85fdf?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
 	function square(arr) {
-      return arr.map(function(x){
-        return x*x;
-      });
-    }
+		return arr.map(function(e) {
+    	    return e*e;
+    	    // return Math.pow(e, 2);
+    	})
+	}	
+ 	
+## 14. [查找元素位置](http://www.nowcoder.com/practice/0a9af9cb20c34babb6232126e019c74d?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 	
-具体执行效率孰高孰低没有深究，先挖个坑...
+	function findAllOccurrences(arr, target) {
+		var pos = arr.indexOf(target);
+    	var result = [];
+    	while(pos !== -1) {
+    		result.push(pos);
+        	pos = arr.indexOf(target, pos+1);
+    	}
+    	return result;
+	}
 
 # 编码规范
 
@@ -110,7 +213,7 @@ a
 
 需要修复的代码：
 
-	function functions(flag) {
+    function functions(flag) {
       if (flag) {
         function getValue() { return 'a'; }
       } else {
@@ -121,7 +224,7 @@ a
     
 修改后的代码：
 
-	function functions(flag) {
+    function functions(flag) {
       if (flag) {
         return  function getValue() { return 'a'; }();
       } else {
@@ -131,8 +234,8 @@ a
     
 或者：
 
-	function functions(flag) {
-	  var getValue = function(){};  //可有可无
+    function functions(flag) {
+      var getValue = function(){};  //可有可无
       if (flag) {
         getValue=function() { return 'a'; }
       } else {
@@ -160,16 +263,16 @@ parse2Int('12'); parse2Int('12px'); parse2Int('0x12')
 熟悉[parseInt文档](http://www.w3school.com.cn/jsref/jsref_parseInt.asp)，第二个参数表示要解析的数字的基数。
 
 需要修复的代码：
-	
-	function parse2Int(num) {
+    
+    function parse2Int(num) {
       return parseInt(num);
-	}
-	
+    }
+    
 修改后：
 
-	function parse2Int(num) {
+    function parse2Int(num) {
       return parseInt(num, 10);
-	}
+    }
 
 
 # 计数
@@ -192,8 +295,8 @@ parse2Int('12'); parse2Int('12px'); parse2Int('0x12')
 
 ### 代码
 
-	function count(start, end) {
-   	  console.log(start++);
+    function count(start, end) {
+         console.log(start++);
       var a = setInterval(function(){
         if(start <= end){
           console.log(start++);
@@ -236,21 +339,21 @@ valueAtBit(128, 8)
 
 我采用的方法比较笨，通过for循环来模拟手算十进制转二进制的过程，先除以2取余，再用剩下的数继续用2除。代码如下：
 
-	function valueAtBit(num, bit) {
+    function valueAtBit(num, bit) {
       var result;
-	  for(var i=0; i<bit; i++){
+      for(var i=0; i<bit; i++){
         result = num%2;
         num = Math.floor(num/2);
       }
       return result;
-	}
-	
+    }
+    
 后面参考其他人提交的记录，发现一种更巧的方法，即利用`toString`方法。`number.toString(num)`可以将十进制的number转换为以num为基数对应进制的值。代码如下：
 
-	function valueAtBit(num, bit) {
+    function valueAtBit(num, bit) {
       var str = num.toString(2);
       return Number(str.charAt(str.length-bit));
-	}
+    }
 
 #### 2.二进制转换——二进制转十进制
 
@@ -269,9 +372,9 @@ base10('11000000')
 ##### 分析
 
 依旧采用比较笨的方式，考虑不同位的权值base不同，base在for循环中随着i的增大而乘2，注意输入字符串在`split`后必须`reverse`。代码如下：
-	
-	function base10(str) {
-	  var result = 0;
+    
+    function base10(str) {
+      var result = 0;
       var base = 1;
       str = str.split('').reverse();
       for(var i=0; i<str.length; i++) {
@@ -279,8 +382,8 @@ base10('11000000')
         base*=2;
       }
       return result;
-	}
-	
+    }
+    
 #### 3.二进制转换——数字转换二进制字符串
 
 ##### 题目描述
@@ -299,41 +402,41 @@ convertToBinary(65)
 
 字符串追加实现方法很多，从最简单的“+”，或者`concat`、字符串`split`成数组后`unshift`再`join`等等。代码如下：
 
-	//最开始想到的笨方法，前导0实现较复杂
-	function convertToBinary(num) {
-	  var result = num.toString(2);
+    //最开始想到的笨方法，前导0实现较复杂
+    function convertToBinary(num) {
+      var result = num.toString(2);
       var len = result.length;
       var tmp = '0'
       if(len < 8){
-    	for(var i=0; i<8-len-1; i++) {
-        	tmp = tmp.concat('0');
-    	}
+        for(var i=0; i<8-len-1; i++) {
+            tmp = tmp.concat('0');
+        }
         result = tmp.concat(result);
       }
       return result;
-	}
-	
-	//优化前导0实现，通过unshfit
-	function convertToBinary(num) {
-	  var result = num.toString(2);
+    }
+    
+    //优化前导0实现，通过unshfit
+    function convertToBinary(num) {
+      var result = num.toString(2);
       var len = result.length;
       result = result.split('');
       for(var i=0; i<8-len; i++) {
         result.unshift('0');  //数组从头插入
       }
       return result.join('');
-	}
-	
-	//参考其他提交记录，如下实现也很巧妙
-	function convertToBinary(num) {
+    }
+    
+    //参考其他提交记录，如下实现也很巧妙
+    function convertToBinary(num) {
  
       var zero=[0,0,0,0,0,0,0,0],bit=num.toString(2);
       if(bit.length>=8){
         return bit;
       }
       return zero.slice(bit.length-8).join("")+bit;
-	}
-	
+    }
+    
 ### 对象
 
 #### 1.改变上下文
@@ -354,10 +457,10 @@ Yo, Rebecca!
 
 用到apply，直接贴代码
 
-	function alterContext(fn, obj) {
-	  return fn.apply(obj);
-	}
-	
+    function alterContext(fn, obj) {
+      return fn.apply(obj);
+    }
+    
 #### 2.批量改变对象的属性
 
 ##### 题目描述
@@ -377,10 +480,10 @@ What's up
 用到`prototype`，直接贴代码
 
 
-	function alterObjects(constructor, greeting) {
-	  constructor.prototype.greeting=greeting;
-	}
-	
+    function alterObjects(constructor, greeting) {
+      constructor.prototype.greeting=greeting;
+    }
+    
 #### 3.属性遍历
 
 ##### 题目描述
@@ -402,16 +505,16 @@ var C = function() {this.foo = 'bar'; this.baz = 'bim';}; C.prototype.bop = 'bip
 
 用到了`hasOwnProperty`和for循环`for(var key in obj)`形式，代码如下：
 
-	function iterate(obj) {
-	  var arr = [];
+    function iterate(obj) {
+      var arr = [];
       for(var key in obj) {
         if(obj.hasOwnProperty(key)) {
             arr.push(key + ': ' + obj[key]);
         }
       }
       return arr;
-	}
-	
+    }
+    
 ### 模块
 
 #### 1.模块
@@ -427,13 +530,13 @@ var C = function() {this.foo = 'bar'; this.baz = 'bim';}; C.prototype.bop = 'bip
 ##### 分析
 
 返回函数中调用属性前得加`this`，代码如下：
-	
-	function createModule(str1, str2) {
-	  return {
+    
+    function createModule(str1, str2) {
+      return {
         greeting: str1,
         name    : str2,
         sayIt   : function() {
             return this.greeting + ', ' + this.name;
         }
       }
-	}
+    }
