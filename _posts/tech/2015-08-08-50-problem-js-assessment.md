@@ -197,19 +197,9 @@ description: 50道js能力测评经典题
 
 # 编码规范
 
-## 1. 正确的函数定义
+## 1. 避免全局变量
 
-### 题目描述
-
-请修复给定的 js 代码中，函数定义存在的问题 
-
-#### 输入例子:
-
-functions(true)
-
-#### 输出例子:
-
-a
+## 2. [正确的函数定义](http://www.nowcoder.com/practice/a5de760a7cf24c0e890eb02eed34bc02?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
 需要修复的代码：
 
@@ -225,50 +215,16 @@ a
 修改后的代码：
 
     function functions(flag) {
-      if (flag) {
-        return  function getValue() { return 'a'; }();
-      } else {
-        return function getValue() { return 'b'; }();
-      }
-    }
-    
-或者：
-
-    function functions(flag) {
       var getValue = function(){};  //可有可无
       if (flag) {
-        getValue=function() { return 'a'; }
+        getValue = function() { return 'a'; }
       } else {
-        getValue= function() { return 'b'; }
+        getValue = function() { return 'b'; }
       }
       return getValue();
     }
     
-## 2.正确的使用 parseInt
-
-### 题目描述
-
-修改 js 代码中 parseInt 的调用方式，使之通过全部测试用例 
-
-#### 输入例子:
-
-parse2Int('12'); parse2Int('12px'); parse2Int('0x12')
-
-#### 输出例子:
-
-12; 12; 0
-
-### 分析
-
-熟悉[parseInt文档](http://www.w3school.com.cn/jsref/jsref_parseInt.asp)，第二个参数表示要解析的数字的基数。
-
-需要修复的代码：
-    
-    function parse2Int(num) {
-      return parseInt(num);
-    }
-    
-修改后：
+## 3. [正确的使用 parseInt](http://www.nowcoder.com/practice/a14f83473c384abba1bb51017d0dbd42?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
     function parse2Int(num) {
       return parseInt(num, 10);
@@ -277,41 +233,85 @@ parse2Int('12'); parse2Int('12px'); parse2Int('0x12')
 
 # 计数
 
-## 1.计时器
+## 1. [计时器](http://www.nowcoder.com/practice/72c661d926494bd8a50608506915268c?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-### 题目描述
-
-实现一个打点计时器，要求
-
-1. 从 start 到 end（包含 start 和 end），每隔 100 毫秒 console.log 一个数字，每次数字增幅为 1
-
-2. 返回的对象中需要包含一个 cancel 方法，用于停止定时操作
-
-3. 第一个数需要立即输出
-
-### 分析
-
-1、3要求比较容易，2真不会，记录学习下。
-
-### 代码
-
+	// setInterval
     function count(start, end) {
-         console.log(start++);
-      var a = setInterval(function(){
-        if(start <= end){
-          console.log(start++);
-        } else {
-          clearInterval(a);
-        }
-      }, 100);
-      return {
-        cancel: function() {
-          clearInterval(a);
-        }
-      }
-    }
- 
+		console.log(start++);
+
+		var interval = 100;
+
+		var timer = setInterval(function() {
+        	if(start <= end) {
+            	console.log(start++);
+        	}
+    	}, interval);
     
+    	var o = {
+        	cancel: function() {
+            	clearInterval(timer);
+        	}
+    	}
+    
+    	return o;
+	}
+	
+	// setTimeout 尚未测试通过
+	function count(start, end) {
+		console.log(start++);
+
+		var interval = 100;
+		var timer = null;
+    	if(start <= end) {
+        	timer = setTimeout(function() {
+            	count(start, end); // arguments.callee
+    		}, interval);
+    	}
+    	var o = {
+        	cancel: function() {
+            	clearTimeout(timer);
+        	}
+    	}
+    
+    	return o;
+	}
+
+
+# 流程控制
+
+## 1. [流程控制](http://www.nowcoder.com/practice/8a7bff7ab0d345d5ac5c82e41d9f7115?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
+
+	function fizzBuzz(num) {
+		if(num % 3 ===0 && num % 5 ===0) {
+        	return 'fizzbuzz';
+	    } else if(num % 3 === 0) {
+    	    return 'fizz';
+	    } else if(num % 5 === 0) {
+    	    return 'buzz';
+	    } else if(arguments.length === 0 || typeof num !== 'number') {
+    	    return false;
+	    } else {
+    	    return num;
+	    }
+	}
+	
+	function fizzBuzz(num) {
+    	if(isNaN(num)){
+        	return false;
+    	}
+    	var str='';
+    	if(num%3===0){
+	        str+='fizz';
+    	}
+	    if(num%5===0){
+    	    str+='buzz';
+	    }
+    	return str||num;
+	}
+ 
+---
+
+以下为之前的部分，待完善。
 
 ### 逻辑操作
 
