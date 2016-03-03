@@ -134,6 +134,8 @@ description: 《JavaScript 权威指南》
 	
 	progress 事件包含三个属性：lengthComputable、position、totaSize
 	
+	load 事件与 progress 事件
+	
 7. 跨源资源共享
 
 	CORS 背后的基本思想，就是使用自定义的 HTTP 头部让浏览器与服务器进行沟通，从而决定请求与响应成功还是失败。

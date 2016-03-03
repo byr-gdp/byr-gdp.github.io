@@ -197,7 +197,8 @@ description: 《JavaScript 权威指南》
 	
 		用函数来封装以特定接口创建对象的细节
 		
-			function createPerson(name, age, job){        		var o = new Object();
+			function createPerson(name, age, job){
+				var o = new Object();
 				o.name = name;
 				o.age = age;
 				o.job = job;
@@ -225,6 +226,16 @@ description: 《JavaScript 权威指南》
 	
 		我们创建的每个函数都有一个 prototype(原型)属性，这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。
 		
+			function Person(name, age, job) {
+				this.name = name;
+				this.age = age;
+				this.job = job;
+			}
+			
+			Person.prototype.sayName = function() {
+				console.log(this.name);
+			}
+		
 		实例通过使用 hasOwnProperty()方法,可以确认什么时候访问的是实例属性（true）,什么时候访问的是原型属性(false)。
 		
 		原型与 in 操作符：有两种方式使用 in 操作符:单独使用和在 for-in 循环中使用。在单独使用时,in 操作符会在通过对象能够访问给定属性时返回 true,无论该属性存在于实例中还是原型中。
@@ -240,7 +251,7 @@ description: 《JavaScript 权威指南》
 			Person.prototype = {			    name: "Nicholas",			    age: 29,			    job: "Software Engineer",			    sayName: function () {			        alert(this.name);	    		}			};
 			
 		注意：constructor 属性不再指向 Person 了。除非显示地设置。
-		原型的动态性：重写整个原型对象会出现问题（P156）
+		原型的动态性：**重写整个原型对象会出现问题（P156）**
 		
 		**原型模式的最大问题是由其共享的本性所导致的。**
 		
