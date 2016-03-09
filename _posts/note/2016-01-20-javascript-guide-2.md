@@ -83,6 +83,28 @@ description: 《JavaScript 权威指南》
 
 1. DOM1 级主要定义的是 HTML 和 XML 文档的底层结构。DOM2 和 DOM3 级则在这个结构 的基础上引入了更多的交互能力,也支持了更高级的 XML 特性。
 
+# 第16章 HTML5 脚本编程
+
+1. 跨文本消息传递（XDM）
+
+	postMessage() 使用
+	
+2. 原生拖放
+
+	1. 拖放事件
+	
+		拖动元素时，将依次触发下列事件：dragstart、drag、dragend。
+		当某个元素被拖动到一个有效的放置目标上时，下列事件会依次发生：dragenter、dragover、dragleave 或 drop
+
+	2. dataTransfer 对象
+	
+		实现拖放操作时数据交换
+
+3. 媒体元素
+4. 历史状态管理
+
+	history 对象 hashchange、pushState、popState、replaceState
+
 # 第21章 Ajax 与 Comet
 
 1. XMLHttpRequest 用法
