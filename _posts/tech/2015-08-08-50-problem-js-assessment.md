@@ -11,8 +11,6 @@ description: 50道js能力测评经典题
 
 在50个练习中，<del>我会选择性地挑选完成有难度或有意思的题目来记录。</del>我除了按照基本要求完成外，每道题会看看其他人的答案，如果有**精彩**的代码我也会在本文附上。
 
-<del>今天（2015-08-13）把所有练习过了一遍，才发现其实只有45个题。不过暴露出很多问题，尤其是**函数相关**，得恶补一下。</del>
-
 # 数组
 
 ## 1. [查找数组元素位置](http://www.nowcoder.com/practice/e7835a8113dd48afb15f77ef8d1dcb1d?rp=1&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
@@ -308,10 +306,6 @@ description: 50道js能力测评经典题
 	    }
     	return str||num;
 	}
- 
----
-
-以下为之前的部分，待完善。
 
 # 逻辑操作
 
@@ -321,7 +315,7 @@ description: 50道js能力测评经典题
 
 # Number
 
-## 1.二进制转换——十进制转二进制
+## 1. [二进制转换——十进制转二进制](http://www.nowcoder.com/practice/2c7f25d532aa4e20b67af9d3c93dc65f?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
 	// toStirng
 	function valueAtBit(num, bit) {
@@ -333,13 +327,13 @@ description: 50道js能力测评经典题
 		return (num>>(bit-1)) % 2;
 	}
 
-#### 2.二进制转换——二进制转十进制
+## 2. [二进制转换——二进制转十进制](http://www.nowcoder.com/practice/4123561150114d119ba41f28219a454f?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
 	function base10(str) {
 		return parseInt(str, 2);
 	}
 
-#### 3.二进制转换——数字转换二进制字符串
+## 3. [二进制转换——数字转换二进制字符串](http://www.nowcoder.com/practice/7b74386695cc48349af37196f45e62a8?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
     // 字符串拼接
     function convertToBinary(num) {
@@ -360,6 +354,7 @@ description: 50道js能力测评经典题
     	}
     	return n.join('');
 	}
+	
     //优化前导0实现，通过unshfit
     function convertToBinary(num) {
       var result = num.toString(2);
@@ -381,99 +376,37 @@ description: 50道js能力测评经典题
       return zero.slice(bit.length-8).join("")+bit;
     }
     
-### 对象
+## 4. [乘法](http://www.nowcoder.com/practice/6429776e4630435cbc3eeb36bdf41f83?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-#### 1.改变上下文
+# 对象
 
-##### 题目描述
-
-将函数 fn 的执行上下文改为 obj，返回 fn 执行后的值 
-
-**输入例子:**
-
-alterContext(function() {return this.greeting + ', ' + this.name + '!'; }, {name: 'Rebecca', greeting: 'Yo' })
-
-**输出例子:**
-
-Yo, Rebecca!
-
-##### 分析
-
-用到apply，直接贴代码
+## 1. [改变上下文](http://www.nowcoder.com/practice/dfcc28bf243642b795eaf5a2a621acc5?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
     function alterContext(fn, obj) {
       return fn.apply(obj);
     }
     
-#### 2.批量改变对象的属性
-
-##### 题目描述
-
-给定一个构造函数 constructor，请完成 alterObjects 方法，将 constructor 的所有实例的 greeting 属性指向给定的 greeting 变量。
- 
-**输入例子:**
-
-var C = function(name) {this.name = name; return this;}; var obj1 = new C('Rebecca'); alterObjects(C, 'What\'s up'); obj1.greeting;
-
-**输出例子:**
-
-What's up
-
-##### 分析
-
-用到`prototype`，直接贴代码
-
+## 2. [批量改变对象的属性](http://www.nowcoder.com/practice/4f7d25a30eb1463cbf1daac39ec04f8d?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
     function alterObjects(constructor, greeting) {
       constructor.prototype.greeting=greeting;
     }
     
-#### 3.属性遍历
+## 3. [属性遍历](http://www.nowcoder.com/practice/0158a4f165154f2eaf27d1907aa55e57?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-##### 题目描述
-
-找出对象 obj 不在原型链上的属性(注意这题测试例子的冒号后面也有一个空格~)
-
-1. 返回数组，格式为 key: value
-2. 结果数组不要求顺序 
-
-**输入例子:**
-
-var C = function() {this.foo = 'bar'; this.baz = 'bim';}; C.prototype.bop = 'bip'; iterate(new C());
-
-**输出例子:**
-
-["foo: bar", "baz: bim"]
-
-##### 分析
-
-用到了`hasOwnProperty`和for循环`for(var key in obj)`形式，代码如下：
-
-    function iterate(obj) {
-      var arr = [];
-      for(var key in obj) {
-        if(obj.hasOwnProperty(key)) {
-            arr.push(key + ': ' + obj[key]);
-        }
-      }
-      return arr;
-    }
+	function iterate(obj) {
+		var result = [];
+    	for(var item in obj) {
+        	if(obj.hasOwnProperty(item)) {
+            	result.push(item + ': ' + obj[item]);
+        	}
+    	}
+    	return result;
+	}
     
 ### 模块
 
-#### 1.模块
-
-##### 题目描述
-
-完成函数 createModule，调用之后满足如下要求：
-
-1. 返回一个对象
-2. 对象的 greeting 属性值等于 str1， name 属性值等于 str2
-3. 对象存在一个 sayIt 方法，该方法返回的字符串为 greeting属性值 + ', ' + name属性值
-
-##### 分析
-
-返回函数中调用属性前得加`this`，代码如下：
+#### 1.[模块](http://www.nowcoder.com/practice/48e53feaabe94506a61300edadb5496d?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
     
     function createModule(str1, str2) {
       return {
@@ -484,3 +417,7 @@ var C = function() {this.foo = 'bar'; this.baz = 'bim';}; C.prototype.bop = 'bip
         }
       }
     }
+    
+---
+
+(最后修改于 2016-03-09)
