@@ -7,7 +7,7 @@ description: 50道js能力测评经典题
 
 ---
 
-接[50道js能力测评经典题(1)](http://if-true.com/2015/08/08/50-problem-js-assessment.html)
+[50道js能力测评经典题](http://www.nowcoder.com/ta/js-assessment) 正则部分，目前的重心不在正则上，故没有进一步维护。
 
 # 正则
 
