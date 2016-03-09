@@ -313,109 +313,53 @@ description: 50道js能力测评经典题
 
 以下为之前的部分，待完善。
 
-### 逻辑操作
+# 逻辑操作
 
-### Number
+## 1. [或运算](http://www.nowcoder.com/practice/77f1e6e2f54044d0ad47ab14e3711489?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-#### 1.二进制转换——十进制转二进制
+## 2. [且运算](http://www.nowcoder.com/practice/608780935ae44babb9785485bb650a76?rp=2&ru=/ta/js-assessment&qru=/ta/js-assessment/question-ranking)
 
-##### 题目描述
+# Number
 
-获取数字 num 二进制形式第 bit 位的值。注意：
+## 1.二进制转换——十进制转二进制
 
-1. bit 从 1 开始
-2. 返回 0 或 1
-3. 举例：2 的二进制为 10，第 1 位为 0，第 2 位为 1 
-
-**输入例子:**
-
-valueAtBit(128, 8)
-
-**输出例子:**
-
-1
-
-##### 分析
-
-我采用的方法比较笨，通过for循环来模拟手算十进制转二进制的过程，先除以2取余，再用剩下的数继续用2除。代码如下：
-
-    function valueAtBit(num, bit) {
-      var result;
-      for(var i=0; i<bit; i++){
-        result = num%2;
-        num = Math.floor(num/2);
-      }
-      return result;
-    }
-    
-后面参考其他人提交的记录，发现一种更巧的方法，即利用`toString`方法。`number.toString(num)`可以将十进制的number转换为以num为基数对应进制的值。代码如下：
-
-    function valueAtBit(num, bit) {
-      var str = num.toString(2);
-      return Number(str.charAt(str.length-bit));
-    }
+	// toStirng
+	function valueAtBit(num, bit) {
+		return num.toString(2)[num.toString(2).length - bit];
+	}
+	
+	// 移位操作
+	function valueAtBit(num, bit) {
+		return (num>>(bit-1)) % 2;
+	}
 
 #### 2.二进制转换——二进制转十进制
 
-##### 题目描述
+	function base10(str) {
+		return parseInt(str, 2);
+	}
 
-给定二进制字符串，将其换算成对应的十进制数字 
-
-**输入例子:**
-
-base10('11000000')
-
-**输出例子:**
-
-192
-
-##### 分析
-
-依旧采用比较笨的方式，考虑不同位的权值base不同，base在for循环中随着i的增大而乘2，注意输入字符串在`split`后必须`reverse`。代码如下：
-    
-    function base10(str) {
-      var result = 0;
-      var base = 1;
-      str = str.split('').reverse();
-      for(var i=0; i<str.length; i++) {
-        result += base*str[i];
-        base*=2;
-      }
-      return result;
-    }
-    
 #### 3.二进制转换——数字转换二进制字符串
 
-##### 题目描述
-
-将给定数字转换成二进制字符串。如果字符串长度不足 8 位，则在前面补 0 到满8位。 
-
-**输入例子:**
-
-convertToBinary(65)
-
-**输出例子:**
-
-01000001
-
-##### 分析
-
-字符串追加实现方法很多，从最简单的“+”，或者`concat`、字符串`split`成数组后`unshift`再`join`等等。代码如下：
-
-    //最开始想到的笨方法，前导0实现较复杂
+    // 字符串拼接
     function convertToBinary(num) {
-      var result = num.toString(2);
-      var len = result.length;
-      var tmp = '0'
-      if(len < 8){
-        for(var i=0; i<8-len-1; i++) {
-            tmp = tmp.concat('0');
-        }
-        result = tmp.concat(result);
-      }
-      return result;
-    }
+		var binary = num.toString(2);
+    	var len = binary.length;
     
+    	for(var i=len; i < 8; i++) {
+        	binary = '0' + binary;
+    	}
+    	return binary;
+	}
+	
+    // 字符串 - 数组 - 字符串
+    function convertToBinary(num) {
+    	var n = num.toString(2).split('');
+    	if(n.length<8){
+       		n.unshift('0');
+    	}
+    	return n.join('');
+	}
     //优化前导0实现，通过unshfit
     function convertToBinary(num) {
       var result = num.toString(2);
