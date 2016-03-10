@@ -104,6 +104,30 @@ description: 《JavaScript 权威指南》
 4. 历史状态管理
 
 	history 对象 hashchange、pushState、popState、replaceState
+	
+# 第17章 错误处理与调试
+
+1. 错误处理
+
+	1. try-catch 语句
+	
+		若有 finally 子句，无论是否发生错误，甚至 return 语句，finally 子句都会执行。
+		
+	2. 抛出错误 throw
+
+2. 常见的错误类型
+
+	1. 类型转换错误（使用全等和不全等操作符）
+	2. 数据类型错误（基本类型使用 typeof 检测，对象使用 instanceof 检测）
+	3. 通信错误（使用 Ajax）
+
+3. 区分致命错误和非致命错误
+4. 把错误记录到服务器
+5. 调试技术
+
+	1. 将消息记录到控制台
+	2. 将消息记录到当前页面
+	3. 抛出错误（assert()函数）
 
 # 第21章 Ajax 与 Comet
 
