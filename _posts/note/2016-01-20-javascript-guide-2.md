@@ -7,7 +7,7 @@ description: 《JavaScript 权威指南》
 
 ---
 
-（Chapter 10 —— Chapter 12、Chapter 21 —— Chapter 22）
+（Chapter 10 —— Chapter 12、Chapter 16 —— Chapter 17、Chapter 21 —— Chapter 25）
 
 ---
 
@@ -375,4 +375,29 @@ description: 《JavaScript 权威指南》
 		
 3. 部署
 
+# 第25章 新兴的 API
+
+1. requestAnimationFrame()
+
+	1. 早期动画循环及 `setInterval`、`setTimeout` 利弊
+	2. 最平滑动画的最佳循环间隔是 1000ms/60，约等于17ms
 	
+2. Page Visibility API
+
+	三部分组成：document.hidden、document.visibilityState(4个可能的状态值)、visibility change事件。
+	
+3. Geolocation API
+
+	浏览器中的实现是 navigator.geolocation 对象。
+	
+4. File API
+5. Web 计时
+
+	Web 计时机制的核心是 window.performance 对象。
+	
+6. Web Workers
+	
+
+
+
+
