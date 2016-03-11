@@ -7,10 +7,6 @@ description: 《JavaScript 权威指南》
 
 ---
 
-（Chapter 10 —— Chapter 12、Chapter 16 —— Chapter 17、Chapter 21 —— Chapter 25）
-
----
-
 # 第10章 DOM
 
 1. DOM(文档对象模型)是针对 HTML 和 XML 文档的一个 API(应用程序编程接口)。
@@ -128,6 +124,21 @@ description: 《JavaScript 权威指南》
 	1. 将消息记录到控制台
 	2. 将消息记录到当前页面
 	3. 抛出错误（assert()函数）
+
+# 第19章 E4X
+
+1. E4X 的类型
+
+	1. E4X = ECMAScript for XML
+	
+	2. 4个新的全局类型
+	
+		* XML: XML 结构中的任何一个独立的部分
+		* XMList: XML 对象的集合
+		* Namespace: 命名空间前缀与命名空间 URI 之间的映射
+		* QName: 由内部名称和命名空间 URI 组成的一个限定名 
+
+**（Chapter 19 未完待续）**
 
 # 第21章 Ajax 与 Comet
 
