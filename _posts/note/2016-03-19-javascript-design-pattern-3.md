@@ -7,7 +7,7 @@ description: 《JavaScript 设计模式与开发指南》
 
 ---
 
-本书笔记分为三个部分，也是按照全书目录三个部分划分的，当前是第三部分**设计原则和变成技巧**，另外两部分分别是：[《JavaScript 设计模式与开发指南》笔记（一）](./2016-03-12-javascript-design-pattern-1.md)、[《JavaScript 设计模式与开发指南》笔记（三）](./2016-03-13-javascript-design-pattern-2.md)
+本书笔记分为三个部分，也是按照全书目录三个部分划分的，当前是第三部分**设计原则和变成技巧**，另外两部分分别是：[《JavaScript 设计模式与开发指南》笔记（一）](/2016/03/12javascript-design-pattern-1.md)、[《JavaScript 设计模式与开发指南》笔记（三）](/2016/03/13/javascript-design-pattern-2.md)
 
 
 # 第三部分 设计原则和变成技巧
