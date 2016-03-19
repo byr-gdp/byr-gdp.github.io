@@ -10,6 +10,12 @@ title: Aloha
 
 ## No Coding, Just Joking
 
+Email: [anthozoan77@gmail.com](mailTo:anthozoan77@gmail.com)
+
+GitHub: [byr-gdp](https://github.com/byr-gdp)
+
+Blog: [if-true](https://if-true.com)
+
 :)
  
 
