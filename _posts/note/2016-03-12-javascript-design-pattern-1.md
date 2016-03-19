@@ -9,7 +9,7 @@ description: 《JavaScript 设计模式与开发指南》
 
 前后花了大约一周时间（2016-03-12——2016-03-19）将《JavaScript 设计模式与开发指南》通读了一遍，对设计模式也有了很基础的人数，外在的主要表现是如何减少过多的 `if else` 语句，内在则从维护和扩展角度出发。书中各个模式的简单实现代码我会在今后去重现、体会、整理。
 
-本书笔记分为三个部分，也是按照全书目录三个部分划分的，当前是第一部分**基础部分**，另外两部分分别是：[《JavaScript 设计模式与开发指南》笔记（二）](/2016/03/13/javascript-design-pattern-2.md)、[《JavaScript 设计模式与开发指南》笔记（三）](/2016/03/19/javascript-design-pattern-3.md)
+本书笔记分为三个部分，也是按照全书目录三个部分划分的，当前是第一部分**基础部分**，另外两部分分别是：[《JavaScript 设计模式与开发指南》笔记（二）](/2016/03/13/javascript-design-pattern-2.html)、[《JavaScript 设计模式与开发指南》笔记（三）](/2016/03/19/javascript-design-pattern-3.html)
 
 
 # 前言
