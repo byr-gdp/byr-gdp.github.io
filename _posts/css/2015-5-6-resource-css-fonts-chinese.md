@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS中文字体对照表
-category: CSS
+category: css
 tags: css, css3, font, font-family
 description: CSS中文字体对照表
 
