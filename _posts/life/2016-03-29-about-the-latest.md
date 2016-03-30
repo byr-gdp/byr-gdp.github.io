@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 最近一二事
+title: 最近一二事（2016-03-29）
 category: 随笔
 tags: if-true, if-true.com
 description: 最近一些事情的回顾。
@@ -25,4 +25,4 @@ description: 最近一些事情的回顾。
 
 （完）
 
-（2016-03-29）
+（最后修改于 2016-03-31）
