@@ -2,8 +2,8 @@
 layout: post
 title: 最近一二事
 category: 随笔
-tags: 随笔, if-true, 日记
-description: 最近一二事
+tags: if-true, if-true.com
+description: 最近一些事情的回顾。
 
 ---
 
