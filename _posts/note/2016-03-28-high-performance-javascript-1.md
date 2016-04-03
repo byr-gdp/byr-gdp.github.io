@@ -107,7 +107,115 @@ description: 《高性能 JavaScript》笔记
 
 # 第4章 算法和流程控制
 
+1. 循环
+
+	1. 4种循环的类型
+	
+		* 标准的 for 循环
+		* while 循环
+		* do-while 循环
+		* for-in 循环
+		
+	2. 循环性能
+	
+		for-in 循环比其他几种明显要慢，因为每次迭代操作都会同时搜索实例和原型属性，故不要使用 for-in 循环来遍历数组成员。
+		
+	3. 提升循环性能
+	
+		* 减少迭代工作量；减少对象成员及数组项的查找次数，把值存储到局部变量中。
+		* 颠倒数组顺序：倒序循环
+		* 减少迭代次数："达夫设备（Duff's Device）"
+		
+			循环体展开技术，使得一次迭代中实际上执行了多次迭代的操作。
+			
+			典型实现如下：
+			
+				var iterations = Math.floor(items.length / 8);
+				var startAt = items.length % 8;
+				var i = 0;
+
+				do {
+					switch(startAt) {
+						case 0: process(items[i++]);
+					   	case 7: process(items[i++]);
+					   	case 6: process(items[i++]);
+					   	case 5: process(items[i++]);
+					   	case 4: process(items[i++]);
+					   	case 3: process(items[i++]);
+    				   	case 2: process(items[i++]);
+						case 1: process(items[i++]);
+					}
+					startAt = 0;
+				} while(iterations--);
+				
+			一个稍快的版本取消了 `switch` 语句，并将余数处理和主循环分开。
+			
+				var count = items.length - 1;
+				var startAt = items.length % 8;
+				var iterations = Math.floor(items.length / 8);
+
+				while(startAt--) {
+					process(items[count--]);
+				}
+
+				while(iterations--) {
+					process(items[count--]);
+					process(items[count--]);
+					process(items[count--]);
+					process(items[count--]);
+					process(items[count--]);
+					process(items[count--]);
+					process(items[count--]);
+					process(items[count--]);
+				}
+				
+	4. 基于函数的迭代
+	
+		`forEach()`同时接受三个参数，分别是**当前数组项的值、索引以及数组本身**。速度慢的主要原因是对每个数组项调用外部方法所带来的开销。
+		
+2. 条件语句
+
+	1. 大多数情况下 `switch` 比 `if-else` 运行得更快
+
+	2. 优化 if-else
+	
+		* 确保最有可能出现的条件放在首位。
+		* 把 if-else 组织成一系列嵌套的 if-else 语句。
+		* 查找表：不用书写任何条件判断语句，即便候选值数量增加，也几乎不会产生额外的性能开销。
+		
+3. 递归
+
+	1. 调用栈限制
+	2. 递归模式
+	
+4. 迭代
+
+	任何递归能实现的算法同样可以用迭代来实现。使用优化后的循环替代长时间运行的递归函数可以提升性能。因为运行一个循环比反复调用一个函数的开销要小得多。
+	
+5. Memoization
+
+	缓存前一个计算结果供后续计算使用。
+	
+		// 利用 Memoization 重写 factorial() 函数
+		function memfactorial(n) {
+			if (!memfactorial.cache) {
+				memfactorial.cache = {
+					"0", 1,
+					"1", 1
+				};
+			}
+			
+			if (!memfactorial.cache.hasOwnProperty(n)) {
+				memfactorial.cache[n] = n * memfactorial(n - 1);
+			}
+			
+			return memfactorial.cache(n);
+		}
+
+# 第5章 字符串和正则表达式（略）
+
+# 第6章 快速响应的用户界面
 
 ---
 
-（最后修改于 2016-03-31）
+（最后修改于 2016-04-03）
