@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book id = "0">
+		<name>都市狂医</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>0</tag>
+		<description>
+			一个小小的镇卫生院，怎么会有这么多的美女？
+			娇俏的小护士，冷艳的女医生，
+			还有各式各样的美女病人接踵而来。
+			肖天觉得，这是上天赐予他的一个机会！
+			什么机会，肯定不是泡妹子的机会。
+			而是在美色的诱惑之中磨练出坚定的意志，
+			把祖传针法发扬光大！
+		</description>
+		<writer>白云</writer>
+		
+	</book>
+	<book id = "1">  
+		<name>完美世界</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>1</tag>
+		<description>
+			起点文学网白金写手辰东的第五部东方玄幻小说，
+			也是辰东结婚后的第一部作品。为《遮天》前传。
+			一粒尘可填海，一根草斩尽日月星辰，弹指间天翻地覆。
+			群雄并起，万族林立，诸圣争霸，乱天动地；问苍茫大地，谁主沉浮？！！！
+      一个少年从大荒中走出，一切从这里开始。
+		</description>
+		<writer>黑土</writer>
+	</book>
+	<book id = "2">  
+		<name>遮天</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>2</tag>
+		<description>
+			本书以九龙拉棺为引子，带出一个庞大的洪荒世界。
+			冰冷与黑暗并存的宇宙深处，九具庞大的龙尸拉着一口青铜古棺，
+			亘古长存。 这是太空探测器在枯寂的宇宙中捕捉
+			到的一幅极其震撼的画面。
+		</description>
+		<writer>孙悟空</writer>
+	</book>
+	<book id = "3">  
+		<name>斗罗大陆 </name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>3</tag>
+		<description>
+			唐门百年难得一见的天才唐三因私学唐门高深内功，
+			被追至悬崖边。他选择以死明志，将绝世暗器佛怒唐
+			莲留下后纵身一跃……意想之中的死亡并没有到来，
+			唐三竟然阴差阳错来到了另一世界，身体也变成了
+			另外一人。
+		</description>
+		<writer>猪八戒</writer>
+	</book>
+	<book id = "10">  
+		<name>泡沫之夏</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>4</tag>
+		<description>
+			夏沫和洛熙都是孤儿，少年的他们在养父母家相识，
+			因为童年留在内心的阴影，他们彼此充满戒备和防范。
+			洛熙在夏沫和弟弟参加电视歌唱大赛遇到尴尬状况下为他们解围，
+			两个孩子中间的坚冰在逐渐融化，而深爱夏沫的富家少爷
+			欧辰为了分开两人，把洛熙送到英国留学…
+		</description>
+		<writer>行者孙</writer>
+	</book>
+	<book id = "11">  
+		<name>我的青春校园</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>5</tag>
+		<description>
+			高中生的冰冰爱上威风潇洒的大叔杨飞,他们几经波折走到一起，
+			已婚的杨飞为了冰冰的学业，撒下了天大的谎言,冰冰在三年中不
+			能与杨飞见面，不能通电话，不久杨飞意外死去，大方得体的杨嫂
+			为完成丈夫的遗言，每周给冰冰一封信，维持冰冰与杨飞的爱情，
+			冰冰的大学生涯只能靠一周一封信维持爱情，三年后冰冰终于毕业了，
+			冰冰来到杨飞与她约定的地....
+		</description>
+		<writer>白骨精</writer>
+	</book>
+	<book id = "12">  
+		<name>盗墓之王</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>6</tag>
+		<description>
+			盗墓之王的弟弟杨天，是一个有特异功能的年轻人。他深入埃及腹地，
+			经历了一系列奇怪的事情之后发现，他的大哥为了探寻一个秘密而被
+			困在了异界，而这秘密关个系着整个地球的存亡……
+		</description>
+		<writer>runrun</writer>
+	</book>
+	<book id = "13">  
+		<name>尸棺</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>7</tag>
+		<description>
+			古老的棺材重见天日，临近的城市却出现丧尸，几个身份迥异的年
+			轻人不得不走上探尸之路。他们走到一起，是偶然还是命中注...
+		</description>
+		<writer>赵钱孙</writer>
+	</book>
+	<book id = "20">  
+		<name>A CLASH OF KINGS </name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>8</tag>
+		<description>
+			The comet’s tail spread across the dawn, a red slash that 
+			bled above the crags of Dragonstone like a wound in the 
+			pink and purple sky.  The maester stood on the windswept
+			 balcony outside hi...
+		</description>
+		<writer>李白</writer>
+	</book>
+	<book id = "21">  
+		<name> Tess of the D'Urbervilles</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>9</tag>
+		<description>
+			 A Pure Woman Faithfully Presented is a novel by Thomas Hardy.
+			  It initially appeared in a censored and serialised version,
+			   published by the British illustrated newspaper The Graphic
+			    in 1891[1] and in book form in 1892. 
+		</description>
+		<writer>杜甫</writer>
+	</book>
+	<book id = "22">  
+		<name>The Hunting of the Snark</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>10</tag>
+		<description>
+			The plot of this book follows a crew of ten trying to hunt the Snark, 
+			an animal which may turn out to be a highly dangerous Boojum. 
+			The only one of the crew to find the Snark quickly vanishes...
+		</description>
+		<writer>周晓慧</writer>
+	</book>
+	<book id = "23">  
+		<name>The Wonderful Wizard of Oz</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>11</tag>
+		<description>
+			One of the true classics of American literature, The Wonderful Wizard
+			 of Oz has stirred the imagination of young and old alike for over four 
+			 generations. Originally published in 1900...
+		</description>
+		<writer>周继成</writer>
+	</book>
+	<book id = "30">  
+		<name>意林</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>12</tag>
+		<description>
+			由长春市文学艺术界联合会主办的知名文摘期刊，杂志创刊于2003年8月，
+			是中国目前最有影响力的杂志之一。[1]  《意林》的内容风格现实温暖，
+			通常用一些故事、寓言和生活经历来吸引读者。
+		</description>
+		<writer>大哥大</writer>
+	</book>
+	<book id = "31">  
+		<name>时尚的心灵</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>13</tag>
+		<description>
+			美国上世纪80年代曾经很著名的时装评论家（Fashion Journalism) 
+			Kennedy Fraser在纽约客上发表过很多很好很深刻的时尚评论。在那个80年代
+			,是记忆中美好的时代,经济起飞百花齐放,时装亦创意无限。
+		</description>
+		<writer>天空</writer>
+	</book>
+	<book id = "32">  
+		<name>知音</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>14</tag>
+		<description>
+			知音是创刊于1985年1月的情感类杂志，杂志售价5元，
+			以悲惨曲折的爱情故事，以及名人轶事等内容与精英文化形成对垒，
+			多年稳居国内期刊发行量第一、世界第五的位置
+		</description>
+		<writer>大地</writer>
+	</book>
+	<book id = "33">  
+		<name>十大健康图书</name>
+		<uri>http://book.dangdang.com/ </uri>
+		<tag>15</tag>
+		<description>
+			大众健康图书的出版从最初的理念教育，
+			到后来强调科学性和正确性，再到现在讲究图书内容的表现形式，
+			仅用了十年左右的时间。应该说健康图书市场越来越成熟。
+			但也存在诸多问题。
+		</description>
+		<writer>邓紫琪</writer>
+	</book>
+</books>
