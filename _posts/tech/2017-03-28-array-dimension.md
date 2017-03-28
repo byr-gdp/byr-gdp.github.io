@@ -7,7 +7,7 @@ description: 优雅地实现多维数组降维
 
 ---
 
-最近（2017年03月28日）突然想到数组降维这东西，便随手写了下二维和多维的实现，想起之前有过类似的记录，所以又打开了本文链接，奇怪的是原文第四种多维情况的代码我愣是看了半天没看懂（充分说明了写可读性和可维护性代码的重要性），因为很难理解为什么会有 `tmp = tmp[0]` 这种赋值的存在。后来通过单步调试后发现第四种情况代码正常运转的前提是数组中的每一项的维度相差小于2，正式基于这样的设定，才敢通过判断数组中第一项是否为 Array 的示例从而判断是否继续展开。看来以后还是得学会些测试用例呢。
+最近（2017年03月28日）突然想到数组降维这东西，便随手写了下二维和多维的实现，想起之前有过类似的记录，所以又打开了本文链接，奇怪的是原文第四种多维情况的代码我愣是看了半天没看懂（充分说明了写可读性和可维护性代码的重要性），因为很难理解为什么会有 `tmp = tmp[0]` 这种赋值的存在。后来通过单步调试后发现第四种情况代码正常运转的前提是数组中的每一项的维度相差小于2，正是基于这样的设定，才敢通过判断数组中第一项是否为 Array 的示例从而判断是否继续展开。看来以后还是得学会些测试用例呢。
 
 （更新于 2017-03-28）
 
@@ -61,30 +61,30 @@ apply方法的第一个参数会作为被调用函数的this值，apply方法的
 
 这里考虑维度不一定的情况，需要通过 `instanceof` 来判断数组的各个元素是否还是数组。于是有了下面的解决方案。
 
-  // 这段代码有严重缺陷，原因已在前文说明。
-	function reduceDimension(arr) {
-    	var tmp = arr;
-    	var result = arr;
-    	while(tmp instanceof Array) {
-        	result = Array.prototype.concat.apply([], result);
-        	tmp = tmp[0];
-    	}
-    	return result;
-	}
+    // 这段代码有严重缺陷，原因已在前文说明。
+	  function reduceDimension(arr) {
+      	var tmp = arr;
+      	var result = arr;
+      	while(tmp instanceof Array) {
+          	result = Array.prototype.concat.apply([], result);
+          	tmp = tmp[0];
+      	}
+      	return result;
+	  }
 
-  const reduceDimension = (arr) => {
-      let r = [];
+    const reduceDimension = (arr) => {
+      	let r = [];
 
-      arr.forEach((item) => {
-          if (item instanceof Array) {
-              r = r.concat(reduceDimension(item));
-          } else {
-              r = r.concat(item);
-          }
-      });
+        arr.forEach((item) => {
+            if (item instanceof Array) {
+                r = r.concat(reduceDimension(item));
+            } else {
+                r = r.concat(item);
+            }
+        });
 
-      return r;
-  }
+        return r;
+    }
 
 暂时想到这么多了。
 
