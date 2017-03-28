@@ -63,8 +63,8 @@ apply方法的第一个参数会作为被调用函数的this值，apply方法的
 
 ```javascript
 function reduceDimension(arr) {
-	// 这段代码有严重缺陷，原因已在前文说明。
-  	var tmp = arr;
+    // 这段代码有严重缺陷，原因已在前文说明。
+    var tmp = arr;
   	var result = arr;
   	while(tmp instanceof Array) {
       	result = Array.prototype.concat.apply([], result);
