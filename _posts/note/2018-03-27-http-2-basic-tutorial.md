@@ -7,7 +7,7 @@ description: 《HTTP/2 基础教程》读书笔记
 
 ---
 
-<div align=center><img width="375"  src="https://img3.doubanio.com/lpic/s29665581.jpg"/></div>
+<div align="center"><img width="375" src="https://img3.doubanio.com/lpic/s29665581.jpg"/></div>
 
 最近几天看了《HTTP/2 基础教程》，现整理如下，以弥补过去知识体系的欠缺。
 
