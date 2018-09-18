@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ios video 标签小结
+title: iOS video 标签小结
 category: 技术
 tags: video, html5, ios
 description: ios video 标签小结
@@ -27,5 +27,5 @@ description: ios video 标签小结
 
 ## 参考
 
-- [New <video> Policies for iOS](https://webkit.org/blog/6784/new-video-policies-for-ios/)
+- [New `<video>` Policies for iOS](https://webkit.org/blog/6784/new-video-policies-for-ios/)
 - [Evolution of <img>: Gif without the GIF](https://calendar.perfplanet.com/2017/animated-gif-without-the-gif/#-but-we-already-have-video-tags)
