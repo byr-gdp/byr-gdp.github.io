@@ -6,6 +6,10 @@ tags: js, browser, javascript
 description: 当浏览器回退时会发生什么
 ---
 
+2019-06-25 更新：补充 efe 的一篇文章，对 bfcache 有较为深入的源码研究和解决方案（通过 Worker）:[浏览器往返缓存（Back/Forward cache）问题的分析与解决](https://efe.baidu.com/blog/bfcache-analysis-and-fix/)。
+
+---
+
 假设存在一个非单页应用，当从页面A跳转到页面B后，点击浏览器后退按钮后会发生什么？这里有两个细节需要关注，一个是离开页面A的时候，页面A怎么处理？另一个是当从页面B返回页面A时，会发生什么。如果要弄清楚第二个问题，首先得弄清楚第一个问题。
 
 ## 页面A跳转页面B
